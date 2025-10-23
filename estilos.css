@@ -1,0 +1,367 @@
+/* estilos.css (v6 - Versión Final) */
+
+/* --- 1. Configuración Global y Tipografía --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --color-primario: #0A284B;    /* Azul oscuro clínico */
+  --color-secundario: #444444; /* Gris grafito (texto) */
+  --color-riesgo: #B84141;      /* Rojo apagado (alerta) */
+  --color-riesgo-fondo: #FDF4F4; /* Fondo claro para alertas */
+  --color-borde: #E0E0E0;      /* Gris claro para bordes */
+}
+
+body {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8; 
+  color: var(--color-secundario);
+  line-height: 1.7; 
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 2. Definición de Páginas A4 (Base) --- */
+.pagina-a4 {
+  position: relative; /* <-- AÑADIDO: Requerido para el pie de página */
+  background: #FFFFFF;
+  width: 210mm;
+  min-height: 297mm; 
+  height: auto; 
+  padding: 2.5cm;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+/* --- 3. PÁGINAS MAESTRAS (Portada, Intro, Dominio) --- */
+
+/* Estilo para Portada */
+.portada-a4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  text-align: center;
+}
+.portada-a4 h1 {
+  font-size: 3.5rem;
+  color: var(--color-primario);
+  margin: 0;
+}
+.portada-a4 h2 {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-secundario);
+  border: 0;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+/* AÑADIDO: Estilo de Autor Portada */
+.portada-a4 .autor {
+  margin-top: 100px; 
+  font-size: 1rem;
+  font-weight: 500; 
+  color: #666; 
+}
+
+/* Estilo para Introducción */
+.introduccion-a4 h1 {
+  font-size: 2rem;
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-primario);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.introduccion-a4 p, .section-a4 p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.introduccion-a4 .highlight, .section-a4 .highlight {
+  font-weight: 700;
+  color: var(--color-primario);
+  display: block;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f6f8;
+  border-radius: 4px;
+}
+
+/* Estilo para Página de Dominio (Separador) */
+.dominio-a4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-color: var(--color-primario);
+  color: #FFFFFF;
+}
+.dominio-a4 h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  border-bottom: 2px solid #FFFFFF;
+  padding-bottom: 20px;
+}
+.dominio-a4 p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 25px 0 0 0;
+  opacity: 0.9;
+}
+
+
+/* --- 4. PÁGINAS DE SECCIÓN y APÉNDICES --- */
+
+.section-a4 h1, .glossary-a4 h1, .referencias-pagina h1 {
+  font-size: 2rem;
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-primario);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.glossary-item {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.glossary-item strong {
+  color: var(--color-primario);
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+
+/* --- 5. FICHA DE EFECTO: Tipografía y Encabezados --- */
+.ficha-a4 h1, .ficha-a4 h2, .ficha-a4 h3, .ficha-a4 h4 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  line-height: 1.4; 
+}
+
+.ficha-a4 h1 { /* Título del Efecto */
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 5px;
+}
+
+.ficha-a4 h2 { /* Dominio */
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-secundario);
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.ficha-a4 h3 { /* Títulos de Sección */
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-primario);
+  padding-bottom: 5px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ficha-a4 h4 { /* Títulos de Sub-sección */
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 0px; 
+  margin-bottom: 5px;
+}
+
+.ficha-a4 p, .ficha-a4 ul {
+  font-size: 0.9rem;
+  margin: 0 0 15px 0; 
+}
+.ficha-a4 p:last-child, .ficha-a4 ul:last-child {
+  margin-bottom: 0;
+}
+
+.ficha-a4 ul {
+  padding-left: 20px;
+}
+
+.micro-etiqueta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-secundario);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px; 
+}
+
+
+/* --- 6. FICHA DE EFECTO: Layout y Grilla (3 Columnas) --- */
+.ficha-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+}
+
+/* --- 7. FICHA DE EFECTO: Secciones Inferiores (Full-width) --- */
+.ficha-manual, .ficha-integracion {
+  grid-column: 1 / -1; 
+}
+
+/* --- 8. FICHA DE EFECTO: Manual de Intervención (Iconos) --- */
+.bloque-icono {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px; 
+}
+.bloque-icono .icono {
+  font-size: 1.5rem; 
+  margin-right: 12px; 
+  color: var(--color-primario);
+  line-height: 1.4; 
+}
+.bloque-icono div > h4 {
+  margin-top: 0; 
+}
+.bloque-icono div > p {
+  margin: 0; 
+}
+.bloque-icono div > p.micro-etiqueta {
+  margin-bottom: 5px; 
+}
+
+
+/* --- 9. FICHA DE EFECTO: Módulo de Riesgo (Destacado) --- */
+.matriz-riesgo-box {
+  border: 1px solid var(--color-riesgo);
+  background-color: var(--color-riesgo-fondo);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px; 
+}
+
+.riesgo-titulo {
+  color: var(--color-riesgo);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.riesgo-titulo span {
+  text-transform: uppercase;
+}
+
+/* --- 10. PÁGINA DE REFERENCIAS (Por Dominio) --- */
+.lista-referencias {
+  padding-left: 15px;
+  margin: 0;
+  list-style-type: square;
+}
+
+.lista-referencias li {
+  font-size: 0.9rem; 
+  line-height: 1.6; 
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.lista-referencias li strong {
+  color: var(--color-secundario);
+  font-weight: 600;
+  display: block; 
+}
+
+/* --- 11. NUEVO: CTA de Cierre --- */
+.cta-a4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #F9FAFB;
+  color: var(--color-primario);
+}
+.cta-contenido {
+  max-width: 80%;
+}
+.cta-a4 h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 15px;
+  border-bottom: none; /* Sobrescribir estilos H2 genéricos */
+  padding-bottom: 0;
+}
+.cta-a4 p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+.cta-boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primario);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+.cta-boton:hover {
+  background-color: #09223d; 
+}
+
+/* --- 12. NUEVO: Pie de Página Global --- */
+@media print, screen {
+  .pagina-a4::after {
+    content: "Atlas de Efectos — Mountain 2025";
+    position: absolute;
+    bottom: 15mm;
+    right: 20mm;
+    font-size: 0.75rem;
+    color: #999999;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Excluir pie de página de la portada */
+  .portada-a4::after {
+    content: "";
+  }
+}
+
+/* --- 13. Reglas de Impresión --- */
+@media print {
+  body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+  }
+  .pagina-a4 { 
+    margin: 0;
+    box-shadow: none;
+    height: auto; 
+    padding: 0; 
+  }
+  @page {
+    size: A4;
+    margin: 2.5cm;
+  }
+  .dominio-a4 {
+    background-color: var(--color-primario) !important;
+  -webkit-print-color-adjust: exact; /* Soporte para Safari y Chrome */
+  print-color-adjust: exact;         /* Propiedad estándar moderna */
+  }
+  .bloque-icono .icono {
+    display: none;
+  }
+}

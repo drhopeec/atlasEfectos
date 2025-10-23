@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Visual de Efectos Psicodélicos</title>
+  
+  <link rel="stylesheet" href="estilos.css">
+  
+  <script src="efectos.js"></script>
+  <script src="referencias.js"></script>
+</head>
+<body>
+
+  <main id="atlas-container"></main>
+
+
+  <script>
+    
+    // --- SECCIÓN 1: DATOS Y TEXTOS NARRATIVOS ---
+
+    const ordenDominios = ["visual", "cognitivo", "emocional", "existencial", "somatico"];
+
+    const textoIntroduccion = `
+      <p>Este atlas es una herramienta clínica diseñada para acompañarte antes, durante y después de cada sesión asistida con psilocibina. No es un texto teórico ni una guía espiritual: es un instrumento operativo que traduce la complejidad de la experiencia en lenguaje clínico.</p>
+      <p>Su propósito es reducir la incertidumbre, aumentar la seguridad y ofrecer marcos claros de interpretación. Cada página busca ayudarte a identificar fenómenos, decidir cuándo intervenir, y reconocer cuándo basta con sostener.</p>
+      <p>Este documento no reemplaza tu criterio clínico: lo organiza. Te ofrece un mapa estructurado para navegar lo desconocido con rigor, claridad y ética.</p>
+    `;
+    
+    const textoCuándoUsar = `
+      <p>Este atlas no es para leerlo una vez. Es una herramienta activa que acompaña tu práctica antes, durante y después de cada sesión.</p>
+      <ul>
+        <li><strong>En la preparación:</strong> Úsalo para psicoeducar al paciente, establecer expectativas realistas y anticipar riesgos según su perfil clínico.</li>
+        <li><strong>Durante la sesión:</strong> Úsalo para interpretar lo que observas, elegir si intervenir o sostener, y evitar confundir un proceso profundo con una crisis clínica.</li>
+        <li><strong>En la integración:</strong> Úsalo para traducir lo vivido en lenguaje comprensible, anclar los insights y guiar prácticas que consoliden el cambio.</li>
+      </ul>
+      <p class="highlight">Este no es un documento de lectura pasiva. Es un mapa clínico para navegar lo desconocido.</p>
+    `;
+
+    const textoQuéHacer = `
+      <p>No todo fenómeno cabe en una casilla. Si lo que observas no está descrito, no significa que estés en peligro. Significa que estás frente a lo vivo.</p>
+      <p>En esos casos:</p>
+      <ol>
+        <li><strong>Sostén antes de intervenir.</strong> Si no hay signos de riesgo, tu presencia es suficiente.</li>
+        <li><strong>Anota con detalle.</strong> Qué dijo. Qué viste. Qué cambió en su cuerpo. Esa información es valiosa para ti y para el campo.</li>
+        <li><strong>Consulta si hay duda.</strong> Usa esta observación para profundizar en supervisión o mentoría.</li>
+      </ol>
+      <p class="highlight">Recuerda: Lo desconocido no siempre es patológico. A veces es solo inédito.</p>
+    `;
+    
+    const textoCómoUsar = `
+      <p>Este recurso está diseñado para el clínico. Pero puedes usarlo con el paciente, si lo haces con cuidado.</p>
+      <p>Evita dar nombres que sugieran diagnóstico o espiritualidad cerrada. En su lugar, nombra procesos con lenguaje neutral, como “Esto suele pasar cuando el cerebro se reorganiza” o “A veces la mente necesita descomponerse para ver algo nuevo”.</p>
+      <p>Recuerda que los psicodélicos aumentan la sugestionabilidad. Lo que digas se puede convertir en verdad interna. Usa este poder con ética. Y si no sabes qué está pasando, dilo. Eso también es sostener.</p>
+    `;
+
+    const textosDominio = {
+      "visual": "Lo que el paciente <strong>ve</strong>. Desde patrones geométricos hasta la 'respiración' de las paredes. Aquí se aprende a no sobre-intervenir, solo a validar la experiencia.",
+      "cognitivo": "Lo que el paciente <strong>piensa</strong>. Bucles, 'insights' acelerados y la distorsión del tiempo. El reto es guiar el proceso sin interrumpir el flujo del pensamiento.",
+      "emocional": "Lo que el paciente <strong>siente</strong>. La emergencia de miedo, culpa, ansiedad o euforia. Este es el núcleo del trabajo terapéutico y el terreno de la intervención activa.",
+      "existencial": "Lo que el paciente <strong>es</strong> (o deja de ser). La disolución del yo y la unidad mística. El terreno más profundo, transformador y potencialmente desorientador.",
+      "somatico": "Lo que el paciente <strong>libera</strong>. Temblores, opresión torácica y catarsis física. La intervención aquí se centra en la seguridad y la permisión de la memoria corporal."
+    };
+    
+    const glosarioData = [
+      {
+        "termino": "Moduladores de riesgo",
+        "definicion": "Variables que modifican la respuesta (dosis, set, setting, historia clínica, medicación)."
+      },
+      {
+        "termino": "Banderas rojas",
+        "definicion": "Indicadores que sugieren posible complicación médica o psiquiátrica."
+      },
+      {
+        "termino": "Frase de normalización",
+        "definicion": "Enunciado verbal breve que ayuda al paciente a integrar y aceptar el fenómeno sin pánico."
+      },
+      {
+        "termino": "Manual de intervención",
+        "definicion": "Protocolo de tres niveles (sostén, anclaje, reencuadre) y un nivel de emergencia (escalamiento)."
+      },
+      {
+        "termino": "REBUS (Relaxed Beliefs Under Psychedelics)",
+        "definicion": "Modelo neurobiológico que postula que los psicodélicos 'relajan' las creencias o predicciones (priores) de alto nivel del cerebro, permitiendo un mayor flujo de información."
+      },
+      {
+        "termino": "DMN (Red de Modo por Defecto)",
+        "definicion": "Red cerebral asociada con el pensamiento autorreferencial (el 'yo' narrativo). Su desactivación se correlaciona con la disolución del ego."
+      }
+    ];
+
+
+    // --- SECCIÓN 2: FUNCIONES DE AYUDA PARA RENDERIZAR ---
+
+    function mapearLista(items) {
+      if (!items || items.length === 0) return '<p>NA</p>';
+      return `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+    }
+
+    function generarHtmlReferencias(dominios = []) {
+      if (typeof referenciasData === 'undefined') return ''; 
+      const referenciasUnicas = new Set();
+      
+      for (const dominio of dominios) {
+        if (referenciasData[dominio]) {
+          referenciasData[dominio].forEach(ref => {
+            referenciasUnicas.add(JSON.stringify(ref));
+          });
+        }
+      }
+      const referencias = Array.from(referenciasUnicas).map(refStr => JSON.parse(refStr));
+      if (referencias.length === 0) return ''; 
+
+      const listaHtml = referencias.map(ref => `
+        <li>
+          <strong>${ref.referencia}</strong>
+          ${ref.resumen_atlas}
+        </li>
+      `).join('');
+
+      return `
+        <div class="pagina-a4 referencias-pagina">
+          <h1 style="text-transform: capitalize;">Referencias Clínicas: Dominio ${dominios[0]}</h1>
+          <ul class="lista-referencias">
+            ${listaHtml}
+          </ul>
+        </div>
+      `;
+    }
+
+    function generarHtmlFicha(efecto) {
+      return `
+        <div class="pagina-a4 ficha-a4">
+          <header class="ficha-header">
+            <h1>${efecto.efecto}</h1>
+            <h2>${efecto.dominio.join(' / ')}</h2>
+          </header>
+          
+          <div class="ficha-grid">
+            
+            <div class="grid-col">
+              <h3>Fenomenología</h3>
+              <h4>Lo que el Paciente Reporta</h4>
+              <p>${efecto.fenomenologia.descripcion_paciente}</p>
+              <h4>Signos Observables (Para ti)</h4>
+              <p>${efecto.fenomenologia.signos_observables}</p>
+            </div>
+            
+            <div class="grid-col">
+              <h3>Neurobiología Aplicada</h3>
+              <h4>Mecanismo Hipotético</h4>
+              <p>${efecto.neurobiologia_aplicada.mecanismo_hipotetico}</p>
+              <h4>Frase de Normalización (Tu Herramienta)</h4>
+              <p><em>"${efecto.neurobiologia_aplicada.frase_de_normalizacion}"</em></p>
+            </div>
+            
+            <div class="grid-col">
+              <h3>Riesgo e Intervención</h3>
+              <div class="matriz-riesgo-box">
+                <h4 class="riesgo-titulo">Matriz de Riesgo: <span>${efecto.matriz_riesgo.split(' ')[0]}</span></h4>
+                <p>${efecto.matriz_riesgo.split(' (Justificación: ')[1].slice(0, -1)}</p>
+              </div>
+              <h4>Moduladores de Riesgo</h4>
+              ${mapearLista([
+                `<strong>Dosis:</strong> ${efecto.moduladores_riesgo.dosis}`,
+                `<strong>Historial:</strong> ${efecto.moduladores_riesgo.historial.join(', ')}`,
+                `<strong>Set & Setting:</strong> ${efecto.moduladores_riesgo.set_setting.join(', ')}`
+              ])}
+              <h4>Banderas Rojas (Diag. Diferencial)</h4>
+              ${mapearLista(efecto.banderas_rojas_diagnostico_diferencial)}
+            </div>
+            
+            <div class="ficha-manual">
+              <h3>Manual de Intervención</h3>
+              <div class="bloque-icono">
+                <div class="icono">🕊️</div>
+                <div>
+                  <h4>Sostén (No Intervención)</h4>
+                  <p class="micro-etiqueta">Frase(s) Modelo:</p>
+                  <p>${efecto.manual_de_intervencion.no_intervencion_sosten}</p>
+                </div>
+              </div>
+              <div class="bloque-icono">
+                <div class="icono">⚓</div>
+                <div>
+                  <h4>Anclaje (Intervención Mínima)</h4>
+                  <p class="micro-etiqueta">Acción / Frase(s) Modelo:</p>
+                  <p>${efecto.manual_de_intervencion.intervencion_minima_anclaje}</p>
+                </div>
+              </div>
+              <div class="bloque-icono">
+                <div class="icono">🔁</div>
+                <div>
+                  <h4>Re-encuadre (Intervención Activa)</h4>
+                  <p class="micro-etiqueta">Frase(s) Modelo:</p>
+                  <p>${efecto.manual_de_intervencion.intervencion_activa_reencuadre}</p>
+
+                </div>
+              </div>
+              <div class="bloque-icono">
+                <div class="icono">🚨</div>
+                <div>
+                  <h4>Escalamiento</h4>
+                  <p>${efecto.criterios_de_escalamiento.criterio_observable_para_escalar} <strong>Acción:</strong> ${efecto.criterios_de_escalamiento.accion_de_escalamiento}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ficha-integracion">
+              <h3>Integración Post-Sesión</h3>
+              <h4>Tema a Explorar</h4>
+              <p>${efecto.integracion_post_sesion.tema_a_explorar}</p>
+              <h4>Práctica Sugerida</h4>
+              <p>${efecto.integracion_post_sesion.practica_sugerida}</p>
+            </div>
+            
+          </div>
+        </div>
+      `;
+    }
+    
+    function generarSeccion(texto, titulo) {
+      return `
+        <div class="pagina-a4 section-a4">
+          <h1>${titulo}</h1>
+          ${texto}
+        </div>
+      `;
+    }
+    
+    function generarGlosario() {
+      const itemsHtml = glosarioData.map(item => `
+        <div class="glossary-item">
+          <strong>${item.termino}</strong>
+          ${item.definicion}
+        </div>
+      `).join('');
+      
+      return `
+        <div class="pagina-a4 glossary-a4">
+          <h1>Glosario de Términos Clínicos</h1>
+          ${itemsHtml}
+        </div>
+      `;
+    }
+    
+    function generarChecklist() {
+      return `
+        <div class="pagina-a4 section-a4">
+          <h1>Apéndice: Hoja de Uso Clínico</h1>
+          <h3>Checklist de Preparación de Sesión (Pre-vuelo)</h3>
+          <ul>
+            <li>Confirmación de criterios de exclusión (medicación, historial).</li>
+            <li>Revisión de la intención y expectativas del paciente.</li>
+            <li>Validación del protocolo de seguridad y contacto de emergencia.</li>
+            <li>Preparación del 'Setting': música, iluminación, confort físico.</li>
+          </ul>
+          <h3>Checklist de Navegación (En-vuelo)</h3>
+          <ul>
+            <li>Nivel 1 (Observar): ¿Signos vitales estables? ¿Respiración regular?</li>
+            <li>Nivel 2 (Validar): ¿El paciente muestra angustia? (Usar 'Frase de Normalización').</li>
+            <li>Nivel 3 (Anclar): ¿El paciente está en un 'bucle' o pánico? (Usar 'Anclaje').</li>
+            <li>Nivel 4 (Escalar): ¿Hay riesgo físico o agitación severa? (Revisar 'Banderas Rojas').</li>
+          </ul>
+        </div>
+      `;
+    }
+
+
+    // --- SECCIÓN 3: FUNCIÓN PRINCIPAL DE RENDERIZADO (ACTUALIZADA) ---
+
+    function renderizarAtlasCompleto() {
+      const container = document.getElementById('atlas-container');
+      if (!container || !efectosData || !referenciasData) {
+        console.error("Error: Faltan datos (efectos, referencias) o el contenedor HTML.");
+        return;
+      }
+      
+      let htmlCompleto = '';
+
+      // 1. Renderizar Portada (ACTUALIZADA CON AUTOR)
+      htmlCompleto += `
+        <div class="pagina-a4 portada-a4">
+          <h1>Atlas Visual de Efectos Psicodélicos</h1>
+          <h2>¿Qué puede pasar durante una sesión?</h2>
+          <div class="autor">AUTOR: <strong>Dr. HOPE</strong></div>
+        </div>
+      `;
+
+      // 2. Renderizar Introducción
+      htmlCompleto += `
+        <div class="pagina-a4 introduccion-a4">
+          <h1>Introducción: De la Intuición al Protocolo</h1>
+          ${textoIntroduccion}
+        </div>
+      `;
+      
+      // 3. Renderizar Secciones Narrativas
+      htmlCompleto += generarSeccion(textoCuándoUsar, "Cuándo usar este atlas");
+      htmlCompleto += generarSeccion(textoQuéHacer, "Qué hacer si lo que ves no encaja");
+      htmlCompleto += generarSeccion(textoCómoUsar, "Cómo usarlo sin crear más confusión");
+
+      // 4. Renderizar Dominios, Fichas, y Página de Referencias
+      for (const dominio of ordenDominios) {
+        
+        // 4a. Página separadora del Dominio
+        htmlCompleto += `
+          <div class="pagina-a4 dominio-a4">
+            <h1 style="text-transform: capitalize;">Dominio: ${dominio}</h1>
+            <p>${textosDominio[dominio]}</p>
+          </div>
+        `;
+
+        // 4b. Fichas de efectos del dominio
+        const efectosDelDominio = efectosData.filter(efecto => efecto.dominio[0] === dominio);
+        for (const efecto of efectosDelDominio) {
+          htmlCompleto += generarHtmlFicha(efecto);
+        }
+        
+        // 4c. Página ÚNICA de Referencias del dominio
+        htmlCompleto += generarHtmlReferencias([dominio]);
+      }
+      
+      // 5. Renderizar Apéndices Finales
+      htmlCompleto += generarGlosario();
+      htmlCompleto += generarChecklist();
+
+      // 6. AÑADIDO: Renderizar CTA de Cierre
+      htmlCompleto += `
+        <div class="pagina-a4 cta-a4">
+          <div class="cta-contenido">
+            <h2>¿Quieres aprender a aplicar este protocolo en tu práctica clínica?</h2>
+            <p>Accede al protocolo donde Dr. HOPE explica el modelo completo de intervención y supervisión clínica con psilocibina.</p>
+            <a href="https://app.ecoretreatmountain.com/minicurso-psilocibinclinica" class="cta-boton" target="_blank">Acceder al curso</a>
+          </div>
+        </div>
+      `;
+
+      // 7. Volcar todo el HTML al contenedor
+      container.innerHTML = htmlCompleto;
+    }
+
+    // Ejecutar el renderizado
+    document.addEventListener('DOMContentLoaded', renderizarAtlasCompleto);
+  </script>
+
+</body>
+</html>
