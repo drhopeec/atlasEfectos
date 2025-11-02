@@ -212,7 +212,7 @@ const efectosData = [
       "signos_observables": "Repetición verbal de ideas o preocupaciones específicas, frustración, ansiedad."
     },
     "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Refleja la persistencia de 'hiperpriores' rígidos y desadaptativos (creencias fijas), que resisten la relajación inducida por el agonismo 5-HT$_{2A}$ (Modelo REBUS).",
+      "mecanismo_hipotetico": "Refleja la persistencia de 'hiperpriores' rígidos y desadaptativos (creencias fijas), que resisten la relajación inducida por el agonismo 5-HT2A (Modelo REBUS).",
       "frase_de_normalizacion": "Estás experimentando la intensidad de un patrón de pensamiento que tu mente está acostumbrada a ejecutar. Esto es resistencia. Observa el patrón con desapego."
     },
     "moduladores_riesgo": { "dosis": "media|alta", "historial": ["TOC", "Depresión (rumiación)"], "medicacion": ["NA"], "set_setting": ["ansiedad basal alta"] },
