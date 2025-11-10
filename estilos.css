@@ -47,6 +47,8 @@ body {
   font-size: 3.5rem;
   color: var(--color-primario);
   margin: 0;
+  line-height: 1.1; /* reduce el espacio vertical entre líneas */
+  letter-spacing: -0.5px; /* opcional: compacta un poco el texto horizontalmente */
 }
 .portada-a4 h2 {
   font-size: 1.8rem;
@@ -54,7 +56,7 @@ body {
   font-weight: 400;
   color: var(--color-secundario);
   border: 0;
-  margin: 20px 0 0 0;
+  margin: 15px 0 0 0;
   padding: 0;
 }
 /* AÑADIDO: Estilo de Autor Portada */
@@ -201,9 +203,10 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-secundario);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 5px; 
+  text-transform: none; /* anula mayúsculas forzadas */
+  letter-spacing: 0.3px;
+  margin-top: 4px;
+  margin-left: 0; /* aseguras alineación con párrafo */
 }
 
 
@@ -225,12 +228,23 @@ body {
   align-items: flex-start;
   margin-bottom: 15px; 
 }
+
 .bloque-icono .icono {
-  font-size: 1.5rem; 
-  margin-right: 12px; 
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid var(--color-primario);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--color-primario);
-  line-height: 1.4; 
+  margin-right: 12px;
+  line-height: 1;
+  flex-shrink: 0;
 }
+
 .bloque-icono div > h4 {
   margin-top: 0; 
 }

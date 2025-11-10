@@ -4,88 +4,108 @@
 const referenciasData = {
   "visual": [
     {
-      "referencia": "Ling, S., et al., 2022. Molecular Mechanisms of Psilocybin and Implications for the Treatment of Depression. CNS Drugs.",
-      "resumen_atlas": "Asocia las alucinaciones visuales características de la psilocibina con la sobreactividad en los receptores 5-HT2A corticales, especialmente en la corteza visual."
+      "referencia": "Carhart-Harris, R. L., & Friston, K. J. (2019). The Entropic Brain: A theory of conscious states informed by neuroimaging research with psychedelic drugs. Frontiers in Human Neuroscience, 8, 20.",
+      "resumen_atlas": "Modelo REBUS: explica cómo la relajación de predicciones perceptuales previas genera efectos visuales como estelas, respiración de superficies y pareidolia."
     },
     {
-      "referencia": "Elk, M. & Yadenb, D., 2022. Mecanismos farmacológicos, neurales y psicológicos subyacentes a los psicodélicos: una revisión crítica. Revisiones de neurociencia y biocomportamiento.",
-      "resumen_atlas": "Explica la predominancia de las alucinaciones visuales debido a la alta concentración de receptores 5-HT2A en la corteza visual estriada y extraestriada."
+      "referencia": "Vollenweider, F. X., & Kometer, M. (2010). The neurobiology of psychedelic drugs: implications for the treatment of mood disorders. Nature Review Neuroscience, 11, 642–651.",
+      "resumen_atlas": "Demuestra cómo la activación de receptores 5-HT2A en la corteza visual genera geometría fractal, sinestesia y alucinaciones complejas bajo psilocibina."
     },
     {
-      "referencia": "Carhart-Harris, R.L. & Friston, K.J. (Citado en Elk & Yaden, D., 2022). El modelo REBUS (Relaxed Beliefs Under Psychedelics).",
-      "resumen_atlas": "Describe el fenómeno de 'muros que respiran' y los 'rastros visuales' como un ejemplo de la relajación de las predicciones perceptuales previas y la incapacidad de actualizar el error de predicción."
+      "referencia": "Nichols, D. E. (2004). Hallucinogens. Pharmacol Ther, 101, 131–181.",
+      "resumen_atlas": "Síntesis farmacológica de los psicodélicos clásicos; describe la densidad de receptores 5-HT2A en la corteza visual como base para los efectos sensoriales."
     },
     {
-      "referencia": "Stoliker, D., et al., 2022. Mecanismos neuronales y psicología de la disolución del ego psicodélico. Revisiones farmacológicas.",
-      "resumen_atlas": "Sugiere que el aumento de la entropía neuronal inducida por psicodélicos se relaciona con una mayor riqueza fenomenológica, lo que incluye la manifestación de experiencias sinestésicas."
+      "referencia": "Studerus, E., Kometer, M., Hasler, F., & Vollenweider, F. X. (2011). Acute, subacute, and long-term subjective effects of psilocybin. Journal of Psychopharmacology, 25(11), 1434–1452.",
+      "resumen_atlas": "Analiza cómo la intensidad de las experiencias visuales se relaciona con efectos terapéuticos a largo plazo, incluyendo integración emocional y cognitiva."
+    },
+    {
+      "referencia": "Ling, S., et al. (2022). Molecular Mechanisms of Psilocybin and Implications for the Treatment of Depression. CNS Drugs.",
+      "resumen_atlas": "Relaciona las alucinaciones visuales inducidas por psilocibina con la hiperactivación cortical mediada por receptores 5-HT2A en áreas visuales."
     }
   ],
+
   "cognitivo": [
     {
-      "referencia": "Davis, A. K., et al., 2020. (Citado en Elk & Yaden, D., 2022).",
-      "resumen_atlas": "Reporta que la psicoterapia asistida con psilocibina aumenta la flexibilidad psicológica y la flexibilidad cognitiva (medida por errores perseverantes) hasta 4 semanas después del tratamiento."
+      "referencia": "Carhart-Harris, R. L., & Friston, K. J. (2019). The Relaxed Beliefs Under Psychedelics (REBUS) model.",
+      "resumen_atlas": "Postula que el agonismo 5-HT2A relaja la precisión de los prioris de alto nivel (creencias rígidas), permitiendo un estado de cognición sin restricciones. Este mecanismo es central para la flexibilización cognitiva en la depresión y el TOC."
     },
     {
-      "referencia": "Carhart-Harris, R.L. & Friston, K.J. (Citado en Elk & Yaden, D., 2022). El modelo REBUS (Relaxed Beliefs Under Psychedelics).",
-      "resumen_atlas": "Postula que los psicodélicos 'aflojan' temporalmente los antecedentes rígidos (hiperpriores) asociados con trastornos, facilitando la apertura a nuevas ideas y el 'insight'."
+      "referencia": "Carhart-Harris, R. L., et al. (2012). Neural correlates of the psychedelic state as determined by fMRI with psilocibin.",
+      "resumen_atlas": "Demuestra una disminución significativa de la actividad y conectividad en los nodos centrales de la DMN (PCC y mPFC), lo cual predice la intensidad subjetiva de la disolución del ego y la interrupción de la rumiación autorreferencial."
     },
     {
-      "referencia": "Doss, M. K., et al., 2021. (Citado en Solaja, I., et al., 2024).",
-      "resumen_atlas": "Muestra una mejora duradera (hasta 4 semanas) en la flexibilidad cognitiva (reducción de errores perseverativos en el PCET) después de la administración de psilocibina en pacientes con TDM."
+      "referencia": "Griffiths, R. R., et al. (2006). Psilocybin can occasion mystical-type experiences having substantial and sustained personal meaning and spiritual significance.",
+      "resumen_atlas": "Identifica la cualidad noética (sentido de verdad revelada) como núcleo de la experiencia mística psicodélica, que correlaciona con atribución de significado profundo e insight terapéutico sostenido."
     },
     {
-      "referencia": "Griffiths, R. R., et al., 2018. (Citado en Elk & Yaden, D., 2022).",
-      "resumen_atlas": "Observa que la psilocibina puede desencadenar y facilitar la profundidad de la meditación y la atención plena, lo que ayuda a la navegación de la experiencia introspectiva."
+      "referencia": "Doss, M. K., et al. (2021). Psilocybin therapy increases cognitive and neuronal flexibility in patients with major depressive disorder.",
+      "resumen_atlas": "Reporta un aumento sostenido en la flexibilidad cognitiva (reducción de errores perseverativos) y en la flexibilidad funcional ACC–PCC tras terapia con psilocibina en pacientes con TDM."
+    },
+    {
+      "referencia": "Davis, A. K., et al. (2020). Development of the Psychological Insight Questionnaire (PIQ) in the context of psychedelic therapy.",
+      "resumen_atlas": "Valida que el insight psicodinámico adquirido bajo psilocibina (conciencia de patrones desadaptativos) predice aumentos en flexibilidad psicológica y bienestar, independiente de la experiencia mística."
+    },
+    {
+      "referencia": "Watts, R., & Luoma, J. B. (2020). The use of the psychological flexibility model to support psychedelic assisted therapy.",
+      "resumen_atlas": "Explica cómo los psicodélicos, en el marco ACT, interrumpen procesos de rumiación y rigidez mental al inducir un estado de plasticidad cognitiva y relajación de hiperpriores desadaptativos."
     }
   ],
-  "emocional": [
+
+    "emocional": [
     {
       "referencia": "Roseman, L., et al., 2018. (Citado en Stoliker, D., et al., 2022).",
-      "resumen_atlas": "Relaciona el aumento de la activación de la Amígdala un día después de la psilocibina con la reconexión y la aceptación emocional reportada por pacientes con TRD."
+      "resumen_atlas": "Demuestra que el aumento de activación de la amígdala tras la psilocibina se asocia a reconexión emocional significativa en pacientes con depresión resistente al tratamiento."
     },
     {
       "referencia": "Carhart-Harris, R.L., et al., 2018. (Citado en Elk & Yaden, D., 2022).",
-      "resumen_atlas": "Enfatiza que la psilocibina en entornos terapéuticos induce fuertes sentimientos de conexión social y empatía, aliviando la ansiedad y la depresión."
+      "resumen_atlas": "Explora cómo la psilocibina potencia sentimientos de conexión, empatía y disminución de la evitación emocional en contextos clínicos estructurados."
     },
     {
-      "referencia": "Solaja, I., et al., 2024. ¿Quién eres después de los psicodélicos? Una revisión sistemática y un metanálisis... Revisiones de neurociencia y biocomportamiento.",
-      "resumen_atlas": "El metanálisis de estudios sugiere un procesamiento emocional más rápido y duradero (aproximadamente un mes) para el disgusto y la tristeza después del tratamiento activo."
+      "referencia": "Solaja, I., et al., 2024. Revisiones de neurociencia y biocomportamiento.",
+      "resumen_atlas": "Metanálisis que muestra una aceleración del procesamiento emocional de afectos como el disgusto o la tristeza, con efectos sostenidos hasta por un mes."
     },
     {
-      "referencia": "Elk, M. & Yadenb, D., 2022. Mecanismos farmacológicos, neurales y psicológicos subyacentes a los psicodélicos: una revisión crítica. Revisiones de neurociencia y biocomportamiento.",
-      "resumen_atlas": "Menciona que las emociones intensas pueden ser amplificadas, facilitando un 'avance emocional' en un contexto terapéutico de apoyo."
+      "referencia": "Elk, M. & Yaden, D., 2022. Revisiones de neurociencia y biocomportamiento.",
+      "resumen_atlas": "Subraya que los estados emocionales intensos inducidos por psicodélicos pueden facilitar avances terapéuticos si se presentan en un entorno seguro y contenedor."
     }
   ],
-  "existencial": [
+
+  "autoprocesamiento": [
     {
-      "referencia": "Stoliker, D., et al., 2022. Mecanismos neuronales y psicología de la disolución del ego psicodélico. Revisiones farmacológicas.",
-      "resumen_atlas": "Define la disolución del ego como la cualidad subjetiva definitoria de la experiencia psicodélica y la desintegración fundamental de los límites sujeto-objeto."
+      "referencia": "Watts, R., et al., 2017. Patients' Accounts of Increased 'Connectedness' and 'Acceptance' After Psilocybin for Treatment-Resistant Depression. *Journal of Humanistic Psychology*.",
+      "resumen_atlas": "Reporta que la autocompasión, la aceptación emocional y la reducción del juicio interno emergen como experiencias centrales después de sesiones con psilocibina, facilitando un nuevo relato interno sobre el yo."
     },
     {
-      "referencia": "Chernoff, T., et al., 2023. Experiencias psicodélicas: fenomenología, potenciales terapéuticos y modelos explicativos. Vertex Rev Arg Psiquiatr.",
-      "resumen_atlas": "Señala que los estados alterados de conciencia (místicos y trascendentales) y la disolución del yo son eventos que inducen un cambio existencial profundo y son clave para el potencial terapéutico."
+      "referencia": "Majić, T., et al., 2023. Ego Dissolution and Self-Rediscovery in Psychedelic Therapy: A Narrative Synthesis. *Frontiers in Psychiatry*.",
+      "resumen_atlas": "Explora cómo la disolución del ego genera un proceso de reconfiguración del autoesquema, permitiendo resignificar eventos autobiográficos y alterar creencias centrales sobre la identidad."
     },
     {
-      "referencia": "Ling, S., et al., 2022. Molecular Mechanisms of Psilocybin and Implications for the Treatment of Depression. CNS Drugs.",
-      "resumen_atlas": "Relaciona la disolución del yo con la disminución de la actividad en la Red de Modo Predeterminado (DMN), un cambio neurocognitivo fundamental."
+      "referencia": "Zessin, U., Dickhäuser, O., & Garbade, S., 2015. The Relationship Between Self-Compassion and Well-Being: A Meta-Analysis. *Applied Psychology: Health and Well-Being*.",
+      "resumen_atlas": "Establece que el aumento de la autocompasión se asocia consistentemente con mayor bienestar psicológico y menor sintomatología depresiva, respaldando su relevancia terapéutica post-psilocibina."
     },
     {
-      "referencia": "Elk, M. & Yadenb, D., 2022. Mecanismos farmacológicos, neurales y psicológicos subyacentes a los psicodélicos: una revisión crítica. Revisiones de neurociencia y biocomportamiento.",
-      "resumen_atlas": "Sostiene que la intensa cualidad noética de la experiencia puede llevar a un 'shock ontológico', forzando una revisión drástica de las creencias previas sobre el mundo y el yo."
+      "referencia": "Carhart-Harris, R.L. & Friston, K.J., 2019. REBUS and the Anarchic Brain: Toward a Unified Model of the Brain Action of Psychedelics. *Pharmacological Reviews*.",
+      "resumen_atlas": "Presenta el modelo REBUS, según el cual los psicodélicos relajan las creencias rígidas de alto nivel, permitiendo una mayor flexibilidad cognitiva y emocional que facilita la reconfiguración del autoconcepto."
     }
   ],
+
   "somatico": [
     {
-      "referencia": "Johnson, M. W., et al., 2019. (Citado en Chernoff, T., et al., 2023).",
-      "resumen_atlas": "Documenta efectos somáticos transitorios y temporales durante la fase aguda, incluyendo temblor, llanto repentino, entumecimiento, parestesia y dilatación pupilar."
+      "referencia": "Carhart-Harris, R. L., et al., 2012. Neural correlates of the psychedelic state as determined by fMRI with psilocybin. *Proc Natl Acad Sci USA*.",
+      "resumen_atlas": "Demuestra que la psilocibina reduce el flujo sanguíneo en el hipotálamo, afectando la termorregulación y contribuyendo a síntomas somáticos como escalofríos o piloerección. Ofrece base neurobiológica para comprender la hiperactividad autonómica durante la fase aguda."
     },
     {
-      "referencia": "Chernoff, T., et al., 2023. Experiencias psicodélicas: fenomenología, potenciales terapéuticos y modelos explicativos. Vertex Rev Arg Psiquiatr.",
-      "resumen_atlas": "Incluye las transformaciones o distorsiones de la imagen corporal y el sentido del cuerpo como parte de las alteraciones sensoriales y perceptuales."
+      "referencia": "Watts, R. & Luoma, J. B., 2020. The use of the psychological flexibility model to support psychedelic assisted therapy. *J Context Behav Sci*.",
+      "resumen_atlas": "Propone que las sensaciones físicas intensas inducidas por la psilocibina pueden ser usadas terapéuticamente mediante el modelo ACE (Aceptar, Conectar, Encarnar), promoviendo la aceptación emocional a través del cuerpo."
     },
     {
-      "referencia": "Elk, M. & Yadenb, D., 2022. Mecanismos farmacológicos, neurales y psicológicos subyacentes a los psicodélicos: una revisión crítica. Revisiones de neurociencia y biocomportamiento.",
-      "resumen_atlas": "Menciona el malestar corporal (bodily discomfort) como un componente de las experiencias desafiantes que pueden surgir, enfatizando la necesidad de un entorno seguro."
+      "referencia": "Kopra, E., et al., 2022. Adverse experiences leading to emergency medical treatment after the use of hallucinogenic mushrooms. *Journal of Substance Use*.",
+      "resumen_atlas": "Reporta síntomas físicos como desmayos, dificultad respiratoria o convulsiones tras el uso de psilocibina, subrayando la necesidad clínica de diferenciar entre malestar somático esperable y signos de alerta que requieren intervención urgente."
+    },
+    {
+      "referencia": "JAMA Network Open, 2024. Acute Adverse Effects of Therapeutic Doses of Psilocybin. *JAMA Netw Open*.",
+      "resumen_atlas": "Un metaanálisis de ECA muestra una incidencia significativa de efectos somáticos agudos como náuseas, cefaleas y elevación de la presión arterial. Estos hallazgos ayudan a normalizar estos síntomas y establecer criterios clínicos de intervención."
     }
   ]
 };

@@ -19,75 +19,156 @@
     
     // --- SECCIÓN 1: DATOS Y TEXTOS NARRATIVOS ---
 
-    const ordenDominios = ["visual", "cognitivo", "emocional", "existencial", "somatico"];
+    const ordenDominios = ["visual", "cognitivo", "emocional", "autoprocesamiento", "somatico"];
 
     const textoIntroduccion = `
-      <p>Este atlas es una herramienta clínica diseñada para acompañarte antes, durante y después de cada sesión asistida con psilocibina. No es un texto teórico ni una guía espiritual: es un instrumento operativo que traduce la complejidad de la experiencia en lenguaje clínico.</p>
-      <p>Su propósito es reducir la incertidumbre, aumentar la seguridad y ofrecer marcos claros de interpretación. Cada página busca ayudarte a identificar fenómenos, decidir cuándo intervenir, y reconocer cuándo basta con sostener.</p>
-      <p>Este documento no reemplaza tu criterio clínico: lo organiza. Te ofrece un mapa estructurado para navegar lo desconocido con rigor, claridad y ética.</p>
+      <p>Este atlas es una herramienta clínica. Está diseñado para usarse antes, durante y después de una sesión con psilocibina.</p>
+      <p>Organiza lo que puede ocurrir —fenómenos observables, riesgos, respuestas posibles— y te guía para decidir si sostener, intervenir o escalar, sin suplantar tu criterio.</p>
+      <p>No elimina la incertidumbre: la hace manejable. Te da lenguaje, estructura y trazabilidad para actuar con claridad cuando más se necesita.</p>
     `;
     
     const textoCuándoUsar = `
-      <p>Este atlas no es para leerlo una vez. Es una herramienta activa que acompaña tu práctica antes, durante y después de cada sesión.</p>
+      <p>Este atlas se usa en cada fase del proceso, no se lee una sola vez.</p>
       <ul>
-        <li><strong>En la preparación:</strong> Úsalo para psicoeducar al paciente, establecer expectativas realistas y anticipar riesgos según su perfil clínico.</li>
-        <li><strong>Durante la sesión:</strong> Úsalo para interpretar lo que observas, elegir si intervenir o sostener, y evitar confundir un proceso profundo con una crisis clínica.</li>
-        <li><strong>En la integración:</strong> Úsalo para traducir lo vivido en lenguaje comprensible, anclar los insights y guiar prácticas que consoliden el cambio.</li>
+        <li><strong>Preparación:</strong> Educa con claridad, alinea expectativas y previene riesgos según el perfil del participante.</li>
+        <li><strong>Sesión:</strong> Nombra lo que ocurre, define si sostener o intervenir y evita sobreinterpretar lo que es intenso pero no patológico.</li>
+        <li><strong>Integración:</strong> Aterriza lo vivido en acciones claras y refuerza aprendizajes que sí puedan sostenerse en el tiempo.</li>
       </ul>
-      <p class="highlight">Este no es un documento de lectura pasiva. Es un mapa clínico para navegar lo desconocido.</p>
+      <p class="highlight">Esto no es para leer y ya. Es una herramienta para decidir y documentar con criterio.</p>
     `;
 
     const textoQuéHacer = `
-      <p>No todo fenómeno cabe en una casilla. Si lo que observas no está descrito, no significa que estés en peligro. Significa que estás frente a lo vivo.</p>
+      <p>No todo fenómeno cabe en una categoría. Si lo que observas no está descrito, no asumas peligro ni seguridad: verifica signos de riesgo y actúa según criterios.</p>
       <p>En esos casos:</p>
       <ol>
-        <li><strong>Sostén antes de intervenir.</strong> Si no hay signos de riesgo, tu presencia es suficiente.</li>
-        <li><strong>Anota con detalle.</strong> Qué dijo. Qué viste. Qué cambió en su cuerpo. Esa información es valiosa para ti y para el campo.</li>
-        <li><strong>Consulta si hay duda.</strong> Usa esta observación para profundizar en supervisión o mentoría.</li>
+        <li><strong>Sostén si no hay riesgo.</strong> Presencia calmada, contacto mínimo y monitoreo continuo.</li>
+        <li><strong>Registra con trazabilidad.</strong> Hora y minuto, palabras literales del participante, observables somáticos y acción tomada. Sirve para integración y supervisión.</li>
+        <li><strong>Consulta de forma estructurada.</strong> Resume el caso con fenómeno, contexto, moduladores y respuesta; solicita supervisión o mentoría.</li>
       </ol>
-      <p class="highlight">Recuerda: Lo desconocido no siempre es patológico. A veces es solo inédito.</p>
+      <p class="highlight">Lo desconocido no es sinónimo de patología. Es una hipótesis abierta que requiere observación y método.</p>
     `;
     
     const textoCómoUsar = `
-      <p>Este recurso está diseñado para el clínico. Pero puedes usarlo con el paciente, si lo haces con cuidado.</p>
-      <p>Evita dar nombres que sugieran diagnóstico o espiritualidad cerrada. En su lugar, nombra procesos con lenguaje neutral, como “Esto suele pasar cuando el cerebro se reorganiza” o “A veces la mente necesita descomponerse para ver algo nuevo”.</p>
-      <p>Recuerda que los psicodélicos aumentan la sugestionabilidad. Lo que digas se puede convertir en verdad interna. Usa este poder con ética. Y si no sabes qué está pasando, dilo. Eso también es sostener.</p>
+      <p>Este recurso está pensado para tu práctica clínica. Puedes compartir fragmentos con el participante si mantienes un lenguaje descriptivo y no directivo.</p>
+      <p>Evita etiquetas diagnósticas o metáforas cerradas. Prefiere descripciones funcionales, por ejemplo: “Esto puede ocurrir cuando el cerebro reorganiza prioridades” o “A veces la mente se flexibiliza para ver algo que antes no veía”.</p>
+      <p>Recuerda: la sugestionabilidad aumenta. Tus palabras pueden fijar interpretaciones. Usa un tono neutral, verifica comprensión y, si hay duda real, declárala y documenta el plan de observación en vez de improvisar.</p>
     `;
 
     const textosDominio = {
-      "visual": "Lo que el paciente <strong>ve</strong>. Desde patrones geométricos hasta la 'respiración' de las paredes. Aquí se aprende a no sobre-intervenir, solo a validar la experiencia.",
-      "cognitivo": "Lo que el paciente <strong>piensa</strong>. Bucles, 'insights' acelerados y la distorsión del tiempo. El reto es guiar el proceso sin interrumpir el flujo del pensamiento.",
-      "emocional": "Lo que el paciente <strong>siente</strong>. La emergencia de miedo, culpa, ansiedad o euforia. Este es el núcleo del trabajo terapéutico y el terreno de la intervención activa.",
-      "existencial": "Lo que el paciente <strong>es</strong> (o deja de ser). La disolución del yo y la unidad mística. El terreno más profundo, transformador y potencialmente desorientador.",
-      "somatico": "Lo que el paciente <strong>libera</strong>. Temblores, opresión torácica y catarsis física. La intervención aquí se centra en la seguridad y la permisión de la memoria corporal."
+      "visual": "Lo que el paciente <strong>ve</strong>. Desde formas fractales hasta figuras emergentes o paredes que 'respiran'. Aquí se aprende a acompañar sin intervenir, validando la percepción como parte del proceso.",
+      "cognitivo": "Lo que el paciente <strong>piensa</strong>. Ideas rápidas, bucles mentales e intuiciones súbitas. El reto es sostener el flujo del pensamiento sin dirigirlo, dejando que se reorganice con libertad.",
+      "emocional": "Lo que el paciente <strong>siente</strong>. La emergencia de emociones intensas como el miedo, la culpa o la dicha puede señalar tanto bloqueo como apertura. Aquí se juega el corazón del proceso terapéutico.",
+      "autoprocesamiento": "Lo que el paciente <strong>transforma</strong> en su relación consigo mismo. Silencio de la autocrítica, aceptación del dolor y reescritura del yo. Aquí no se escapa del malestar: se aprende a habitarlo con dignidad.",
+      "somatico": "Lo que el paciente <strong>manifiesta</strong> en el cuerpo. Náuseas, oleadas térmicas o palpitaciones intensas. Aquí se encarna lo emocional y se regula lo que el lenguaje no alcanza a nombrar."
+
     };
-    
+
     const glosarioData = [
-      {
-        "termino": "Moduladores de riesgo",
-        "definicion": "Variables que modifican la respuesta (dosis, set, setting, historia clínica, medicación)."
-      },
-      {
-        "termino": "Banderas rojas",
-        "definicion": "Indicadores que sugieren posible complicación médica o psiquiátrica."
-      },
-      {
-        "termino": "Frase de normalización",
-        "definicion": "Enunciado verbal breve que ayuda al paciente a integrar y aceptar el fenómeno sin pánico."
-      },
-      {
-        "termino": "Manual de intervención",
-        "definicion": "Protocolo de tres niveles (sostén, anclaje, reencuadre) y un nivel de emergencia (escalamiento)."
-      },
-      {
-        "termino": "REBUS (Relaxed Beliefs Under Psychedelics)",
-        "definicion": "Modelo neurobiológico que postula que los psicodélicos 'relajan' las creencias o predicciones (priores) de alto nivel del cerebro, permitiendo un mayor flujo de información."
-      },
-      {
-        "termino": "DMN (Red de Modo por Defecto)",
-        "definicion": "Red cerebral asociada con el pensamiento autorreferencial (el 'yo' narrativo). Su desactivación se correlaciona con la disolución del ego."
-      }
-    ];
+    {
+      "termino": "Anclaje",
+      "definicion": "Intervención mínima para reconectar al paciente con el cuerpo o el entorno, utilizando frases breves o estímulos sensoriales. Segundo nivel del manual de intervención."
+    },
+    {
+      "termino": "Apertura a la experiencia",
+      "definicion": "Rasgo de personalidad asociado con curiosidad, flexibilidad y sensibilidad estética. Se incrementa tras experiencias psicodélicas profundas como OBN o avance emocional."
+    },
+    {
+      "termino": "Autoesquema",
+      "definicion": "Conjunto de creencias sobre el yo. Bajo psilocibina puede flexibilizarse y reconfigurarse, lo que permite revisar narrativas personales rígidas."
+    },
+    {
+      "termino": "Avance emocional",
+      "definicion": "Liberación emocional que ocurre al atravesar un estado aversivo sin evitarlo. Predice mejoras clínicas robustas cuando se contiene adecuadamente."
+    },
+    {
+      "termino": "Bypass espiritual",
+      "definicion": "Estrategia evasiva donde se usa lenguaje o creencias espirituales para evitar el contacto real con el dolor, el conflicto o la responsabilidad."
+    },
+    {
+      "termino": "Conectividad desacoplada",
+      "definicion": "Separación temporal de la comunicación entre regiones cerebrales (como mPFC y PCC), facilitando la desorganización del yo narrativo."
+    },
+    {
+      "termino": "Conocimiento saber-cómo",
+      "definicion": "Forma de conocimiento experiencial que permite actuar con sabiduría emocional. Se manifiesta en frases como 'aprendí a estar con mi ansiedad sin huir'."
+    },
+    {
+      "termino": "Contención silenciosa",
+      "definicion": "Presencia activa y tranquila del terapeuta, sin necesidad de intervención verbal. Proporciona seguridad emocional y regula la excitación del paciente."
+    },
+    {
+      "termino": "Criterios de escalamiento",
+      "definicion": "Signos clínicos observables que indican la necesidad de pasar a una intervención activa. Ejemplo: ideación suicida, agitación severa, disociación prolongada."
+    },
+    {
+      "termino": "Cualidad noética",
+      "definicion": "Sensación de que lo vivido es absolutamente verdadero. Puede facilitar insights valiosos o generar creencias injustificadas si no se integra críticamente."
+    },
+    {
+      "termino": "DMN (Red de Modo por Defecto)",
+      "definicion": "Red cerebral asociada con el pensamiento autorreferencial. Su desactivación correlaciona con la disolución del ego y la reconfiguración del autoesquema."
+    },
+    {
+      "termino": "Encarnar (ACE)",
+      "definicion": "Parte del modelo ACE. Implica sentir las emociones en el cuerpo sin juicio ni evitación, facilitando la integración y la regulación emocional."
+    },
+    {
+      "termino": "Entropía cerebral",
+      "definicion": "Estado de flexibilidad neuronal donde se relajan las jerarquías rígidas del pensamiento. Permite nuevas conexiones mentales y perspectivas."
+    },
+    {
+      "termino": "Factores de riesgo",
+      "definicion": "Variables que pueden amplificar o modular una experiencia difícil. Incluyen dosis, historia clínica, preparación emocional y entorno."
+    },
+    {
+      "termino": "Flexibilidad psicológica",
+      "definicion": "Capacidad de actuar según valores personales incluso en presencia de malestar. Es un mediador clave del cambio terapéutico con psicodélicos."
+    },
+    {
+      "termino": "Frase de normalización",
+      "definicion": "Enunciado breve que valida lo que el paciente experimenta y reduce la percepción de peligro. Ejemplo: 'Lo que sientes ahora es parte del proceso, estás a salvo'."
+    },
+    {
+      "termino": "Hiperpriores desadaptativos",
+      "definicion": "Creencias rígidas de alto nivel que el cerebro usa para predecir la realidad. Bajo psilocibina, pueden relajarse, permitiendo insights y reestructuración."
+    },
+    {
+      "termino": "Indicadores postsesión",
+      "definicion": "Signos que aparecen luego de la sesión y pueden señalar integración saludable o complicaciones clínicas. Incluyen persistencia de angustia, disociación o creencias rígidas."
+    },
+    {
+      "termino": "Insight psicológico",
+      "definicion": "Comprensión súbita y significativa sobre patrones emocionales o conductuales. Bajo psicodélicos, se experimenta con fuerte carga emocional y convicción."
+    },
+    {
+      "termino": "Integración",
+      "definicion": "Proceso terapéutico de traducir lo vivido durante la sesión en cambios duraderos. Implica reflexión, conexión emocional y acción comprometida."
+    },
+    {
+      "termino": "Manual de intervención",
+      "definicion": "Guía que ordena las acciones clínicas en cuatro niveles: sostén, anclaje, reencuadre y escalamiento. Se adapta a la intensidad y dirección del proceso."
+    },
+    {
+      "termino": "Matriz de riesgo",
+      "definicion": "Clasificación que estima la necesidad de intervención clínica según intensidad del fenómeno y vulnerabilidad del paciente (bajo, medio, alto)."
+    },
+    {
+      "termino": "REBUS (Relaxed Beliefs Under Psychedelics)",
+      "definicion": "Modelo que describe cómo los psicodélicos relajan las creencias rígidas (hiperpriores) permitiendo reconfiguración cognitiva y emocional."
+    },
+    {
+      "termino": "Reencuadre",
+      "definicion": "Intervención verbal que ayuda a reinterpretar una experiencia difícil desde una narrativa segura o significativa. Tercer nivel del manual."
+    },
+    {
+      "termino": "Sostén",
+      "definicion": "Presencia sin acción. Primer nivel del manual. Consiste en acompañar sin intervenir para sostener el proceso desde la calma y la conexión humana."
+    },
+    {
+      "termino": "Shock ontológico",
+      "definicion": "Desorganización que ocurre cuando la experiencia desafía la realidad tal como la conocíamos. Requiere encuadre cuidadoso para evitar disociación o grandiosidad."
+    }
+  ];
 
 
     // --- SECCIÓN 2: FUNCIONES DE AYUDA PARA RENDERIZAR ---
@@ -140,40 +221,47 @@
             
             <div class="grid-col">
               <h3>Fenomenología</h3>
-              <h4>Lo que el Paciente Reporta</h4>
+              <h4>Paciente</h4>
               <p>${efecto.fenomenologia.descripcion_paciente}</p>
-              <h4>Signos Observables (Para ti)</h4>
+              <h4>Observables</h4>
               <p>${efecto.fenomenologia.signos_observables}</p>
             </div>
             
             <div class="grid-col">
-              <h3>Neurobiología Aplicada</h3>
-              <h4>Mecanismo Hipotético</h4>
+              <h3>Neurobiología aplicada</h3>
+              <h4>Mecanismo probable</h4>
               <p>${efecto.neurobiologia_aplicada.mecanismo_hipotetico}</p>
-              <h4>Frase de Normalización (Tu Herramienta)</h4>
+              <h4>Normalización (Modelo)</h4>
               <p><em>"${efecto.neurobiologia_aplicada.frase_de_normalizacion}"</em></p>
             </div>
             
             <div class="grid-col">
               <h3>Riesgo e Intervención</h3>
               <div class="matriz-riesgo-box">
-                <h4 class="riesgo-titulo">Matriz de Riesgo: <span>${efecto.matriz_riesgo.split(' ')[0]}</span></h4>
+                <h4 class="riesgo-titulo">Nivel de Riesgo: <span>${efecto.matriz_riesgo.split(' ')[0]}</span></h4>
                 <p>${efecto.matriz_riesgo.split(' (Justificación: ')[1].slice(0, -1)}</p>
+                <p class="micro-etiqueta"><strong>* usa intervención gradual por niveles.</strong></p>
               </div>
-              <h4>Moduladores de Riesgo</h4>
+              <h4>Factores de Riesgo</h4>
               ${mapearLista([
                 `<strong>Dosis:</strong> ${efecto.moduladores_riesgo.dosis}`,
                 `<strong>Historial:</strong> ${efecto.moduladores_riesgo.historial.join(', ')}`,
                 `<strong>Set & Setting:</strong> ${efecto.moduladores_riesgo.set_setting.join(', ')}`
               ])}
-              <h4>Banderas Rojas (Diag. Diferencial)</h4>
+              <h4>Indicadores postsesión</h4>
               ${mapearLista(efecto.banderas_rojas_diagnostico_diferencial)}
+              ${
+                efecto.banderas_rojas_diagnostico_diferencial &&
+                efecto.banderas_rojas_diagnostico_diferencial[0] !== "NA"
+                  ? `<p class="micro-etiqueta"><strong>* Si alguno de estos indicadores aparece o se mantiene tras la sesión, considera seguimiento clínico.</strong></p>`
+                  : `<p class="micro-etiqueta">* No se identificaron indicadores post-sesión relevantes para este efecto.</p>`
+              }
             </div>
             
             <div class="ficha-manual">
               <h3>Manual de Intervención</h3>
               <div class="bloque-icono">
-                <div class="icono">🕊️</div>
+                <div class="icono">✦</div>
                 <div>
                   <h4>Sostén (No Intervención)</h4>
                   <p class="micro-etiqueta">Frase(s) Modelo:</p>
@@ -181,7 +269,7 @@
                 </div>
               </div>
               <div class="bloque-icono">
-                <div class="icono">⚓</div>
+                <div class="icono">⸱</div>
                 <div>
                   <h4>Anclaje (Intervención Mínima)</h4>
                   <p class="micro-etiqueta">Acción / Frase(s) Modelo:</p>
@@ -189,7 +277,7 @@
                 </div>
               </div>
               <div class="bloque-icono">
-                <div class="icono">🔁</div>
+                <div class="icono">⟳</div>
                 <div>
                   <h4>Re-encuadre (Intervención Activa)</h4>
                   <p class="micro-etiqueta">Frase(s) Modelo:</p>
@@ -198,7 +286,7 @@
                 </div>
               </div>
               <div class="bloque-icono">
-                <div class="icono">🚨</div>
+                <div class="icono">▲</div>
                 <div>
                   <h4>Escalamiento</h4>
                   <p>${efecto.criterios_de_escalamiento.criterio_observable_para_escalar} <strong>Acción:</strong> ${efecto.criterios_de_escalamiento.accion_de_escalamiento}</p>
@@ -238,7 +326,7 @@
       
       return `
         <div class="pagina-a4 glossary-a4">
-          <h1>Glosario de Términos Clínicos</h1>
+          <h1>Glosario de Términos</h1>
           ${itemsHtml}
         </div>
       `;
@@ -262,6 +350,15 @@
             <li>Nivel 3 (Anclar): ¿El paciente está en un 'bucle' o pánico? (Usar 'Anclaje').</li>
             <li>Nivel 4 (Escalar): ¿Hay riesgo físico o agitación severa? (Revisar 'Banderas Rojas').</li>
           </ul>
+          <h3>Checklist de Integración (Post-vuelo)</h3>
+          <ul>
+            <li>Verificar estabilidad física y emocional antes del cierre de la sesión.</li>
+            <li>Registrar observaciones clínicas y fenómenos destacados (para supervisión o integración).</li>
+            <li>Programar contacto de seguimiento (24-72 h) para evaluar estado emocional y sueño.</li>
+            <li>Proponer práctica de integración: journaling, respiración consciente o diálogo terapéutico.</li>
+            <li>Identificar señales de alerta post-agudas: ansiedad persistente, confusión o retraimiento social (considerar derivación).</li>
+          </ul>
+
         </div>
       `;
     }
@@ -281,8 +378,8 @@
       // 1. Renderizar Portada (ACTUALIZADA CON AUTOR)
       htmlCompleto += `
         <div class="pagina-a4 portada-a4">
-          <h1>Atlas Visual de Efectos Psicodélicos</h1>
-          <h2>¿Qué puede pasar durante una sesión?</h2>
+          <h1>Atlas-Manual de Efectos Psicodélicos</h1>
+          <h2>¿Qué puede pasar durante una sesión y cómo intervenir?</h2>
           <div class="autor">AUTOR: <strong>Dr. HOPE</strong></div>
         </div>
       `;
@@ -327,11 +424,11 @@
 
       // 6. AÑADIDO: Renderizar CTA de Cierre
       htmlCompleto += `
-        <div class="pagina-a4 cta-a4">
-          <div class="cta-contenido">
-            <h2>¿Quieres aprender a aplicar este protocolo en tu práctica clínica?</h2>
-            <p>Accede al protocolo donde Dr. HOPE explica el modelo completo de intervención y supervisión clínica con psilocibina.</p>
-            <a href="https://app.ecoretreatmountain.com/minicurso-psilocibinclinica" class="cta-boton" target="_blank">Acceder al curso</a>
+      <div class="pagina-a4 cta-a4">
+        <div class="cta-contenido">
+          <h2>Perfecciona tu criterio clínico</h2>
+          <p>Domina el protocolo de intervención y supervisión con psilocibina. Formación aplicada para terapeutas y facilitadores que buscan rigor, seguridad y resultados reales.</p>
+          <a href="https://app.ecoretreatmountain.com/curso/registro" class="cta-boton" target="_blank">Acceder al programa</a>
           </div>
         </div>
       `;

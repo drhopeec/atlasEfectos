@@ -77,7 +77,7 @@ Este proyecto se distribuye bajo la **Licencia MIT**, lo que permite su uso y ad
 
 - 🎥 **Curso: Psilocibina Clínica – Mountain 2025**  
   Accede al protocolo completo y recursos complementarios:  
-  👉 [app.ecoretreatmountain.com/minicurso-psilocibinclinica](https://app.ecoretreatmountain.com/minicurso-psilocibinclinica)
+  👉 [app.ecoretreatmountain.com/curso/registro](https://app.ecoretreatmountain.com/curso/registro)
 
 ---
 
