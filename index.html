@@ -23,35 +23,37 @@
 
     const textoIntroduccion = `
       <p>Este atlas es una herramienta clínica. Está diseñado para usarse antes, durante y después de una sesión con psilocibina.</p>
-      <p>Organiza lo que puede ocurrir —fenómenos observables, riesgos, respuestas posibles— y te guía para decidir si sostener, intervenir o escalar, sin suplantar tu criterio.</p>
-      <p>No elimina la incertidumbre: la hace manejable. Te da lenguaje, estructura y trazabilidad para actuar con claridad cuando más se necesita.</p>
+      <p>Organiza lo que puede ocurrir —fenómenos observables, riesgos, respuestas posibles— y te guía para decidir si sostener, intervenir o escalar, sin reemplazar tu criterio.</p>
+      <p>No elimina la incertidumbre, pero la vuelve manejable. Te da lenguaje, estructura y método para actuar con claridad cuando más se necesita.</p>
     `;
+
     
     const textoCuándoUsar = `
-      <p>Este atlas se usa en cada fase del proceso, no se lee una sola vez.</p>
+      <p>Este manual se usa en cada fase del proceso. Por su profundidad, no basta con leerlo una sola vez.</p>
       <ul>
-        <li><strong>Preparación:</strong> Educa con claridad, alinea expectativas y previene riesgos según el perfil del participante.</li>
-        <li><strong>Sesión:</strong> Nombra lo que ocurre, define si sostener o intervenir y evita sobreinterpretar lo que es intenso pero no patológico.</li>
-        <li><strong>Integración:</strong> Aterriza lo vivido en acciones claras y refuerza aprendizajes que sí puedan sostenerse en el tiempo.</li>
+        <li><strong>Preparación:</strong> Revísalo junto al participante. Ayuda a clarificar, alinear expectativas y anticipar riesgos.</li>
+        <li><strong>Sesión:</strong> Identifica lo que ocurre, consulta el atlas y decide si sostener o intervenir. Evita invalidar la experiencia o confundir intensidad con patología.</li>
+        <li><strong>Integración:</strong> Aterriza lo vivido en acciones concretas. Refuerza aprendizajes y acompaña los cambios que siguen después de la sesión.</li>
       </ul>
-      <p class="highlight">Esto no es para leer y ya. Es una herramienta para decidir y documentar con criterio.</p>
+      <p class="highlight">Esto no es para “leer y ya”. Es una herramienta que merece ser estudiada, úsala en sesión, cárgala en ChatGPT y pídele que te ayude a sacarle el jugo.</p>
     `;
 
     const textoQuéHacer = `
-      <p>No todo fenómeno cabe en una categoría. Si lo que observas no está descrito, no asumas peligro ni seguridad: verifica signos de riesgo y actúa según criterios.</p>
-      <p>En esos casos:</p>
+      <p>Aquí están descritos los principales efectos con base en evidencia neurofenomenológica y observación clínica. Si lo que observas no aparece aquí, cuéntamelo. Puede ser parte de una próxima versión.</p>
+      <p>Cuando te enfrentes a fenómenos no categorizados:</p>
       <ol>
-        <li><strong>Sostén si no hay riesgo.</strong> Presencia calmada, contacto mínimo y monitoreo continuo.</li>
-        <li><strong>Registra con trazabilidad.</strong> Hora y minuto, palabras literales del participante, observables somáticos y acción tomada. Sirve para integración y supervisión.</li>
-        <li><strong>Consulta de forma estructurada.</strong> Resume el caso con fenómeno, contexto, moduladores y respuesta; solicita supervisión o mentoría.</li>
+        <li><strong>Aplica sostén si no hay riesgo. Reutiliza las frases y adáptalas a tu estilo.</strong> Quédate presente, interviene lo mínimo, observa y registra si es pertinente.</li>
+        <li><strong>Registra con trazabilidad clínica.</strong> Anota hora, minuto, música, palabras literales, observables físicos como posturas o tono de voz, y lo que decidiste hacer.</li>
+        <li><strong>Consulta con método.</strong> Resume en cuatro datos: fenómeno (lo que ves), contexto (lo que lo rodea), moduladores (lo que lo intensifica o atenúa), y respuesta. Si lo necesitas, pide supervisión o mentoría.</li>
       </ol>
-      <p class="highlight">Lo desconocido no es sinónimo de patología. Es una hipótesis abierta que requiere observación y método.</p>
+      <p class="highlight">Lo que no entiendes aún no es peligroso: es incierto. Y lo incierto se maneja con método, no con improvisación.</p>
     `;
+
     
     const textoCómoUsar = `
-      <p>Este recurso está pensado para tu práctica clínica. Puedes compartir fragmentos con el participante si mantienes un lenguaje descriptivo y no directivo.</p>
-      <p>Evita etiquetas diagnósticas o metáforas cerradas. Prefiere descripciones funcionales, por ejemplo: “Esto puede ocurrir cuando el cerebro reorganiza prioridades” o “A veces la mente se flexibiliza para ver algo que antes no veía”.</p>
-      <p>Recuerda: la sugestionabilidad aumenta. Tus palabras pueden fijar interpretaciones. Usa un tono neutral, verifica comprensión y, si hay duda real, declárala y documenta el plan de observación en vez de improvisar.</p>
+      <p>Este manual está hecho para tu práctica clínica. Puedes usarlo durante la preparación si mantienes un lenguaje descriptivo y no directivo.</p>
+      <p>Evita etiquetas diagnósticas o metáforas cerradas. Prefiere descripciones funcionales, como: “Esto puede pasar cuando el cerebro reorganiza prioridades” o “A veces la mente se flexibiliza para ver lo que antes no podía ver”.</p>
+      <p>Recuerda: la sugestionabilidad aumenta. Tus palabras pueden fijar interpretaciones. Usa un tono neutral, verifica comprensión y, si hay duda, nómbrala y registra. No improvises.</p>
     `;
 
     const textosDominio = {
@@ -426,9 +428,9 @@
       htmlCompleto += `
       <div class="pagina-a4 cta-a4">
         <div class="cta-contenido">
-          <h2>Perfecciona tu criterio clínico</h2>
-          <p>Domina el protocolo de intervención y supervisión con psilocibina. Formación aplicada para terapeutas y facilitadores que buscan rigor, seguridad y resultados reales.</p>
-          <a href="https://app.ecoretreatmountain.com/curso/registro" class="cta-boton" target="_blank">Acceder al programa</a>
+          <h2>¿Te sirvió este atlas?</h2>
+          <p>Este curso baja todo a tierra. Explica cada fase con claridad clínica y un método replicable. Ideal si no quieres improvisar.</p>
+          <a href="https://app.ecoretreatmountain.com/curso/registro" class="cta-boton" target="_blank">Sí, quiero aplicarlo</a>
           </div>
         </div>
       `;
