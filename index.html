@@ -21,40 +21,35 @@
 
     const ordenDominios = ["visual", "cognitivo", "emocional", "autoprocesamiento", "somatico"];
 
+
+
     const textoIntroduccion = `
-      <p>Este atlas es una herramienta clínica. Está diseñado para usarse antes, durante y después de una sesión con psilocibina.</p>
-      <p>Organiza lo que puede ocurrir —fenómenos observables, riesgos, respuestas posibles— y te guía para decidir si sostener, intervenir o escalar, sin reemplazar tu criterio.</p>
-      <p>No elimina la incertidumbre, pero la vuelve manejable. Te da lenguaje, estructura y método para actuar con claridad cuando más se necesita.</p>
-    `;
-
-    
-    const textoCuándoUsar = `
-      <p>Este manual se usa en cada fase del proceso. Por su profundidad, no basta con leerlo una sola vez.</p>
-      <ul>
-        <li><strong>Preparación:</strong> Revísalo junto al participante. Ayuda a clarificar, alinear expectativas y anticipar riesgos.</li>
-        <li><strong>Sesión:</strong> Identifica lo que ocurre, consulta el atlas y decide si sostener o intervenir. Evita invalidar la experiencia o confundir intensidad con patología.</li>
-        <li><strong>Integración:</strong> Aterriza lo vivido en acciones concretas. Refuerza aprendizajes y acompaña los cambios que siguen después de la sesión.</li>
-      </ul>
-      <p class="highlight">Esto no es para “leer y ya”. Es una herramienta que merece ser estudiada, úsala en sesión, cárgala en ChatGPT y pídele que te ayude a sacarle el jugo.</p>
-    `;
-
-    const textoQuéHacer = `
-      <p>Aquí están descritos los principales efectos con base en evidencia neurofenomenológica y observación clínica. Si lo que observas no aparece aquí, cuéntamelo. Puede ser parte de una próxima versión.</p>
-      <p>Cuando te enfrentes a fenómenos no categorizados:</p>
-      <ol>
-        <li><strong>Aplica sostén si no hay riesgo. Reutiliza las frases y adáptalas a tu estilo.</strong> Quédate presente, interviene lo mínimo, observa y registra si es pertinente.</li>
-        <li><strong>Registra con trazabilidad clínica.</strong> Anota hora, minuto, música, palabras literales, observables físicos como posturas o tono de voz, y lo que decidiste hacer.</li>
-        <li><strong>Consulta con método.</strong> Resume en cuatro datos: fenómeno (lo que ves), contexto (lo que lo rodea), moduladores (lo que lo intensifica o atenúa), y respuesta. Si lo necesitas, pide supervisión o mentoría.</li>
-      </ol>
-      <p class="highlight">Lo que no entiendes aún no es peligroso: es incierto. Y lo incierto se maneja con método, no con improvisación.</p>
+      <p>Este atlas está hecho para <strong>darle nombre a lo que pasa</strong> y ofrecer <strong>criterios concretos</strong> para intervenir —o no— con claridad.</p>
+      <p>Arrancó cuando encontré un índice de efectos subjetivos y noté que lo "inefable" tiene orden y, muchas veces, mecanismo. Lo conecté con ciencia, lo probé en sesiones reales y lo sigo afinando. Así nació este atlas-manual: no solo describe, también ayuda a decidir.</p>
+      <p>Encontrarás <strong>efectos frecuentes</strong>, explicaciones neurobiológicas, frases guía, factores de riesgo y criterios de intervención. Todo pensado para la práctica del terapeuta o facilitador que necesita un marco confiable.</p>
+      <p>Este atlas se apoya en tres modelos clave —ACE, EMBARK y PHRI— no como teoría de relleno, sino como los pilares para tomar decisiones clínicas con método.</p>
     `;
 
     
     const textoCómoUsar = `
-      <p>Este manual está hecho para tu práctica clínica. Puedes usarlo durante la preparación si mantienes un lenguaje descriptivo y no directivo.</p>
-      <p>Evita etiquetas diagnósticas o metáforas cerradas. Prefiere descripciones funcionales, como: “Esto puede pasar cuando el cerebro reorganiza prioridades” o “A veces la mente se flexibiliza para ver lo que antes no podía ver”.</p>
-      <p>Recuerda: la sugestionabilidad aumenta. Tus palabras pueden fijar interpretaciones. Usa un tono neutral, verifica comprensión y, si hay duda, nómbrala y registra. No improvises.</p>
+      <p>Te explico cómo está estructurado el manual y cómo sacarle provecho.</p>
+
+      <p>Cada <strong>efecto</strong> se presenta en una ficha con cinco bloques clave:</p>
+      <ul>
+        <li><strong>Experiencia fenomenológica:</strong> lo que el paciente reporta y lo que el terapeuta puede observar.</li>
+        <li><strong>Explicación neurobiológica:</strong> mecanismo hipotético del efecto y una <em>frase de normalización</em> para contener sin sugestionar.</li>
+        <li><strong>Riesgo e intervención:</strong> nivel de riesgo, <em>moduladores</em> (dosis, historia, set/setting), <em>banderas rojas</em> y <em>indicadores post-sesión</em> que requieren consulta profesional.</li>
+        <li><strong>Manual de intervención:</strong> cuatro pasos operativos:
+          <em>Sostén</em> (presencia),
+          <em>Anclaje</em> (volver al cuerpo y al entorno),
+          <em>Reencuadre</em> (intervención activa y breve),
+          y <em>Escalamiento</em> (Intervención activa que puede llegar al uso de fármacos "protocolo fuera del alcance de este documento").</li>
+        <li><strong>Integración post-sesión:</strong> tema a explorar y práctica sugerida para procesar el efecto.</li>
+      </ul>
+
+      <p><strong>Uso recomendado:</strong> antes de la sesión revisa los efectos probables; durante, consulta la ficha para decidir en ≤30 s entre sostener, anclar o reencuadrar; después, usa la sección de integración para traducir la experiencia en acciones concretas.</p>
     `;
+
 
     const textosDominio = {
       "visual": "Lo que el paciente <strong>ve</strong>. Desde formas fractales hasta figuras emergentes o paredes que 'respiran'. Aquí se aprende a acompañar sin intervenir, validando la percepción como parte del proceso.",
@@ -174,12 +169,32 @@
 
 
     // --- SECCIÓN 2: FUNCIONES DE AYUDA PARA RENDERIZAR ---
+    
+    // helper: crear slug para ids
+    function slugify(text) {
+      return text.toString().toLowerCase().trim()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-');
+    }
 
     function mapearLista(items) {
       if (!items || items.length === 0) return '<p>NA</p>';
       return `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
     }
 
+    // Ajuste: generarSeccion ahora admite id opcional
+    function generarSeccion(texto, titulo, id = '') {
+      const idAttr = id ? ` id="${id}"` : '';
+      return `
+        <div class="pagina-a4 section-a4"${idAttr}>
+          <h1>${titulo}</h1>
+          ${texto}
+        </div>
+      `;
+    }
+
+    // Ajuste: generarHtmlReferencias añade id único por dominio
     function generarHtmlReferencias(dominios = []) {
       if (typeof referenciasData === 'undefined') return ''; 
       const referenciasUnicas = new Set();
@@ -201,8 +216,10 @@
         </li>
       `).join('');
 
+      const dominioId = 'referencias-' + slugify(dominios[0]);
+
       return `
-        <div class="pagina-a4 referencias-pagina">
+        <div class="pagina-a4 referencias-pagina" id="${dominioId}">
           <h1 style="text-transform: capitalize;">Referencias Clínicas: Dominio ${dominios[0]}</h1>
           <ul class="lista-referencias">
             ${listaHtml}
@@ -211,9 +228,11 @@
       `;
     }
 
+    // Ajuste: generarHtmlFicha ahora añade id a cada ficha (para link directo)
     function generarHtmlFicha(efecto) {
+      const fichaId = 'efecto-' + slugify(efecto.efecto);
       return `
-        <div class="pagina-a4 ficha-a4">
+        <div class="pagina-a4 ficha-a4" id="${fichaId}">
           <header class="ficha-header">
             <h1>${efecto.efecto}</h1>
             <h2>${efecto.dominio.join(' / ')}</h2>
@@ -309,15 +328,6 @@
       `;
     }
     
-    function generarSeccion(texto, titulo) {
-      return `
-        <div class="pagina-a4 section-a4">
-          <h1>${titulo}</h1>
-          ${texto}
-        </div>
-      `;
-    }
-    
     function generarGlosario() {
       const itemsHtml = glosarioData.map(item => `
         <div class="glossary-item">
@@ -327,7 +337,7 @@
       `).join('');
       
       return `
-        <div class="pagina-a4 glossary-a4">
+        <div class="pagina-a4 glossary-a4" id="glosario">
           <h1>Glosario de Términos</h1>
           ${itemsHtml}
         </div>
@@ -336,11 +346,11 @@
     
     function generarChecklist() {
       return `
-        <div class="pagina-a4 section-a4">
+        <div class="pagina-a4 section-a4" id="checklist">
           <h1>Apéndice: Hoja de Uso Clínico</h1>
           <h3>Checklist de Preparación de Sesión (Pre-vuelo)</h3>
           <ul>
-            <li>Confirmación de criterios de exclusión (medicación, historial).</li>
+            <li>Descarte de criterios de exclusión (medicación, historial).</li>
             <li>Revisión de la intención y expectativas del paciente.</li>
             <li>Validación del protocolo de seguridad y contacto de emergencia.</li>
             <li>Preparación del 'Setting': música, iluminación, confort físico.</li>
@@ -350,7 +360,7 @@
             <li>Nivel 1 (Observar): ¿Signos vitales estables? ¿Respiración regular?</li>
             <li>Nivel 2 (Validar): ¿El paciente muestra angustia? (Usar 'Frase de Normalización').</li>
             <li>Nivel 3 (Anclar): ¿El paciente está en un 'bucle' o pánico? (Usar 'Anclaje').</li>
-            <li>Nivel 4 (Escalar): ¿Hay riesgo físico o agitación severa? (Revisar 'Banderas Rojas').</li>
+            <li>Nivel 4 (Escalar): ¿Hay riesgo físico o agitación severa? (Revisar 'Indicadores Postsesión').</li>
           </ul>
           <h3>Checklist de Integración (Post-vuelo)</h3>
           <ul>
@@ -360,14 +370,47 @@
             <li>Proponer práctica de integración: journaling, respiración consciente o diálogo terapéutico.</li>
             <li>Identificar señales de alerta post-agudas: ansiedad persistente, confusión o retraimiento social (considerar derivación).</li>
           </ul>
-
         </div>
       `;
     }
 
+    // Nueva función: generar índice / tabla de contenidos
+    function generarIndice() {
+      if (!efectosData) return '';
+      const itemsPorDominio = ordenDominios.map(dominio => {
+        const slugDominio = slugify(dominio);
+        const efectosDelDominio = efectosData.filter(e => e.dominio[0] === dominio);
+        const efectosHtml = efectosDelDominio.map(e => {
+          const id = 'efecto-' + slugify(e.efecto);
+          return `<li><a href="#${id}">${e.efecto}</a></li>`;
+        }).join('');
+        const referenciasId = 'referencias-' + slugDominio;
+        return `
+          <li class="indice-dominio">
+            <strong><a href="#dominio-${slugDominio}">Dominio: ${dominio}</a></strong>
+            <ul>
+              ${efectosHtml || '<li>Sin efectos listados</li>'}
+              <li><a href="#${referenciasId}">Referencias del dominio</a></li>
+            </ul>
+          </li>
+        `;
+      }).join('');
+
+      return `
+        <div class="pagina-a4 indice-a4" id="indice">
+          <h1>Índice / Tabla de contenidos</h1>
+          <nav>
+            <ul>
+              ${itemsPorDominio}
+              <li><a href="#glosario">Glosario</a></li>
+              <li><a href="#checklist">Checklist / Apéndice</a></li>
+            </ul>
+          </nav>
+        </div>
+      `;
+    }
 
     // --- SECCIÓN 3: FUNCIÓN PRINCIPAL DE RENDERIZADO (ACTUALIZADA) ---
-
     function renderizarAtlasCompleto() {
       const container = document.getElementById('atlas-container');
       if (!container || !efectosData || !referenciasData) {
@@ -379,32 +422,34 @@
 
       // 1. Renderizar Portada (ACTUALIZADA CON AUTOR)
       htmlCompleto += `
-        <div class="pagina-a4 portada-a4">
-          <h1>Atlas-Manual de Efectos Psicodélicos</h1>
-          <h2>¿Qué puede pasar durante una sesión y cómo intervenir?</h2>
+        <div class="pagina-a4 portada-a4" id="portada">
+          <h1>Efectos Psicodélicos</h1>
+          <h2>¿Qué puede pasar en sesión y cómo intervenir?</h2>
           <div class="autor">AUTOR: <strong>Dr. HOPE</strong></div>
         </div>
       `;
 
+      // 1.5 Insertar Índice (antes de la introducción)
+      htmlCompleto += generarIndice();
+
       // 2. Renderizar Introducción
       htmlCompleto += `
-        <div class="pagina-a4 introduccion-a4">
-          <h1>Introducción: De la Intuición al Protocolo</h1>
+        <div class="pagina-a4 introduccion-a4" id="introduccion">
+          <h1>Introducción: Afila la intución</h1>
           ${textoIntroduccion}
         </div>
       `;
       
       // 3. Renderizar Secciones Narrativas
-      htmlCompleto += generarSeccion(textoCuándoUsar, "Cuándo usar este atlas");
-      htmlCompleto += generarSeccion(textoQuéHacer, "Qué hacer si lo que ves no encaja");
-      htmlCompleto += generarSeccion(textoCómoUsar, "Cómo usarlo sin crear más confusión");
-
+      htmlCompleto += generarSeccion(textoCómoUsar, "Cómo usar este documento");
+      
       // 4. Renderizar Dominios, Fichas, y Página de Referencias
       for (const dominio of ordenDominios) {
         
-        // 4a. Página separadora del Dominio
+        // 4a. Página separadora del Dominio (con id)
+        const dominioSlug = slugify(dominio);
         htmlCompleto += `
-          <div class="pagina-a4 dominio-a4">
+          <div class="pagina-a4 dominio-a4" id="dominio-${dominioSlug}">
             <h1 style="text-transform: capitalize;">Dominio: ${dominio}</h1>
             <p>${textosDominio[dominio]}</p>
           </div>
@@ -428,9 +473,9 @@
       htmlCompleto += `
       <div class="pagina-a4 cta-a4">
         <div class="cta-contenido">
-          <h2>¿Te sirvió este atlas?</h2>
-          <p>Este curso baja todo a tierra. Explica cada fase con claridad clínica y un método replicable. Ideal si no quieres improvisar.</p>
-          <a href="https://app.ecoretreatmountain.com/curso/registro" class="cta-boton" target="_blank">Sí, quiero aplicarlo</a>
+          <h2>¿Te fué útil?</h2>
+          <p>Creé un curso que aterriza todo el proceso: desde el screening hasta la integración. Cada fase explicada con ejemplos reales y criterio clínico. Si no te sirve, te devuelvo el dinero. Sin vueltas.</p>
+          <a href="https://app.ecoretreatmountain.com/curso/registro" class="cta-boton" target="_blank">Ver detalles</a>
           </div>
         </div>
       `;
