@@ -1,742 +1,570 @@
 // efectos.js
-// Fuente de datos completa para el Atlas Visual de Efectos Psicodélicos
+// Atlas de Fenómenos Psicodélicos
+// Lectura operativa y presencia CUSHION en sesión
 
 const efectosData = [
   // --- DOMINIO VISUAL ---
-    {
+  {
     "efecto": "Estelas visuales (Tracers)",
     "dominio": ["visual"],
     "fenomenologia": {
-      "descripcion_paciente": "Los objetos en movimiento, como manos, aves o vehículos, dejan un rastro de luz o halo alargado que persiste unos instantes tras su paso. Este fenómeno forma parte de la Reestructuración Visual (VRS), junto a pseudoalucinaciones y sinestesia.",
-      "signos_observables": "Seguimiento ocular fijo o errático. Movimientos lentos de manos o cabeza para observar o controlar el efecto. Posible incomodidad si la distorsión genera confusión."
+      "descripcion_paciente": "Los objetos en movimiento dejan un rastro de luz, sombra o halo que persiste unos instantes después de moverse. Puede sentirse curioso, bello o desorientador.",
+      "signos_observables": "Mirada fija en objetos en movimiento. Movimientos lentos de manos o cabeza para observar el efecto. Puede haber risa, asombro o incomodidad si la persona se desorienta."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La activación de receptores 5‑HT₂A en corteza visual relaja las predicciones sensoriales. El cerebro procesa más lento los estímulos en movimiento, generando estelas.",
-      "frase_de_normalizacion": "Tu cerebro está procesando las imágenes un poco más despacio de lo habitual; es parte del ajuste visual y no implica peligro. Puedes dejar que ocurra."
+    "mecanismo_probable": "La percepción visual puede estar procesando el movimiento con menos estabilidad habitual. El sistema da más peso a rastros sensoriales que normalmente se filtran rápido.",
+    "lectura_operativa": "Si la persona observa con curiosidad y conserva orientación, no interrumpas. Si aparece pánico, desorientación o intento de levantarse por miedo a lo que ve, pasa a orientación y anclaje.",
+    "presencia_cushion": {
+      "prioridad": "Ubicación + Calma",
+      "hacer": "Permanece estable y visible si la persona busca referencia. Usa pocas palabras y tono bajo. Observa si el fenómeno aumenta curiosidad o amenaza.",
+      "evitar": "No expliques el efecto como si fuera peligroso. No sobreintervengas si la persona está tranquila."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["NA"],
-      "medicacion": ["ISRS", "NA"],
-      "set_setting": ["entorno no seguro"]
+    "frases_utiles": {
+      "sosten": "Estoy aquí contigo. Puedes observarlo sin intentar cambiarlo.",
+      "anclaje": "Siente el contacto de tu cuerpo con la superficie. Escucha mi voz y vuelve a tu respiración.",
+      "orientacion": "Esto puede verse extraño, pero estás aquí, en la sesión. Podemos volver a lo concreto si se vuelve demasiado."
     },
-    "matriz_riesgo": "Bajo (Justificación: efecto perceptivo frecuente y autolimitado. El riesgo aumenta solo si la alteración visual genera pánico o desorientación).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy aquí contigo. Observa lo que ves, sin intentar cambiarlo.",
-      "intervencion_minima_anclaje": "Siente el peso de la manta y el contacto con el suelo. Escucha mi voz y vuelve a tu respiración.",
-      "intervencion_activa_reencuadre": "Estás a salvo; tu cerebro se está reajustando. Puedes mirar la sensación con curiosidad: el rastro pasará."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Pánico intenso o intento de quitarse la venda o abandonar la sala debido a desorientación visual.",
-      "accion_de_escalamiento": "Intervención verbal directiva, contención física suave si hay riesgo de lesión."
-    },
-    "indicadores_postsesion": [
-      "Persistencia de estelas visuales más allá de 48 horas post‑sesión (evaluar posible HPPD)."
+    "senales_intervencion_directiva": [
+      "Pánico ante las distorsiones visuales.",
+      "Intento de quitarse la venda o abandonar la sala por desorientación.",
+      "Pérdida de respuesta a la voz o dificultad para orientarse en el espacio.",
+      "Riesgo físico por movimiento impulsivo."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Procesamiento de la información y percepción del tiempo.",
-      "practica_sugerida": "Dibuja los rastros o patrones observados y escribe cómo cambió tu percepción del movimiento y del tiempo durante la sesión."
-    }
-  },
-
-    {
-    "efecto": "Geometría fractal",
-    "dominio": ["visual"],
-    "fenomenologia": {
-      "descripcion_paciente": "Percibo patrones geométricos complejos —como mandalas, túneles o fractales—, especialmente con los ojos cerrados. Son intensos, repetitivos y no obedecen las leyes visuales del mundo externo.",
-      "signos_observables": "Midriasis (pupilas dilatadas), expresión facial de asombro o fascinación, mirada fija o pérdida momentánea de contacto visual. Puede presentarse una inmersión profunda en el contenido visual o emocional asociado."
-    },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina activa los receptores 5‑HT₂A en la corteza visual estriada y extraestriada, reduciendo la inhibición cortical de arriba hacia abajo. Este mecanismo aumenta la señalización sensorial interna, permitiendo que emerjan patrones fractales, túneles o mandalas, como describe el modelo REBUS.",
-      "frase_de_normalizacion": "Esto forma parte del proceso perceptivo. Puedes observar la geometría con curiosidad y asombro; muchos la viven como una manifestación de la complejidad interior y la interconexión."
-    },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["NA"],
-      "medicacion": ["Ketanserina (antagonista 5‑HT₂A)"],
-      "set_setting": ["entorno sensorial saturado"]
-    },
-    "matriz_riesgo": "Bajo (Justificación: suele generar asombro y apertura emocional. El riesgo aumenta si se interpreta como amenazante o si emergen contenidos simbólicos de carga traumática).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. Permite que las formas se desarrollen; no necesitan interpretación.",
-      "intervencion_minima_anclaje": "Siente el contacto del cuerpo con el suelo. Escucha mi voz y nota tu respiración.",
-      "intervencion_activa_reencuadre": "Estos patrones no son peligrosos; son parte de cómo tu mente libera control. Permítete contemplar su belleza."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Desconexión prolongada del entorno o pérdida de contacto con el terapeuta durante más de 10 minutos.",
-      "accion_de_escalamiento": "Intervención verbal clara (por ejemplo: 'Abre los ojos y mírame'). Contención física si existe riesgo."
-    },
-    "indicadores_postsesion": [
-      "Persistencia de geometrías visuales simples o patrones residuales más allá de 48 h post‑sesión (evaluar posible HPPD)."
-    ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Asombro, unidad y percepción del orden interno.",
-      "practica_sugerida": "Dibuja los patrones observados y reflexiona sobre lo que revelan acerca de la relación entre caos y armonía en tu experiencia."
-    }
-  },
-
-    {
-    "efecto": "Sinestesia (auditiva‑visual)",
-    "dominio": ["visual", "perceptivo"],
-    "fenomenologia": {
-      "descripcion_paciente": "Los sonidos se transforman en formas o colores. Percibo que los sentidos se fusionan: la música se vuelve visible y los colores parecen vibrar.",
-      "signos_observables": "Movimientos rítmicos espontáneos, mirada sostenida o expresión de placer sensorial. El paciente puede sincronizar su respiración o gestos con la música. La respuesta emocional suele ser de asombro o bienestar."
-    },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina incrementa la conectividad funcional entre áreas sensoriales que normalmente operan por separado. La activación de receptores 5‑HT₂A y la desinhibición de señales ascendentes generan un entrelazamiento multisensorial que produce la experiencia sinestésica.",
-      "frase_de_normalizacion": "Tu cerebro está conectando los sentidos de forma más libre. Puedes observar esta fusión con curiosidad; es un estado transitorio y seguro."
-    },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["NA"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno auditivo estimulante o música intensa"]
-    },
-    "matriz_riesgo": "Bajo (Justificación: la sinestesia suele vivirse como positiva, asociada a creatividad y apertura. El riesgo aparece si hay sobrecarga sensorial o confusión perceptual intensa).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. Permite que los sonidos y las sensaciones se mezclen sin intentar controlarlas.",
-      "intervencion_minima_anclaje": "Lleva la atención a tu respiración. Siente la música como una vibración suave en tu cuerpo.",
-      "intervencion_activa_reencuadre": "Tu mente está explorando nuevas conexiones. Esta experiencia muestra la flexibilidad natural de tu percepción; puedes confiar en ella."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Sobrecarga sensorial evidente: el paciente se cubre los oídos o los ojos, muestra confusión o llanto persistente.",
-      "accion_de_escalamiento": "Reducir estímulos auditivos y visuales, intervención verbal calmada, y contención física si es necesario."
-    },
-    "indicadores_postsesion": [
-      "Persistencia de fenómenos sinestésicos que interfieren con la función cotidiana (evaluar HPPD o vulnerabilidad psicótica latente)."
-    ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Límites sensoriales, creatividad, percepción expandida y unidad.",
-      "practica_sugerida": "Dibuja la música o describe cómo los sentidos se entrelazaron. Reflexiona sobre lo que esta experiencia te enseñó sobre la percepción y la integración."
-    }
+    "accion_directiva": "Reducir estímulos visuales, orientar a cuerpo y espacio, usar voz clara y mantener presencia física estable."
   },
 
   {
-    "efecto": "'Respiración' de superficies (Drifting)",
+    "efecto": "Geometría fractal",
     "dominio": ["visual"],
     "fenomenologia": {
-      "descripcion_paciente": "Las paredes, los objetos y las texturas parecen moverse o respirar suavemente. El suelo ondula, como si todo el entorno tuviera vida propia. A veces es bello, otras veces desconcertante.",
-      "signos_observables": "Mirada fija en superficies estáticas, movimientos lentos o contacto táctil con paredes o pisos para verificar estabilidad. Puede haber verbalizaciones como 'todo se mueve' o gestos de confusión leve."
+      "descripcion_paciente": "Aparecen patrones geométricos, mandalas, túneles, formas repetitivas o diseños complejos, especialmente con ojos cerrados. Pueden ser intensos y cambiantes.",
+      "signos_observables": "Quietud, expresión de asombro, sonrisa, lágrimas o mirada fija. Puede haber inmersión profunda y menor respuesta verbal durante algunos minutos."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La activación de receptores 5‑HT₂A en la corteza visual reduce la confianza en las predicciones visuales de alto nivel. El modelo REBUS explica este fenómeno como una relajación de los filtros que normalmente mantienen estable la percepción de objetos inmutables.",
-      "frase_de_normalizacion": "Tu percepción se está flexibilizando. Aunque parece que el mundo se mueve, sigue siendo estable. Puedes dejar que ese efecto visual se despliegue sin resistirlo."
+    "mecanismo_probable": "El sistema visual puede estar generando patrones internos con menos control de filtros habituales. La experiencia puede sentirse envolvente sin que implique pérdida de seguridad por sí misma.",
+    "lectura_operativa": "Si hay fascinación, calma o inmersión estable, sostén sin intervenir. Si la persona se asusta, pierde contacto prolongado o interpreta las formas como amenaza, orienta y ancla.",
+    "presencia_cushion": {
+      "prioridad": "Hospitalidad + No imposición",
+      "hacer": "Permite que la experiencia visual ocurra sin interpretarla. Mantén una presencia receptiva y no dirijas el contenido.",
+      "evitar": "No digas qué significan los patrones. No conviertas la geometría en mensaje espiritual o diagnóstico."
     },
-    "moduladores_riesgo": {
-      "dosis": "baja|media",
-      "historial": ["alta sensibilidad visual", "neuroticismo"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno visualmente saturado", "luces en movimiento"]
+    "frases_utiles": {
+      "sosten": "Estoy contigo. No necesitas explicar lo que ves ahora.",
+      "anclaje": "Siente tu respiración y el peso del cuerpo. Puedes volver a mi voz si lo necesitas.",
+      "orientacion": "Las imágenes pueden ser intensas. Estás en un espacio seguro y podemos ir más despacio."
     },
-    "matriz_riesgo": "Bajo (Justificación: efecto visual común y autolimitado. Puede generar ansiedad si se interpreta como desestabilización externa).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy aquí contigo. Puedes observar cómo se mueve todo sin intervenir.",
-      "intervencion_minima_anclaje": "Siente el suelo bajo tus pies o la manta sobre tu cuerpo. La estabilidad está aquí.",
-      "intervencion_activa_reencuadre": "Nada se está derritiendo. Es tu percepción abriéndose a nuevas posibilidades. El mundo sigue siendo sólido."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Reacción de pánico o intento de salir de la sala creyendo que el entorno es inestable.",
-      "accion_de_escalamiento": "Reducción de estímulos visuales, intervención verbal directa y contacto físico suave si es necesario."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia de distorsiones visuales post-sesión que afectan la percepción de la estabilidad del entorno físico (evaluar HPPD)."
+    "senales_intervencion_directiva": [
+      "Desconexión prolongada sin respuesta a señales pactadas.",
+      "Miedo intenso ante los patrones.",
+      "Interpretación amenazante o persecutoria de las formas.",
+      "Necesidad de levantarse sin orientación."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Percepción y creencias sobre lo estable, la rigidez cognitiva y la apertura al cambio.",
-      "practica_sugerida": "Practicar atención plena en objetos estáticos; reflexionar sobre cómo percibimos la realidad como fija o cambiante."
-    }
+    "accion_directiva": "Usar orientación verbal breve, pedir contacto con cuerpo o entorno y reducir estímulos si hay sobrecarga."
+  },
+
+  {
+    "efecto": "Sinestesia (auditiva-visual)",
+    "dominio": ["visual", "perceptivo"],
+    "fenomenologia": {
+      "descripcion_paciente": "Los sonidos pueden sentirse como colores, formas, texturas o movimientos. La música puede parecer visible o corporal.",
+      "signos_observables": "Movimientos rítmicos, respiración sincronizada con música, sonrisa, llanto suave o expresión de asombro. También puede aparecer sobrecarga sensorial."
+    },
+    "mecanismo_probable": "La separación habitual entre sentidos puede volverse más flexible. Sonido, color, cuerpo y emoción pueden mezclarse en una sola experiencia perceptiva.",
+    "lectura_operativa": "Si la experiencia se vive con apertura y regulación, no intervengas. Si hay sobrecarga, confusión o rechazo intenso a la música, reduce estímulos y orienta al cuerpo.",
+    "presencia_cushion": {
+      "prioridad": "Calma + Ubicación",
+      "hacer": "Observa si la música ayuda o abruma. Mantén estabilidad y ajusta el entorno si la persona muestra saturación.",
+      "evitar": "No subas intensidad sensorial para 'profundizar'. No fuerces música, luz o estímulos."
+    },
+    "frases_utiles": {
+      "sosten": "Puedes dejar que los sonidos y las sensaciones pasen a su ritmo.",
+      "anclaje": "Siente un punto del cuerpo. Podemos bajar la intensidad si lo necesitas.",
+      "orientacion": "Si se siente demasiado, volvemos a algo simple: respiración, cuerpo y silencio."
+    },
+    "senales_intervencion_directiva": [
+      "La persona se cubre ojos u oídos con angustia.",
+      "Confusión creciente o llanto persistente por sobrecarga.",
+      "Rechazo claro a la música o estímulos.",
+      "Pérdida de contacto interpersonal."
+    ],
+    "accion_directiva": "Reducir o pausar estímulos, bajar volumen, ajustar luz y orientar a respiración o contacto corporal."
+  },
+
+  {
+    "efecto": "Respiración de superficies (Drifting)",
+    "dominio": ["visual"],
+    "fenomenologia": {
+      "descripcion_paciente": "Paredes, objetos, texturas o el suelo parecen moverse, ondular o respirar. Puede sentirse agradable, extraño o inestable.",
+      "signos_observables": "Mirada fija en superficies, tocar paredes o piso para verificar estabilidad, comentarios como 'todo se mueve' o gestos de confusión leve."
+    },
+    "mecanismo_probable": "La percepción de estabilidad del entorno puede flexibilizarse. Estímulos visuales estáticos se interpretan como si tuvieran movimiento.",
+    "lectura_operativa": "Si la persona observa sin angustia, sostén. Si cree que el entorno es peligroso o intenta salir, orienta al espacio físico y reduce estímulos visuales.",
+    "presencia_cushion": {
+      "prioridad": "Ubicación + Seguridad",
+      "hacer": "Ofrece una referencia estable: tu voz, un objeto fijo, el suelo o la manta. Mantén una presencia predecible.",
+      "evitar": "No discutas si el entorno se mueve o no. No ridiculices la percepción."
+    },
+    "frases_utiles": {
+      "sosten": "Puedes observarlo sin tener que hacer nada con eso.",
+      "anclaje": "Siente el suelo o la manta. Este punto está estable.",
+      "orientacion": "Lo que ves puede cambiar, pero estás aquí en la sala y el espacio está contenido."
+    },
+    "senales_intervencion_directiva": [
+      "Pánico por sentir que el entorno es inestable.",
+      "Intento de levantarse o salir sin orientación.",
+      "Confusión visual que compromete seguridad física.",
+      "Necesidad repetida de verificar objetos con angustia creciente."
+    ],
+    "accion_directiva": "Reducir estímulos visuales, orientar a un punto fijo y mantener al participante en una postura segura."
   },
 
   {
     "efecto": "Pareidolia (ver caras en patrones)",
     "dominio": ["visual", "cognitivo"],
     "fenomenologia": {
-      "descripcion_paciente": "Veo caras o presencias en patrones: en la alfombra, en la textura de la pared, incluso en la oscuridad. A veces parecen tener un mensaje o intención.",
-      "signos_observables": "Mirada prolongada a objetos inanimados. Reacciones emocionales marcadas (asombro, miedo, devoción) frente a estímulos visuales ambiguos. El paciente puede verbalizar que el entorno 'lo mira' o 'le habla'."
+      "descripcion_paciente": "La persona ve caras, figuras o presencias en patrones, sombras, texturas o la oscuridad. Puede sentir que tienen intención, mensaje o carga emocional.",
+      "signos_observables": "Mirada prolongada a objetos ambiguos, reacción intensa ante paredes, alfombras o sombras. Puede decir que algo lo mira, le habla o tiene intención."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La activación del receptor 5‑HT₂A en cortezas visuales y asociativas reduce la inhibición de predicciones internas. El cerebro proyecta significado sobre estímulos ambiguos, generando inferencias tipo 'rostro' o 'entidad'. El modelo REBUS explica esta interpretación como una amplificación de las creencias previas.",
-      "frase_de_normalizacion": "Tu mente está encontrando sentido donde normalmente no lo haría. Es una forma temporal de ver el mundo con más profundidad, pero no todo lo que aparece es necesariamente real."
+    "mecanismo_probable": "La mente puede proyectar significado sobre estímulos ambiguos. El sistema perceptivo intenta organizar patrones y puede convertirlos en rostros, presencias o figuras.",
+    "lectura_operativa": "Si hay curiosidad y flexibilidad, no impongas interpretación. Si el contenido se vuelve amenazante, rígido o persecutorio, orienta y reencuadra sin confirmar la creencia.",
+    "presencia_cushion": {
+      "prioridad": "No imposición + Orientación",
+      "hacer": "Valida la vivencia sin validar literalmente el contenido. Mantén el marco de sesión y vuelve a cuerpo, espacio y voz.",
+      "evitar": "No digas que la figura es real, espiritual, ancestral o diagnóstica. No refuerces delirios."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["psicosis", "trauma no integrado"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno no seguro", "ansiedad basal alta"]
+    "frases_utiles": {
+      "sosten": "Puedes observar lo que aparece sin decidir ahora qué significa.",
+      "anclaje": "Toca la manta o siente tus pies. Vuelve conmigo a este espacio.",
+      "orientacion": "Eso puede sentirse muy real. Ahora no necesitamos confirmarlo ni explicarlo; volvamos a tu cuerpo y a la sala."
     },
-    "matriz_riesgo": "Medio (Justificación: si el contenido percibido se interpreta como amenazante o se fija en una narrativa rígida, puede generar disociación o angustia prolongada).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. Observa lo que aparece, sin aferrarte a lo que significa.",
-      "intervencion_minima_anclaje": "Toca tu cuerpo o un objeto estable. Recuerda que estás en un espacio seguro.",
-      "intervencion_activa_reencuadre": "Lo que ves viene de ti, no contra ti. La medicina muestra símbolos que a veces necesitan interpretación lenta, no inmediata."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Narrativa delirante activa (ej. el patrón es una amenaza, o está poseído), o respuesta agresiva ante la figura vista.",
-      "accion_de_escalamiento": "Contención verbal firme. Activar protocolo si se pierde el juicio de realidad o hay riesgo de daño."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Interpretaciones fijas post-sesión sobre las figuras (ej. 'vi a un demonio y aún está conmigo').",
-      "Evitación persistente de entornos visuales similares."
+    "senales_intervencion_directiva": [
+      "Narrativa persecutoria o delirante sobre la figura.",
+      "Creencia rígida de que la presencia amenaza o controla.",
+      "Respuesta agresiva o intento de huida.",
+      "Pérdida del juicio de realidad sin capacidad de responder a orientación."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Significado proyectado, simbolismo, creencias sobre lo invisible o espiritual.",
-      "practica_sugerida": "Escribir sobre lo que se vio y cómo se sintió. Dibujar la figura y explorar si representa algo interno."
-    }
+    "accion_directiva": "Reorientar de forma firme, reducir estímulos ambiguos, evitar confirmar el contenido y activar protocolo si hay riesgo."
   },
 
   {
-    "efecto": "Alucinaciones visuales complejas (Visiones figurales)",
+    "efecto": "Visiones figurales complejas",
     "dominio": ["visual"],
     "fenomenologia": {
-      "descripcion_paciente": "Veo personas, entidades, paisajes o escenas completas con los ojos cerrados. A veces son recuerdos, otras veces parecen mundos nuevos o seres desconocidos. La experiencia es vívida, con sentido propio.",
-      "signos_observables": "Inmovilidad prolongada con los ojos cerrados, expresión de asombro o lágrimas. El paciente puede verbalizar narrativas como 'vi a mi abuela', 'viajé a otro lugar', o 'había una presencia'."
+      "descripcion_paciente": "Aparecen personas, entidades, paisajes, escenas o recuerdos visuales vívidos, especialmente con ojos cerrados. Pueden sentirse simbólicos, autobiográficos o extraños.",
+      "signos_observables": "Quietud prolongada, lágrimas, asombro, narración de escenas o presencias. Puede haber inmersión profunda y menor contacto verbal."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La activación de receptores 5‑HT₂A en corteza visual estriada y extraestriada amplifica el flujo de información sensorial interna. Esto permite visiones detalladas y narrativas visuales. El modelo REBUS lo explica como una reducción del control top-down, permitiendo que modelos internos emerjan como realidad visual subjetiva.",
-      "frase_de_normalizacion": "Estás viendo imágenes que tu mente crea desde adentro. Pueden tener un significado personal o simbólico. Puedes observarlas sin necesidad de entenderlas ahora mismo."
+    "mecanismo_probable": "La imaginación visual, memoria y significado pueden combinarse con gran intensidad. La experiencia puede sentirse como una escena interna muy vívida.",
+    "lectura_operativa": "Si la persona observa y mantiene estabilidad, sostén sin interpretar. Si la visión genera terror, delirio, confusión o pérdida prolongada de contacto, orienta y ancla.",
+    "presencia_cushion": {
+      "prioridad": "Hospitalidad + No imposición",
+      "hacer": "Recibe la narración sin decidir qué significa. Permite silencio y evita preguntas invasivas.",
+      "evitar": "No confirmes entidades, mensajes o presencias. No empujes a explorar escenas traumáticas durante el pico."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["trauma no procesado", "baja absorción"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno descuidado", "baja confianza"]
+    "frases_utiles": {
+      "sosten": "Puedes dejar que la imagen esté ahí sin tener que entenderla ahora.",
+      "anclaje": "Vuelve al contacto del cuerpo con la superficie. Estoy aquí contigo.",
+      "orientacion": "Puede sentirse muy intenso. Ahora solo necesitamos que recuerdes que estás en sesión y acompañado."
     },
-    "matriz_riesgo": "Medio (Justificación: las visiones pueden activar contenido autobiográfico intenso. El riesgo aumenta si se interpretan literalmente o se asocian con trauma no integrado.",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. Puedes dejar que la imagen aparezca y desaparezca sola.",
-      "intervencion_minima_anclaje": "Vuelve a tu cuerpo. Siente el contacto con el suelo y el sonido de mi voz.",
-      "intervencion_activa_reencuadre": "Esto que ves puede tener valor simbólico, no es real ni peligroso. Puedes estar presente sin entrar en la historia."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Angustia marcada, llanto incontenible, verbalización de ideas delirantes o pérdida de contacto prolongada.",
-      "accion_de_escalamiento": "Intervención verbal clara y contención emocional. Redirigir la atención al entorno físico de forma firme y compasiva."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia de visiones o narrativas visuales tras 72h post-sesión (evaluar HPPD o psicosis latente)."
+    "senales_intervencion_directiva": [
+      "Angustia marcada o llanto incontenible.",
+      "Pérdida prolongada de contacto con el facilitador.",
+      "Ideas delirantes asociadas a la visión.",
+      "Riesgo físico por movimiento impulsivo."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Simbolismo, memoria autobiográfica, sentido personal del contenido visual.",
-      "practica_sugerida": "Dibuja o narra lo que viste. Pregúntate qué parte de tu historia pudo reflejarse en esa imagen. Trabájalo en integración acompañada si fue intenso o confuso."
-    }
+    "accion_directiva": "Usar orientación verbal clara, pedir respuesta simple a la voz y volver a cuerpo/entorno antes de cualquier exploración de contenido."
   },
 
   // --- DOMINIO COGNITIVO ---
   {
-    "efecto": "Distorsión temporal (Time distortion)",
+    "efecto": "Distorsión temporal",
     "dominio": ["cognitivo", "perceptivo"],
     "fenomenologia": {
-      "descripcion_paciente": "El tiempo se estira o se comprime. Minutos parecen horas, o todo ocurre en un instante. En estados profundos, el tiempo desaparece: hay una sensación de presente eterno.",
-      "signos_observables": "Asombro al intentar calcular la duración de la experiencia. Introspección profunda con ojos cerrados. Dificultad posterior para recordar la secuencia cronológica de los eventos."
+      "descripcion_paciente": "El tiempo parece estirarse, comprimirse, repetirse o desaparecer. Minutos pueden sentirse como horas, o todo puede sentirse suspendido.",
+      "signos_observables": "Asombro al preguntar por la hora, dificultad para ordenar la secuencia de eventos, introspección profunda o frases como 'esto no termina'."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La distorsión surge por la relajación de las predicciones de alto nivel sobre el tiempo y el yo (Modelo REBUS). La disminución de actividad en la DMN debilita la narrativa lineal interna, mientras que la desregulación de la Red de Prominencia (SN) afecta la capacidad de anclaje temporal.",
-      "frase_de_normalizacion": "Estás experimentando una forma distinta de percibir el tiempo. Este estado es seguro y puede ayudarte a ver la vida desde otra perspectiva. Solo obsérvalo sin intentar controlarlo."
+    "mecanismo_probable": "La percepción del tiempo puede perder su referencia habitual. La atención se concentra en el presente o en ciclos internos de experiencia.",
+    "lectura_operativa": "Si hay asombro y calma, sostén. Si aparece miedo a quedar atrapado, a no volver o a que el tiempo no termine, orienta con referencias simples y temporales.",
+    "presencia_cushion": {
+      "prioridad": "Orientación + Calma",
+      "hacer": "Usa pocas referencias concretas: estás en sesión, esto es temporal, yo estoy aquí. Mantén ritmo lento.",
+      "evitar": "No bromees con el tiempo. No digas 'falta mucho' si eso puede aumentar pánico."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["NA"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno temporalmente estresante"]
+    "frases_utiles": {
+      "sosten": "El tiempo puede sentirse diferente. No necesitas medirlo ahora.",
+      "anclaje": "Respira conmigo. Siente este momento, este cuerpo, esta superficie.",
+      "orientacion": "Esto es temporal. Estás en una sesión y yo estoy aquí contigo."
     },
-    "matriz_riesgo": "Bajo (Justificación: fenómeno perceptivo común y no disruptivo si es sostenido con claridad. Puede provocar confusión si se interpreta como pérdida de control).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy aquí contigo. El tiempo se siente diferente, y eso está bien.",
-      "intervencion_minima_anclaje": "Siente el contacto de tu cuerpo con la manta. Respira, este momento es suficiente.",
-      "intervencion_activa_reencuadre": "Tu mente está soltando la necesidad de medir. Esta experiencia puede enseñarte algo sobre cómo vives el tiempo. Estás a salvo."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Pánico severo por la sensación de tiempo detenido o eterno.",
-      "accion_de_escalamiento": "Recordar suavemente que esta experiencia pasará. Anclar con estímulos temporales suaves como música rítmica o toque guiado (si es consensuado)."
-    },
-    "indicadores_postsesion": [
-      "Persistencia de la distorsión temporal que afecta la funcionalidad diaria o causa ansiedad significativa."
+    "senales_intervencion_directiva": [
+      "Pánico por sentir que el tiempo se detuvo.",
+      "Repetición angustiada de que 'esto no termina'.",
+      "Desorientación temporal con agitación.",
+      "Incapacidad de responder a orientación básica."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Naturaleza del tiempo, paciencia, ritmo de vida.",
-      "practica_sugerida": "Explorar con journaling cómo cambió tu experiencia del presente. Reflexionar sobre qué significa vivir 'a tiempo'."
-    }
+    "accion_directiva": "Orientar con voz lenta, repetir información básica, usar respiración y contacto con superficie como referencia temporal y corporal."
   },
 
   {
     "efecto": "Hiperasociación (pensamiento divergente)",
     "dominio": ["cognitivo"],
     "fenomenologia": {
-      "descripcion_paciente": "Mi mente conecta ideas a gran velocidad. Todo parece tener sentido o estar relacionado. Siento que descubro verdades profundas sobre mí o el mundo.",
-      "signos_observables": "Verbalizaciones fluidas y altamente asociativas. Posible deterioro del control ejecutivo (desorganización leve, pérdida de foco), pero con intensa concentración o asombro. Rasgos de Absorción aumentan la intensidad."
+      "descripcion_paciente": "La mente conecta ideas rápidamente. Todo parece relacionado o cargado de significado. Puede sentirse creativo, revelador o abrumador.",
+      "signos_observables": "Verbalización fluida, cambios rápidos de tema, asociaciones amplias, entusiasmo, asombro o pérdida de foco."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina relaja las predicciones cognitivas previas (hiperpriores) al reducir la conectividad de la Red Neuronal por Defecto (DMN), especialmente en la mPFC y la PCC. Esto permite mayor flexibilidad cognitiva y aparición de ideas novedosas.",
-      "frase_de_normalizacion": "Tu mente está funcionando con menos filtros. Es normal que las ideas fluyan sin estructura habitual. Puedes observarlas sin necesidad de juzgarlas o resolverlas ahora."
+    "mecanismo_probable": "El pensamiento puede volverse menos lineal y más asociativo. Ideas que normalmente estarían separadas pueden conectarse con facilidad.",
+    "lectura_operativa": "Si hay curiosidad y flexibilidad, escucha sin dirigir. Si aparecen certezas rígidas, grandiosidad, paranoia o desorganización, limita contenido y orienta al presente.",
+    "presencia_cushion": {
+      "prioridad": "Interés + No imposición",
+      "hacer": "Escucha sin convertir cada idea en conclusión. Puedes ofrecer anotar algo para después, sin analizarlo durante el pico.",
+      "evitar": "No estimules más asociaciones. No tomes decisiones ni hagas interpretaciones importantes en sesión."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["ansiedad generalizada", "hipomanía"],
-      "medicacion": ["NA"],
-      "set_setting": ["contexto caótico o no estructurado"]
+    "frases_utiles": {
+      "sosten": "Puedes dejar que las ideas pasen sin tener que seguirlas todas.",
+      "anclaje": "Volvamos un momento a tu respiración. Una idea a la vez.",
+      "orientacion": "No necesitamos decidir nada ahora. Podemos recogerlo y revisarlo después con calma."
     },
-    "matriz_riesgo": "Bajo (Justificación: asociada con insight y creatividad. El riesgo aumenta si deriva en desorganización o pánico sin acompañamiento adecuado).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy aquí contigo. Puedes dejar que las ideas se expresen sin necesidad de seguirlas.",
-      "intervencion_minima_anclaje": "Vuelve a tu respiración. Puedo anotar las ideas para retomarlas más adelante.",
-      "intervencion_activa_reencuadre": "Esto que surge es parte de tu mente expandiéndose. No necesitas decidir nada ahora. Solo observa y confía en que luego lo integrarás mejor."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Discurso desorganizado persistente, signos de ansiedad creciente o pérdida del contacto interpersonal.",
-      "accion_de_escalamiento": "Reducción de estímulos, reorientación verbal clara y validación de la seguridad."
-    },
-    "indicadores_postsesion": [
-      "Persistencia de pensamiento desorganizado o creencias rígidas adquiridas sin capacidad de cuestionamiento.",
-      "Identificación rígida con ideas generadas durante la sesión, sin proceso reflexivo posterior."
+    "senales_intervencion_directiva": [
+      "Discurso incoherente persistente.",
+      "Aumento de ansiedad por exceso de ideas.",
+      "Creencias rígidas o grandiosas sin capacidad de pausa.",
+      "Pérdida de contacto interpersonal."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Flexibilidad cognitiva, estructuras de pensamiento anteriores, origen de nuevos patrones mentales.",
-      "practica_sugerida": "Journaling sobre las ideas nuevas, clasificándolas sin juicio. Ejercicios de integración crítica con apoyo terapéutico."
-    }
+    "accion_directiva": "Reducir estimulación verbal, anclar al cuerpo, posponer decisiones y restaurar contacto con la sala."
   },
 
   {
     "efecto": "Rumiación circular (loops de pensamiento)",
     "dominio": ["cognitivo", "emocional"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento que estoy atrapado en una espiral mental. La misma idea se repite con fuerza y urgencia, sin que pueda detenerla. Es como si mi mente no pudiera soltar algo.",
-      "signos_observables": "Repetición verbal de una misma preocupación o dilema. Mirada fija, ansiedad creciente, lenguaje sin avance narrativo. El paciente puede parecer agitado o frustrado por la falta de resolución cognitiva."
+      "descripcion_paciente": "La misma idea se repite con fuerza. La persona siente que debe resolverla, pero no avanza. Puede sentirse atrapada en una espiral mental.",
+      "signos_observables": "Repetición verbal de la misma preocupación, mirada fija, ansiedad creciente, frustración o lenguaje sin avance narrativo."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina reduce la actividad de la Red por Defecto (DMN), responsable del yo narrativo. Sin embargo, cuando existen hiperpriores desadaptativos —creencias rígidas o patrones obsesivos— pueden mantenerse activos como una forma de resistencia. El bucle refleja una lucha del sistema por conservar un marco cognitivo rígido mientras el fármaco intenta flexibilizarlo.",
-      "frase_de_normalizacion": "Estás atravesando un patrón de pensamiento repetitivo que tu mente conoce bien. No necesitas resolverlo ahora. Obsérvalo con curiosidad, sin involucrarte en su urgencia."
+    "mecanismo_probable": "Un patrón de pensamiento rígido puede mantenerse activo mientras la experiencia lo vuelve más visible. La mente intenta controlar o resolver algo bajo alta carga emocional.",
+    "lectura_operativa": "No entres a resolver el contenido del loop. Si la persona puede observarlo, sostén. Si aumenta angustia o rigidez, ancla al cuerpo y reduce procesamiento verbal.",
+    "presencia_cushion": {
+      "prioridad": "Orientación + No imposición",
+      "hacer": "Interrumpe suavemente la urgencia de resolver. Devuelve a cuerpo, respiración y presente.",
+      "evitar": "No debatas la idea. No ofrezcas soluciones complejas durante el bucle."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["TOC", "Depresión (rumiación)"],
-      "medicacion": ["NA"],
-      "set_setting": ["ansiedad basal alta"]
+    "frases_utiles": {
+      "sosten": "No necesitas resolver eso ahora. Puedes notar que la idea está repitiéndose.",
+      "anclaje": "Lleva la atención a tus pies o manos. Respira más lento conmigo.",
+      "orientacion": "Ahora volvemos al cuerpo. La idea puede esperar; tu seguridad va primero."
     },
-    "matriz_riesgo": "Medio (Justificación: puede indicar resistencia del ego. Si no se facilita la rendición o aceptación del contenido, aumenta el riesgo de pánico o frustración intensa.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. No necesitas resolver nada en este momento, solo observa el pensamiento como viene y va.",
-      "intervencion_minima_anclaje": "Lleva tu atención al cuerpo. Siente el contacto con el suelo o el calor de la manta. Respira con lentitud.",
-      "intervencion_activa_reencuadre": "Este bucle mental es una vieja defensa que está saliendo a la luz. Al soltar el control, permites que algo nuevo pueda surgir. Confía en que pasará."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Angustia severa, pánico o pensamiento desorganizado persistente sin capacidad de reorientación.",
-      "accion_de_escalamiento": "Contención verbal directa. Fomentar el contacto físico con el entorno (anclaje somático), validación emocional y redirección suave del foco atencional."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia del patrón rumiativo post-sesión que interfiere con el funcionamiento diario.",
-      "Pensamientos obsesivos con fuerte carga emocional negativa que no remiten tras 48 h (evaluar recaída o descompensación ansiosa)."
+    "senales_intervencion_directiva": [
+      "Angustia severa sin capacidad de pausa.",
+      "Pánico asociado al bucle.",
+      "Discurso cada vez más desorganizado.",
+      "Fijación en una idea persecutoria o autolesiva."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Rigidez cognitiva, necesidad de control, narrativas mentales repetitivas.",
-      "practica_sugerida": "Diálogo interno guiado o journaling para observar cómo surgen y se sostienen los pensamientos. Prácticas de aceptación basada en mindfulness."
-    }
-
+    "accion_directiva": "Reducir lenguaje conceptual, usar anclaje somático, orientar al presente y escalar si hay riesgo o pérdida del juicio de realidad."
   },
 
   {
-    "efecto": "Despersonalización (Disolución del Ego)",
-    "dominio": ["cognitivo", "existencial"],
+    "efecto": "Despersonalización / Disolución del ego",
+    "dominio": ["cognitivo", "autoprocesamiento"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento que ya no soy yo. Las fronteras entre mi cuerpo y el entorno desaparecen. El mundo se percibe como irreal o 'delgado', y a veces todo parece un solo flujo. En otros momentos, esto genera temor: siento que estoy desapareciendo.",
-      "signos_observables": "Puede observarse calma profunda o asombro (si la experiencia es placentera), o bien ansiedad, confusión y miedo (si se interpreta como pérdida de control). Expresiones como 'no sé quién soy' o 'todo se disolvió' son comunes."
+      "descripcion_paciente": "La persona siente que ya no es ella misma, que los límites del cuerpo se disuelven o que el mundo se vuelve irreal. Puede vivirse como paz o como miedo a desaparecer.",
+      "signos_observables": "Quietud profunda, asombro, frases como 'no sé quién soy', o ansiedad, confusión y búsqueda de orientación si se vive como pérdida de control."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La despersonalización surge de la disminución de la actividad y la desconexión funcional dentro de la Red por Defecto (DMN), especialmente entre la corteza cingulada posterior y la prefrontal medial. Bajo el modelo REBUS, la psilocibina relaja las creencias de alto nivel sobre el yo y el mundo, generando la sensación de disolución de la identidad individual y pérdida de límites entre el yo y el entorno.",
-      "frase_de_normalizacion": "Estás experimentando una forma distinta de ser. Este estado es temporal y puede revelar partes de ti más allá del control habitual. Estás a salvo, déjate sostener por la experiencia."
+    "mecanismo_probable": "La narrativa habitual del yo puede volverse menos fija. Las referencias normales de identidad, cuerpo y entorno pueden sentirse más flexibles o difusas.",
+    "lectura_operativa": "Si hay paz o apertura, sostén sin interferir. Si aparece terror, fragmentación o miedo a morir/desaparecer, orienta al cuerpo y al encuadre de sesión.",
+    "presencia_cushion": {
+      "prioridad": "Hospitalidad + Orientación",
+      "hacer": "Permite la experiencia si es estable. Si hay miedo, ofrece referencias concretas: nombre, cuerpo, sala, voz y respiración.",
+      "evitar": "No digas que la persona está 'muriendo' simbólicamente. No espiritualices el terror."
     },
-    "moduladores_riesgo": {
-      "dosis": "alta",
-      "historial": ["psicosis", "trauma complejo", "neuroticismo elevado"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno no seguro", "falta de acompañamiento clínico"]
+    "frases_utiles": {
+      "sosten": "Estoy contigo. No tienes que definir quién eres ahora.",
+      "anclaje": "Siente tu respiración, tu cuerpo y el contacto con la superficie. Aquí hay un punto de apoyo.",
+      "orientacion": "Esta sensación es temporal. Estás en tu sesión, en este espacio, acompañado."
     },
-    "matriz_riesgo": "Medio (Justificación: si la experiencia se interpreta con miedo, puede transformarse en Disolución Ansiosa del Ego. Un acompañamiento empático y la reorientación somática reducen el riesgo de pánico).",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. No tienes que hacer nada; solo deja que la experiencia te muestre lo que hay cuando el 'yo' se relaja.",
-      "intervencion_minima_anclaje": "Vuelve al cuerpo: siente tu respiración, el peso de tu cuerpo, el contacto con el suelo. Tu presencia sigue aquí.",
-      "intervencion_activa_reencuadre": "Lo que sientes no es una pérdida, es una expansión. Estás soltando la idea de quién eras para ver algo más amplio."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Temor intenso o pánico ante la sensación de pérdida del yo. Desconexión prolongada del entorno o del terapeuta (>10 min).",
-      "accion_de_escalamiento": "Intervención verbal firme y tranquila. Validar la experiencia, reforzar la orientación corporal y el contacto con el entorno físico."
-    },
-    "indicadores_postsesion": [
-      "Persistencia de síntomas disociativos o desrealización que interfieren con la vida cotidiana.",
-      "Dificultad para reintegrar la experiencia o sensación de vacío prolongada (evaluar posible PAE)."
+    "senales_intervencion_directiva": [
+      "Pánico ante la sensación de perder el yo.",
+      "Desconexión prolongada del entorno o facilitador.",
+      "Confusión marcada sobre dónde está o quién acompaña.",
+      "Agitación por miedo a desaparecer o morir."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Identidad, unidad, límites del yo, trascendencia y reconstrucción del sentido personal.",
-      "practica_sugerida": "Escribir sobre cómo cambió la percepción de ti mismo. Dibujar o narrar la experiencia del 'yo disuelto' y reflexionar sobre lo que permanece cuando desaparecen las etiquetas."
-  }
+    "accion_directiva": "Orientar de forma firme y tranquila, usar anclaje corporal y mantener límites claros del rol del facilitador."
   },
+
   {
-    "efecto": "Flexibilidad cognitiva (relajación de creencias rígidas)",
+    "efecto": "Flexibilidad cognitiva",
     "dominio": ["cognitivo"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento que mi mente se ha soltado. Ideas nuevas entran sin filtro. Es como si pudiera pensar desde otro lugar, menos limitado por cómo suelo ver las cosas.",
-      "signos_observables": "Mayor sugestionabilidad, disminución de la resistencia del ego, receptividad a nuevas interpretaciones. Puede haber dificultad en tareas de atención o control cognitivo."
+      "descripcion_paciente": "La mente se siente más abierta. Aparecen perspectivas nuevas, menos rigidez y posibilidad de pensar desde otro lugar.",
+      "signos_observables": "Mayor receptividad, cambios de perspectiva, lenguaje menos defensivo, curiosidad. También puede haber sugestionabilidad aumentada."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina relaja los ‘prioris’ de alto nivel al disminuir la actividad y conectividad de la Red Neuronal por Defecto (DMN), permitiendo mayor influencia de señales bottom-up. Esto genera cognición sin restricciones y plasticidad psicológica, como postula el modelo REBUS.",
-      "frase_de_normalizacion": "Tu mente está soltando estructuras rígidas y abriéndose a nuevas formas de comprender. Esta apertura es segura, pasajera y profundamente valiosa si la atraviesas con curiosidad."
+    "mecanismo_probable": "Creencias o interpretaciones habituales pueden relajarse temporalmente. Esto puede permitir nuevas perspectivas, pero también aumenta la influencia del entorno y del lenguaje del facilitador.",
+    "lectura_operativa": "Es un estado útil si se acompaña sin dirigir. Prioriza no imposición: no introduzcas ideas, explicaciones o conclusiones que la persona pueda adoptar por sugestión.",
+    "presencia_cushion": {
+      "prioridad": "No imposición + Interés",
+      "hacer": "Escucha, refleja con cuidado y evita dirigir la conclusión. Protege la autonomía de la persona.",
+      "evitar": "No aproveches la apertura para instalar creencias, promesas o interpretaciones."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["pensamiento rígido (TOC, depresión)"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno poco flexible"]
+    "frases_utiles": {
+      "sosten": "Puedes notar esa apertura sin apresurarte a concluir.",
+      "anclaje": "Respira y quédate con una sensación o idea simple por ahora.",
+      "orientacion": "No necesitamos decidir nada en este momento. Después habrá tiempo para revisar qué sigue siendo útil."
     },
-    "matriz_riesgo": "Bajo (Justificación: altamente terapéutico si se acompaña con un entorno seguro. El riesgo aparece si la apertura excesiva genera confusión sin apoyo.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estás en un estado mental fértil. Permítete pensar distinto, sin necesidad de resolver nada ahora.",
-      "intervencion_minima_anclaje": "Respira. Toma una pausa. Puedes explorar una idea a la vez, con calma.",
-      "intervencion_activa_reencuadre": "Esto que ves es una oportunidad para revisar viejos patrones. No necesitas entender todo de inmediato; solo permítete ver diferente."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Desorganización del pensamiento o discurso incoherente sin introspección.",
-      "accion_de_escalamiento": "Intervención verbal firme, centrada en anclaje y contextualización del estado inducido por la sustancia."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Desorganización cognitiva persistente post-sesión sin insight (evaluar vulnerabilidad psicótica)."
+    "senales_intervencion_directiva": [
+      "Alta sugestionabilidad con búsqueda de respuestas externas.",
+      "Desorganización del pensamiento.",
+      "Adopción rígida de conclusiones súbitas.",
+      "Pérdida de capacidad para pausar o cuestionar."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Esquemas mentales, rigidez cognitiva, nuevas perspectivas.",
-      "practica_sugerida": "Mapeo o journaling de creencias que se flexibilizaron. Reflexionar sobre ideas que antes eran impensables."
-    }
+    "accion_directiva": "Limitar interpretaciones, posponer decisiones, orientar al presente y reforzar que las conclusiones se revisarán después."
   },
 
   {
-    "efecto": "Insight noético (conocimiento por familiaridad)",
+    "efecto": "Insight noético",
     "dominio": ["cognitivo"],
     "fenomenologia": {
-      "descripcion_paciente": "He comprendido algo profundo, como una verdad sobre mí o el universo. No lo pensé… simplemente lo supe. No tengo palabras, pero es real.",
-      "signos_observables": "Expresiones de asombro, lágrimas, verbalización de ‘verdades personales’. El paciente puede mostrar calma intensa o liberación emocional con contenido de gran significado subjetivo."
+      "descripcion_paciente": "Surge una comprensión que se siente profunda, evidente o verdadera. Puede ser difícil de explicar, pero tener mucha fuerza subjetiva.",
+      "signos_observables": "Lágrimas, asombro, calma intensa, frases de revelación o certezas sobre sí mismo, la vida o el mundo."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La disolución del ego reduce la actividad de la DMN, facilitando el acceso a contenido subconsciente. Esto permite reconfigurar creencias previas, generando una sensación de certeza subjetiva. La ‘cualidad noética’ surge cuando el sistema intenta reorganizarse frente a nueva información emocional y perceptiva.",
-      "frase_de_normalizacion": "Estás accediendo a una verdad que viene desde dentro. No necesitas explicarla ahora. Lo importante es que está surgiendo para ti, y es válida como punto de partida."
+    "mecanismo_probable": "La experiencia puede unir emoción, significado y certeza subjetiva. Algo puede sentirse verdadero antes de haber sido revisado con calma.",
+    "lectura_operativa": "Valida la importancia subjetiva sin confirmar que sea verdad objetiva. Sostén la experiencia y protege la revisión crítica posterior.",
+    "presencia_cushion": {
+      "prioridad": "No imposición + Orientación",
+      "hacer": "Permite que la comprensión exista sin fijarla como conclusión definitiva. Usa lenguaje que mantenga apertura.",
+      "evitar": "No digas 'esa es la verdad'. No conviertas el insight en mandato o diagnóstico."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["NA"],
-      "medicacion": ["NA"],
-      "set_setting": ["contexto no reflexivo o sin integración posterior"]
+    "frases_utiles": {
+      "sosten": "Eso parece importante. No necesitas explicarlo por completo ahora.",
+      "anclaje": "Siente tu cuerpo mientras eso se asienta. Respira y déjalo estar.",
+      "orientacion": "Podemos guardar esta comprensión y revisarla después con más calma."
     },
-    "matriz_riesgo": "Medio (Justificación: puede producir interpretaciones erróneas si no se integra críticamente. Es crucial discernir entre insight terapéutico y sobreinterpretación mística o ilusoria.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Confía en lo que estás comprendiendo. No es necesario nombrarlo aún.",
-      "intervencion_minima_anclaje": "Siente tu cuerpo mientras observas esta comprensión. Respira para integrarla.",
-      "intervencion_activa_reencuadre": "Este insight puede ser una semilla. Recógelo sin aferrarte; la integración te ayudará a darle forma útil después."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Grandiosidad, pérdida de juicio o creencias delirantes que no se reconocen como inducidas.",
-      "accion_de_escalamiento": "Contención verbal firme, enraizamiento en el presente y validación sin reforzar el contenido delirante."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Creencias falsas adoptadas con certeza post-sesión (evaluar confabulación, efectos adversos prolongados (PAE), o bypass espiritual)."
+    "senales_intervencion_directiva": [
+      "Grandiosidad o omnipotencia.",
+      "Certeza delirante sin capacidad de cuestionamiento.",
+      "Impulso a tomar decisiones inmediatas.",
+      "Contenido persecutorio, mesiánico o autolesivo."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Significado personal, nuevas comprensiones, discernimiento epistémico.",
-      "practica_sugerida": "Escritura reflexiva sobre lo que se ‘comprendió’ y evaluar su aplicación (la acción) real y simbólica con el terapeuta."
-    }
+    "accion_directiva": "Validar la intensidad sin reforzar literalidad, anclar al presente y posponer decisiones o interpretaciones."
   },
+
   // --- DOMINIO EMOCIONAL ---
   {
-  "efecto": "Miedo intenso / Ansiedad (Challenging experience)",
-  "dominio": ["emocional"],
-  "fenomenologia": {
-    "descripcion_paciente": "El miedo puede sentirse en distintos niveles: como angustia física (somática), como pánico por perder el control (cognitivo), o como miedo existencial a morir o desaparecer. A veces se experimenta como una lucha intensa con pensamientos o emociones reprimidas.",
-    "signos_observables": "Llanto, hiperventilación, agitación motora, lenguaje desorganizado o intento de abandonar la sala. También puede presentarse como un estado de alerta o vigilancia excesiva. Si hay avance emocional, el paciente puede entrar en un estado de profunda catarsis o introspección."
-  },
-  "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "El miedo agudo refleja una resistencia del ego a soltar el control, exacerbada por la desorganización jerárquica inducida por el agonismo 5-HT₂A. La Red de Prominencia (SN) y la amígdala se activan ante señales emocionales intensas, mientras la corteza prefrontal pierde su control regulador. Esto se acompaña de una disolución de creencias rígidas (Modelo REBUS) que puede resultar angustiante si no se acepta el contenido emergente.",
-      "frase_de_normalizacion": "El miedo que sientes es una parte común del proceso de transformación. Estás en un lugar seguro y acompañado. Esta experiencia difícil puede abrir una puerta hacia algo más profundo si te permites sentirla."
+    "efecto": "Miedo intenso / Ansiedad",
+    "dominio": ["emocional"],
+    "fenomenologia": {
+      "descripcion_paciente": "El miedo puede sentirse como angustia corporal, pánico a perder el control, miedo a morir, desaparecer o quedar atrapado en la experiencia.",
+      "signos_observables": "Llanto, hiperventilación, temblor, agitación, vigilancia, lenguaje desorganizado o intento de abandonar la sala."
     },
-    "moduladores_riesgo": {
-      "dosis": "alta",
-      "historial": ["neuroticismo alto", "trauma no procesado"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno no seguro", "preparación emocional deficiente"]
+    "mecanismo_probable": "El sistema emocional puede estar procesando amenaza con alta intensidad. Puede haber lucha contra la experiencia, necesidad de control o dificultad para aceptar lo que aparece.",
+    "lectura_operativa": "La intensidad emocional no exige cortar el proceso si la persona conserva seguridad. Si hay pánico sostenido, agitación o riesgo físico, pasa a anclaje y escalamiento según respuesta.",
+    "presencia_cushion": {
+      "prioridad": "Seguridad + Calma",
+      "hacer": "Baja tu ritmo, mantén voz firme y suave, confirma que está acompañado. Primero co-regula; luego orienta.",
+      "evitar": "No digas 'no pasa nada'. No minimices. No empujes a atravesar miedo si la persona está perdiendo seguridad."
     },
-    "matriz_riesgo": "Alto (Justificación: la ansiedad severa y el pánico pueden llevar a desorganización aguda, riesgo físico o retraumatización si no se acompaña adecuadamente. Con contención terapéutica, puede ser una puerta a la catarsis y el avance emocional.",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy aquí contigo. El miedo es temporal. Puedes permitirte sentirlo, sin luchar contra él.",
-      "intervencion_minima_anclaje": "Pon atención a tu respiración. Siente el peso de tu cuerpo sobre la superficie. Estás en un lugar seguro.",
-      "intervencion_activa_reencuadre": "Esta emoción difícil tiene algo que mostrarte. Puedes atravesarla. Estás acompañado, y esto también pasará."
+    "frases_utiles": {
+      "sosten": "Estoy aquí contigo. No tienes que pelear con esto ahora.",
+      "anclaje": "Pon atención a tu exhalación. Siente el peso de tu cuerpo sobre la superficie.",
+      "orientacion": "Esto se siente muy intenso, pero estás en la sesión y estoy aquí. Vamos paso a paso."
     },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Agitación física severa, verbalizaciones incoherentes persistentes, intento de autoagresión o de abandonar el entorno terapéutico.",
-      "accion_de_escalamiento": "Intervención verbal clara y directiva. Anclaje físico si está consensuado. Activación de protocolo de seguridad si el paciente no responde al contacto verbal ni físico."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia del miedo o angustia más allá de 72 horas (Evaluar PAE).",
-      "Pérdida de introspección o desarrollo de creencias delirantes tras la sesión."
+    "senales_intervencion_directiva": [
+      "Hiperventilación persistente o pánico sostenido.",
+      "Intento de autoagresión o de abandonar el espacio sin orientación.",
+      "Agitación psicomotriz peligrosa.",
+      "Verbalizaciones incoherentes persistentes o pérdida de contacto."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Miedo evitado, contenido reprimido, rendición y coraje emocional.",
-      "practica_sugerida": "Escribir sobre lo que produjo miedo. ¿Qué parte de ti se resistía? ¿Qué aprendiste al permitirte sentirlo sin huir?"
-    }
+    "accion_directiva": "Anclar a cuerpo y entorno, reducir estímulos, usar instrucciones breves y activar protocolo de seguridad si no responde."
   },
 
   {
     "efecto": "Culpa expansiva / Juicio moral intenso",
     "dominio": ["emocional", "cognitivo"],
     "fenomenologia": {
-      "descripcion_paciente": "Una forma aguda de autocrítica o juicio moral que se manifiesta como bucles mentales centrados en errores pasados o insuficiencia personal. La intensidad emocional hace que el paciente sienta que está enfrentando una verdad devastadora sobre sí mismo.",
-      "signos_observables": "Verbalizaciones repetitivas de culpa o insuficiencia. Inquietud motora, llanto, angustia somática y posible pánico si la experiencia se intensifica hacia la disolución ansiosa del ego (DED)."
+      "descripcion_paciente": "Aparece culpa intensa, autocrítica o sensación de haber hecho algo irreparable. Puede sentirse como una verdad devastadora sobre sí mismo.",
+      "signos_observables": "Llanto, frases repetitivas de culpa o insuficiencia, inquietud, contracción corporal, dificultad para soltar una idea moral o autocrítica."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La culpa expansiva refleja la resistencia del ego a la disolución de creencias rígidas ('hiperpriores'), típicas de trastornos internalizantes. El agonismo 5-HT₂A interrumpe la actividad de la Red Neuronal por Defecto (DMN), especialmente PCC y mPFC, lo que permite que emerjan contenidos previamente reprimidos. La amígdala puede amplificar la amenaza emocional cuando no hay rendición psicológica.",
-      "frase_de_normalizacion": "Lo que sientes es un patrón emocional profundamente arraigado emergiendo. Puedes permitirte sentirlo sin identificarte con él. La culpa, aunque intensa, también puede ser un umbral hacia el perdón y la transformación."
+    "mecanismo_probable": "Un patrón de autojuicio puede hacerse muy visible y emocionalmente intenso. La mente puede tomar una evaluación interna como verdad absoluta.",
+    "lectura_operativa": "No confirmes el contenido de culpa. Si hay contacto y emoción procesable, sostén. Si hay rumiación, pánico o autodesprecio rígido, orienta y reencuadra sin discutir. ",
+    "presencia_cushion": {
+      "prioridad": "Hospitalidad + No imposición",
+      "hacer": "Recibe la culpa sin reforzarla. Diferencia sentir culpa de concluir que la culpa es toda la verdad.",
+      "evitar": "No digas que la persona debe perdonarse ahora. No conviertas la culpa en lección espiritual."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["depresión (rumiación)", "TOC"],
-      "medicacion": ["NA"],
-      "set_setting": ["autocrítica basal alta", "entorno terapéutico no contenedor"]
+    "frases_utiles": {
+      "sosten": "Puedes sentir esto sin convertirlo en una sentencia sobre quién eres.",
+      "anclaje": "Vuelve al cuerpo. Siente tus manos, tus pies, el contacto con la superficie.",
+      "orientacion": "No necesitamos resolver esta culpa ahora. Podemos sostenerla sin obedecerla."
     },
-    "matriz_riesgo": "Medio (Justificación: requiere acompañamiento cercano, ya que puede devenir en rumiación patológica o disolución ansiosa si no se contiene y reencuadra clínicamente.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. No tienes que cambiar lo que estás sintiendo; solo observarlo.",
-      "intervencion_minima_anclaje": "Pon atención a tu respiración o a la textura de la manta. Siente tu cuerpo como un ancla que sostiene.",
-      "intervencion_activa_reencuadre": "Esa voz crítica es parte de un viejo patrón. Ahora tienes la oportunidad de escucharlo sin obedecerlo. Hay otra forma de relacionarte con lo que sientes."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Rumiación persistente o angustia paralizante que bloquea el avance del proceso.",
-      "accion_de_escalamiento": "Uso firme de anclaje somático, reencuadre directo y orientación clara. Validación emocional sin confirmar contenido de autocrítica."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Culpa persistente o autocrítica patológica post-sesión (PAE).",
-      "Insight psicótico: creencias rígidas adoptadas como verdades absolutas con cualidad noética no cuestionada."
+    "senales_intervencion_directiva": [
+      "Rumiación moral sin pausa.",
+      "Autodesprecio extremo o verbalizaciones de daño hacia sí mismo.",
+      "Pánico asociado a culpa.",
+      "Creencia rígida e incuestionable de condena, castigo o daño irreparable."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Autoimagen, perfeccionismo, moralidad, perdón, origen del juicio interno.",
-      "practica_sugerida": "Diálogo interno guiado, journaling de reencuadre (revisar la narrativa moral), trabajo de compasión (práctica de metta o meditación de bondad amorosa)."
-    }
+    "accion_directiva": "Validar emoción sin confirmar contenido, anclar al presente y escalar si hay ideación suicida o pérdida del juicio de realidad."
   },
 
   {
-    "efecto": "Ansiedad de rebote (0–72h)",
+    "efecto": "Ansiedad de rebote (0-72h)",
     "dominio": ["emocional"],
     "fenomenologia": {
-      "descripcion_paciente": "Después de la sesión, me siento inquieto, emocionalmente frágil, con miedo o confusión que aparece incluso cuando ya no estoy bajo el efecto directo de la sustancia. A veces me cuesta dormir o siento que las emociones resurgen sin explicación.",
-      "signos_observables": "Ansiedad persistente leve-moderada, reportes de flashbacks, insomnio, irritabilidad o dificultad para retomar la funcionalidad basal. Puede haber verbalizaciones de temor (ej. '¿Esto se quedará así?') o sensación de desconexión leve (desrealización)."
+      "descripcion_paciente": "Después de la sesión aparece inquietud, fragilidad emocional, miedo, insomnio o sensación de que algo quedó abierto.",
+      "signos_observables": "Reportes de ansiedad persistente, irritabilidad, dificultad para dormir, confusión leve, temor a haber quedado mal o desconexión leve."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Durante la ventana post-aguda, el sistema serotoninérgico entra en un proceso de reajuste. La amígdala puede mostrar hiperreactividad tras la disminución del control prefrontal, generando ansiedad. La red DMN, tras haber relajado sus hiperpriores bajo psilocibina, puede intentar reinstaurarlos, generando fricción interna (resistencia). El material emocional no integrado adecuadamente también puede reaparecer.",
-      "frase_de_normalizacion": "Este estado es transitorio y esperable. Tu mente está ajustándose a los cambios y procesando lo vivido. No estás retrocediendo: estás integrando. Esto también es parte del proceso de sanación."
+    "mecanismo_probable": "Después de una experiencia intensa, el sistema puede necesitar tiempo para recuperar estabilidad. Material emocional abierto puede seguir activo durante horas o días.",
+    "lectura_operativa": "Aunque ocurre después de la sesión, debe quedar como fenómeno de seguimiento. No lo trates como fracaso. Observa intensidad, duración, sueño, funcionalidad y riesgo.",
+    "presencia_cushion": {
+      "prioridad": "Seguridad + Orientación",
+      "hacer": "Ofrece encuadre claro, seguimiento y referencias simples de regulación. Normaliza sin banalizar.",
+      "evitar": "No prometas que todo desaparecerá solo. No interpretes el malestar como sanación inevitable."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["neuroticismo alto", "ansiedad previa"],
-      "medicacion": ["NA"],
-      "set_setting": ["falta de red de apoyo o integración terapéutica post-sesión"]
+    "frases_utiles": {
+      "sosten": "Esto puede pasar después de una experiencia intensa. Vamos a observar cómo evoluciona.",
+      "anclaje": "Vuelve a rutinas simples: dormir, comer, hidratarte, caminar suave y hablar con apoyo seguro.",
+      "orientacion": "Si esto aumenta, dura más de lo esperado o aparecen ideas de hacerte daño, necesitamos apoyo clínico."
     },
-    "matriz_riesgo": "Medio (Justificación: Aunque suele resolverse espontáneamente, si no es encuadrado ni acompañado, puede progresar a efectos adversos persistentes o interferir con la integración psicológica.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Recuerda lo aprendido: observa tu estado sin identificarte con él. Esto pasará. Puedes permitir que el malestar se exprese sin luchar contra él.",
-      "intervencion_minima_anclaje": "Busca señales de estabilidad (una rutina, una conversación significativa, contacto con el cuerpo). Nombrar lo que sientes puede ayudarte a contenerlo.",
-      "intervencion_activa_reencuadre": "Este es un momento para aplicar lo que ganaste en la experiencia: responder con curiosidad, no con juicio. No necesitas resolver todo ahora. Solo sostenerte, y permitir que se asiente."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Ansiedad severa o confusión persistente >72h, aparición de ideación suicida o sensación de 'haber quedado dañado permanentemente'.",
-      "accion_de_escalamiento": "Intervención clínica formal, derivación a red de apoyo terapéutico, validación de la experiencia y encuadre protector. Posible evaluación psiquiátrica si el malestar funcional es grave."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia de síntomas emocionales negativos más allá de la primera semana.",
-      "Narrativas rígidas post-sesión (ej. 'la experiencia me destruyó', 'mi mente no volverá a ser la misma')."
+    "senales_intervencion_directiva": [
+      "Ansiedad severa o confusión persistente más de 72 horas.",
+      "Insomnio grave o deterioro funcional.",
+      "Sensación de daño permanente.",
+      "Ideación suicida, paranoia o desrealización persistente."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "La ansiedad como resistencia emocional. El regreso de patrones mentales no significa retroceso, sino la necesidad de integración.",
-      "practica_sugerida": "Journaling sobre lo que quedó abierto; sesiones de integración que encuadren la ansiedad como parte del proceso. Reforzar prácticas de regulación emocional (respiración, metta, conexión interpersonal)."
-    }
-  },
-  {
-  "efecto": "Ilimitación Oceánica (OBN)",
-    "dominio": ["emocional", "cognitivo"],
-    "fenomenologia": {
-      "descripcion_paciente": "Sentí que ya no existía como individuo separado. Todo estaba conectado. Me invadió una dicha inexplicable y una sensación de verdad profunda.",
-      "signos_observables": "Expresiones de calma o asombro, mirada fija, verbalizaciones místicas, quietud profunda o verbalizaciones sobre unidad o amor universal."
-    },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Correlato positivo de la disolución del ego. Disminución de la actividad y conectividad de la Red Neuronal por Defecto (DMN), facilitada por el agonismo 5-HT₂A. Activación reducida de la Amígdala ante estímulos negativos. Incremento de entropía en la red cortical.",
-      "frase_de_normalizacion": "Estás experimentando la amplitud de la conciencia más allá del yo. Permítete rendirte a la unidad. No necesitas entenderlo; solo sentirlo."
-    },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["idealización espiritual", "grandiosidad"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno muy espiritual o no estructurado"]
-    },
-    "matriz_riesgo": "Bajo a Medio (Justificación: puede inducir confusión o sobreinterpretación si no se integra con acompañamiento. Riesgo epistémico si se convierte en una creencia rígida.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo, estás bien. Solo permite que el momento exista.",
-      "intervencion_minima_anclaje": "Siente la música, siente tu cuerpo. Lo que estás sintiendo es seguro.",
-      "intervencion_activa_reencuadre": "Este momento es una muestra de lo que tu mente puede sentir cuando no se defiende. Puedes recordarlo, no aferrarte."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Transformación súbita del estado en paranoia o pánico. Comportamiento agitado o discurso delirante de omnipotencia.",
-      "accion_de_escalamiento": "Reducción de estímulos, intervención verbal orientada a anclar y restaurar el marco de seguridad."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia de creencias metafísicas inflexibles o delirantes post-sesión.",
-      "Narrativas grandiosas o mesiánicas no evaluadas críticamente."
-    ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Sentido de propósito, apertura a la experiencia, relación con lo espiritual y lo inexpresable.",
-      "practica_sugerida": "Diseñar metas basadas en valores vividos; exploración de filosofía personal desde la apertura emocional."
-    }
+    "accion_directiva": "Activar seguimiento clínico, red de apoyo y evaluación profesional si hay deterioro, riesgo o persistencia."
   },
 
-    {
-    "efecto": "Catarsis emocional (Avance emocional)",
+  {
+    "efecto": "Ilimitación oceánica (OBN)",
+    "dominio": ["emocional", "autoprocesamiento"],
+    "fenomenologia": {
+      "descripcion_paciente": "La persona siente unidad, conexión, amplitud, amor o pérdida placentera de límites personales. Puede vivirse como profundamente significativo.",
+      "signos_observables": "Calma, quietud, lágrimas, sonrisa, frases sobre unidad, amor, totalidad o conexión con todo."
+    },
+    "mecanismo_probable": "Los límites habituales del yo pueden sentirse más flexibles. La experiencia de separación puede disminuir y aparecer una sensación intensa de conexión.",
+    "lectura_operativa": "Si hay paz y regulación, no intervengas. Si la experiencia se convierte en grandiosidad, certeza metafísica rígida o omnipotencia, orienta sin confrontar. ",
+    "presencia_cushion": {
+      "prioridad": "Hospitalidad + No imposición",
+      "hacer": "Permite la experiencia sin apropiarte de su significado. Protege la autonomía interpretativa.",
+      "evitar": "No confirmes creencias metafísicas. No digas que la persona está iluminada o curada."
+    },
+    "frases_utiles": {
+      "sosten": "Puedes descansar en esta experiencia sin tener que explicarla ahora.",
+      "anclaje": "Siente también tu cuerpo aquí, respirando, sostenido por la superficie.",
+      "orientacion": "Lo que aparece puede ser importante. No necesitamos convertirlo ahora en una conclusión."
+    },
+    "senales_intervencion_directiva": [
+      "Grandiosidad o discurso mesiánico.",
+      "Paranoia o pánico tras la apertura expansiva.",
+      "Pérdida de juicio de realidad.",
+      "Impulso a tomar decisiones radicales durante o inmediatamente después."
+    ],
+    "accion_directiva": "Orientar al cuerpo y al marco de sesión, evitar reforzar conclusiones rígidas y posponer decisiones."
+  },
+
+  {
+    "efecto": "Catarsis emocional",
     "dominio": ["emocional"],
     "fenomenologia": {
-      "descripcion_paciente": "Sentí que todo lo que he reprimido por años salió de golpe. Lloré, grité y después sentí un alivio que no sabía que necesitaba.",
-      "signos_observables": "Llanto profundo, temblores emocionales, verbalizaciones espontáneas de traumas pasados, relajación corporal posterior al pico emocional."
+      "descripcion_paciente": "Aparece una descarga emocional intensa: llanto, grito, temblor o alivio después de expresar algo contenido.",
+      "signos_observables": "Llanto profundo, respiración irregular, temblores, expresión de dolor o alivio, relajación corporal después del pico emocional."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Reducción de la inhibición cortical y disolución de la Red por Defecto permiten la emergencia de material reprimido. El sistema límbico es activado, especialmente la Amígdala, permitiendo una reconfiguración emocional. Relajación de prioris facilita insight emocional.",
-      "frase_de_normalizacion": "Estás liberando emociones que antes estaban contenidas. Es seguro sentirlas ahora. Este es un momento poderoso de transformación."
+    "mecanismo_probable": "Emociones evitadas o contenidas pueden hacerse accesibles con mayor intensidad. El cuerpo puede expresar carga afectiva antes de que haya palabras claras.",
+    "lectura_operativa": "Si hay descarga con contacto y seguridad, sostén. No cortes la emoción por incomodidad. Si hay disociación, retraumatización o pérdida de seguridad, orienta y ancla.",
+    "presencia_cushion": {
+      "prioridad": "Seguridad + Hospitalidad",
+      "hacer": "Haz espacio a la emoción sin empujarla. Observa respiración, contacto y recuperación después de la ola emocional.",
+      "evitar": "No pidas detalles traumáticos durante la catarsis. No dramatices ni celebres la intensidad."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["trauma complejo", "represión emocional"],
-      "medicacion": ["NA"],
-      "set_setting": ["falta de contención emocional", "facilitador inexperto"]
+    "frases_utiles": {
+      "sosten": "Estoy aquí. Puedes sentirlo sin tener que explicarlo.",
+      "anclaje": "Respira. Siente la superficie sosteniendo tu cuerpo.",
+      "orientacion": "No necesitamos entrar en la historia ahora. Solo vuelve al cuerpo y a este momento."
     },
-    "matriz_riesgo": "Bajo a Medio (Justificación: si se acompaña adecuadamente, es un predictor robusto de cambio. Mal gestionado, puede intensificar trauma no procesado.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Sigue respirando. Está bien sentir. Aquí no tienes que reprimir nada.",
-      "intervencion_minima_anclaje": "Pon atención a tu respiración. Siente el suelo bajo ti. Siente tu cuerpo.",
-      "intervencion_activa_reencuadre": "Este dolor está saliendo porque ahora tienes los recursos para sentirlo. Tu sistema se está liberando."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Pérdida de conexión con el entorno o discurso desorganizado posterior a la liberación emocional intensa.",
-      "accion_de_escalamiento": "Anclaje físico suave, contención verbal, intervención para restaurar seguridad emocional."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Flashbacks frecuentes del contenido catártico sin integración.",
-      "Ansiedad o culpa persistente vinculada a la emoción liberada."
+    "senales_intervencion_directiva": [
+      "Llanto o grito que evoluciona a pánico o desorganización.",
+      "Disociación marcada o pérdida de contacto.",
+      "Riesgo físico por movimiento intenso.",
+      "Reviviscencia traumática sin capacidad de orientación."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Cómo relacionarse con las emociones intensas, los patrones que impiden sentir, la apertura emocional sostenida.",
-      "practica_sugerida": "Practicar aceptación emocional (modelo ACE), diseñar acciones que reflejen la nueva libertad emocional percibida."
-    }
+    "accion_directiva": "Reducir estímulos, orientar al cuerpo, evitar exploración narrativa intensa y escalar si no recupera seguridad."
   },
 
-  // --- DOMINIO EXISTENCIAL ---
+  // --- DOMINIO AUTOPROCESAMIENTO ---
   {
-    "efecto": "Silencio Autorreferencial",
+    "efecto": "Silencio autorreferencial",
     "dominio": ["autoprocesamiento", "emocional"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento un alivio al dejar de pelear conmigo. Puedo mirar mis errores o emociones sin atacarme. Mi mente se suaviza, y por primera vez siento ternura hacia mí mismo.",
-      "signos_observables": "Cambio visible en el tono emocional: rostro relajado, respiración más profunda, verbalizaciones menos autocríticas. El paciente puede pasar de la rumiación a la aceptación silenciosa o al llanto con alivio."
+      "descripcion_paciente": "La autocrítica baja. La persona puede mirar errores, dolor o emociones sin atacarse. Aparece alivio, ternura o quietud interna.",
+      "signos_observables": "Rostro más relajado, respiración profunda, menor lenguaje autocrítico, llanto con alivio o silencio estable."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Durante la meseta, la psilocibina reduce la actividad y la conectividad de la Red Neuronal por Defecto (DMN), especialmente en la mPFC, interrumpiendo la autocrítica y la rumiación autorreferencial. El modelo REBUS explica la relajación temporal de los hiperpriores negativos, permitiendo la entrada de señales afectivas ascendentes que disuelven patrones rígidos de autojuicio.",
-      "frase_de_normalizacion": "Tu mente está aprendiendo una nueva forma de relacionarse contigo: observar sin castigar, sentir sin corregir. Este alivio no es evasión, es apertura."
+    "mecanismo_probable": "La narrativa habitual de autojuicio puede perder fuerza temporalmente. La persona puede observarse con menos defensa o castigo interno.",
+    "lectura_operativa": "Si aparece suavidad y estabilidad, no llenes el silencio. Si se convierte en falsa redención, grandiosidad o rechazo de ayuda futura, orienta con cautela.",
+    "presencia_cushion": {
+      "prioridad": "Interés + No imposición",
+      "hacer": "Respeta el silencio. Refleja sin exagerar. Deja que la persona encuentre su propio lenguaje.",
+      "evitar": "No declares que la persona ya sanó. No conviertas el alivio en conclusión clínica."
     },
-    "moduladores_riesgo": { 
-      "dosis": "media|alta", 
-      "historial": ["autocrítica elevada", "depresión"], 
-      "medicacion": ["NA"], 
-      "set_setting": ["falta de preparación psicológica", "entorno descuidado"]
+    "frases_utiles": {
+      "sosten": "Puedes quedarte con esa suavidad sin tener que explicarla.",
+      "anclaje": "Nota cómo se siente tu cuerpo cuando baja la autocrítica.",
+      "orientacion": "Esto puede ser importante. Dejemos que se asiente antes de sacar conclusiones."
     },
-    "matriz_riesgo": "Bajo a Medio (Justificación: aunque es un efecto terapéutico positivo, puede derivar en falsa redención o bypass espiritual si se interpreta como 'curación completa' sin integración crítica.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Permite que esta suavidad se asiente. No necesitas entenderla ni explicarla. Solo siente la diferencia.",
-      "intervencion_minima_anclaje": "Respira y nota cómo tu cuerpo se siente al soltar la autocrítica. El alivio también es información.",
-      "intervencion_activa_reencuadre": "Estás experimentando la posibilidad de aceptarte sin condiciones. No es una ilusión; es una capacidad que puedes seguir cultivando."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Sobreidentificación con sensaciones de iluminación o rechazo absoluto de ayuda médica o psicoterapéutica.",
-      "accion_de_escalamiento": "Reforzar el marco racional de integración. Validar la experiencia pero contextualizarla como transitoria y parte de un proceso continuo."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Persistencia de creencias de grandiosidad o infalibilidad personal post-sesión.",
-      "Negación de necesidades terapéuticas futuras."
+    "senales_intervencion_directiva": [
+      "Grandiosidad, infalibilidad o certeza de curación completa.",
+      "Rechazo absoluto de ayuda o tratamientos necesarios.",
+      "Desorganización tras el alivio.",
+      "Bypass espiritual o negación del conflicto real."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Origen de la voz autocrítica, patrones de autoexigencia, relación entre vulnerabilidad y poder.",
-      "practica_sugerida": "Journaling compasivo, meditación centrada en el corazón, práctica del modelo ACE (Aceptar, Conectar, Encarnar) aplicada al diálogo interno."
-    },
-    "fase_emergente": "Meseta a descenso temprano (efecto agudo con eco integrativo)"
+    "accion_directiva": "Validar el alivio sin absolutizarlo, orientar al proceso y posponer conclusiones definitivas."
   },
 
   {
-    "efecto": "Aceptación Emocional",
-    "dominio": ["autoprocesamiento"],
+    "efecto": "Aceptación emocional",
+    "dominio": ["autoprocesamiento", "emocional"],
     "fenomenologia": {
-      "descripcion_paciente": "Durante el viaje, pude enfrentar emociones que antes evitaba. Sentí tristeza, rabia o miedo sin necesidad de huir. Fue doloroso, pero había calma debajo, como si algo dentro de mí supiera que podía sostenerlo.",
-      "signos_observables": "Llanto o liberación emocional con estabilidad postural. Disminución de la rigidez corporal, verbalizaciones centradas en la aceptación ('está bien sentir esto'). El paciente se mantiene presente y no busca escapar del malestar."
+      "descripcion_paciente": "La persona puede sentir tristeza, rabia, miedo o dolor sin huir. Puede haber malestar, pero también una base de calma o permiso interno.",
+      "signos_observables": "Llanto con estabilidad, respiración que se regula, frases como 'puedo sentir esto', menor rigidez corporal y presencia sostenida."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina relaja los hiperpriores rígidos de la DMN y aumenta la comunicación entre áreas límbicas y sensoriales, permitiendo que el dolor emocional reprimido emerja con menos censura. La reducción de la actividad en la mPFC disminuye la resistencia cognitiva, mientras que la menor reactividad de la Amígdala facilita la aceptación y la autocompasión emergente.",
-      "frase_de_normalizacion": "Estás sintiendo lo que antes evitabas, y eso es una señal de fortaleza. Permítete vivirlo en el cuerpo. No estás rompiéndote, estás liberando."
+    "mecanismo_probable": "La evitación puede disminuir y permitir más contacto con emoción difícil. La persona puede permanecer con el malestar sin reaccionar automáticamente.",
+    "lectura_operativa": "Si hay emoción con presencia, sostén. No rescates. Si aparece retraumatización, disociación o pérdida de regulación, ancla y reduce profundidad emocional.",
+    "presencia_cushion": {
+      "prioridad": "Seguridad + Hospitalidad",
+      "hacer": "Sostén la emoción sin dirigir. Permite pausas, respiración y contacto corporal.",
+      "evitar": "No fuerces exposición emocional. No digas que el dolor es necesario o que debe seguir."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["trauma relacional", "evitación emocional crónica"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno descuidado", "acompañamiento intrusivo"]
+    "frases_utiles": {
+      "sosten": "Estoy contigo. No hay prisa por entenderlo.",
+      "anclaje": "Siente una parte estable del cuerpo: pies, manos o espalda.",
+      "orientacion": "Puedes tomar una pausa. No tenemos que ir más profundo ahora."
     },
-    "matriz_riesgo": "Medio (Justificación: es una liberación emocional saludable, pero puede volverse retraumatizante si no se contiene adecuadamente o si el entorno carece de sostén emocional.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estoy contigo. Permite que la emoción se mueva. No hay prisa por entender.",
-      "intervencion_minima_anclaje": "Trae atención a una parte estable de tu cuerpo: tus manos, tus pies, el peso sobre la superficie. El cuerpo sabe cómo liberar.",
-      "intervencion_activa_reencuadre": "Esta emoción no es enemiga; es parte de la sanación. Estás haciendo espacio para ti mismo."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Disociación marcada, retraumatización o llanto incontrolable que impide la contención verbal.",
-      "accion_de_escalamiento": "Reorientar al entorno físico con señales sensoriales, validar la seguridad, y posponer la exploración emocional profunda hasta una fase de integración acompañada."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Reviviscencia traumática prolongada sin capacidad de regulación.",
-      "Interpretación espiritual del sufrimiento como castigo o deuda kármica."
+    "senales_intervencion_directiva": [
+      "Disociación o desconexión marcada.",
+      "Llanto incontrolable sin respuesta a la voz.",
+      "Reviviscencia traumática intensa.",
+      "Necesidad de escapar del espacio o del cuerpo."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "El papel del dolor como maestro, nuevas formas de sostener la vulnerabilidad y redefinir la fortaleza emocional.",
-      "practica_sugerida": "Prácticas de mindfulness enfocadas en el cuerpo, journaling de gratitud ante emociones difíciles, aplicación diaria del modelo ACE (Aceptar, Conectar, Encarnar)."
-    },
-    "fase_emergente": "Descenso y primeras horas post-sesión (efecto mixto agudo–integrativo)"
+    "accion_directiva": "Orientar al entorno físico, estabilizar respiración, pausar exploración emocional y activar apoyo clínico si no recupera regulación."
   },
 
   {
-    "efecto": "Reconstrucción del Autoesquema",
+    "efecto": "Reconstrucción del autoesquema",
     "dominio": ["autoprocesamiento"],
     "fenomenologia": {
-      "descripcion_paciente": "Sentí que mi identidad era una historia vieja. Como si de repente pudiera reescribir quién soy. Ya no estoy atrapado en ese yo rígido o culpable. Vi mi vida con claridad y entendí que podía cambiar.",
-      "signos_observables": "Asombro emocional, verbalizaciones introspectivas sobre la historia personal desde una nueva perspectiva. Disminución del lenguaje autorreferencial rígido y aumento de apertura cognitiva."
+      "descripcion_paciente": "La persona siente que puede verse desde otro ángulo. Viejas identidades, culpas o historias personales parecen menos fijas.",
+      "signos_observables": "Asombro, frases sobre una nueva perspectiva de la vida, menor lenguaje rígido sobre sí mismo, apertura a revisar narrativas personales."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "La psilocibina relaja los hiperpriores de alto nivel que sostienen la narrativa rígida del yo. Este efecto se correlaciona con una disminución aguda y desacoplamiento funcional de la Red de Modo Predeterminado (DMN), especialmente en la Corteza Cingulada Posterior (PCC) y la Corteza Prefrontal Medial (mPFC), facilitando una revisión epistémicamente inocente del autoesquema.",
-      "frase_de_normalizacion": "Estás viendo quién eres desde una perspectiva nueva. Esta claridad puede parecer extraña, pero es un signo de apertura profunda. Tu identidad no está fija: está viva, y puede transformarse."
+    "mecanismo_probable": "La historia habitual sobre el yo puede flexibilizarse. Pueden aparecer nuevas formas de organizar recuerdos, identidad y sentido personal.",
+    "lectura_operativa": "Acompaña sin fijar una nueva identidad. Si aparecen conclusiones radicales, grandiosidad o negación de hechos biográficos, orienta y pospone decisiones.",
+    "presencia_cushion": {
+      "prioridad": "No imposición + Orientación",
+      "hacer": "Permite nuevas perspectivas sin convertirlas en verdad final. Mantén el marco de sesión y protege decisiones futuras.",
+      "evitar": "No ayudes a construir una nueva narrativa definitiva durante el pico. No refuerces omnipotencia."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["identidad negativa rígida", "creencias autolimitantes"],
-      "medicacion": ["NA"],
-      "set_setting": ["entorno emocionalmente inseguro", "preparación no orientada a insight"]
+    "frases_utiles": {
+      "sosten": "Puedes observar esa nueva perspectiva sin tener que decidir quién eres ahora.",
+      "anclaje": "Siente el cuerpo mientras esta claridad aparece. Respira y deja que se asiente.",
+      "orientacion": "No necesitamos reescribir toda tu vida ahora. Podemos guardar esto para revisarlo después."
     },
-    "matriz_riesgo": "Medio (Justificación: aunque es altamente terapéutico, puede volverse desorganizador si deriva en sobreinterpretación metafísica, grandiosidad o shock ontológico sin integración crítica.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estás viendo tu historia desde un nuevo ángulo. No hay prisa. Deja que la comprensión se asiente.",
-      "intervencion_minima_anclaje": "Observa lo que estás sintiendo mientras aparece esa claridad. Siente el suelo bajo tus pies mientras respiras.",
-      "intervencion_activa_reencuadre": "Estás soltando un viejo yo. Confía en que puedes reconstruir desde lo que estás sintiendo ahora. Esto es crecimiento, no pérdida."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Verbalizaciones delirantes o creencias de omnipotencia. Pérdida de contacto con la realidad o negación absoluta de eventos biográficos significativos.",
-      "accion_de_escalamiento": "Validación empática seguida de reconexión biográfica. Uso de preguntas ancladas en la historia personal para facilitar reintegración narrativa."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Falsa epifanía con abandono de tratamientos médicos.",
-      "Narrativas espirituales rígidas sin correlato conductual.",
-      "Shock ontológico que deriva en ansiedad o desrealización persistente."
+    "senales_intervencion_directiva": [
+      "Creencias de omnipotencia o identidad grandiosa.",
+      "Negación rígida de eventos biográficos relevantes.",
+      "Impulso a cortar vínculos, tratamientos o responsabilidades de inmediato.",
+      "Shock ontológico con ansiedad o desrealización."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "Historia de identidad. Creencias sobre quién soy. Narrativas heredadas o impuestas. Redefinición intencional del yo.",
-      "practica_sugerida": "Ejercicios de reescritura narrativa, journaling sobre versiones del yo que emergieron. Prácticas de mindfulness para sostener la nueva perspectiva sin juicio."
-    }
+    "accion_directiva": "Validar la apertura, anclar a historia concreta y posponer decisiones identitarias o conductuales."
   },
 
   // --- DOMINIO SOMÁTICO ---
@@ -744,107 +572,83 @@ const efectosData = [
     "efecto": "Náusea no emética",
     "dominio": ["somatico"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento malestar fuerte en el estómago. No llego a vomitar, pero es incómodo y me cuesta concentrarme en otra cosa.",
-      "signos_observables": "Palidez, inquietud corporal, rostro tenso o expresiones de disgusto, respiración superficial. Posible necesidad de cambio postural para mitigar el malestar."
+      "descripcion_paciente": "Malestar estomacal, sensación de náusea o incomodidad abdominal sin llegar necesariamente al vómito.",
+      "signos_observables": "Palidez, gesto de disgusto, inquietud, respiración superficial, necesidad de cambiar postura o llevar manos al abdomen."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Activación serotoninérgica visceral (agonismo 5-HT) amplificada por el foco atencional interno. La psilocibina intensifica las señales interoceptivas, haciendo conscientes sensaciones gastrointestinales leves o reprimidas.",
-      "frase_de_normalizacion": "Esa incomodidad en el abdomen es parte de lo que tu cuerpo está soltando. No es peligroso. Siente la respiración en la zona y permite que se mueva sin resistir."
+    "mecanismo_probable": "Las señales internas del cuerpo pueden sentirse más intensas. La atención puede amplificar sensaciones gastrointestinales y volverlas difíciles de ignorar.",
+    "lectura_operativa": "Si hay incomodidad sin signos médicos graves, sostén con calma y orientación corporal. Si el malestar dispara pánico o miedo a intoxicación, ancla y evalúa seguridad física.",
+    "presencia_cushion": {
+      "prioridad": "Calma + Orientación",
+      "hacer": "Habla poco, observa color, respiración, hidratación y postura. Ofrece ajustes simples sin dramatizar.",
+      "evitar": "No espiritualices la náusea como limpieza. No ignores señales médicas si hay dolor intenso, desmayo o síntomas atípicos."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["hipervigilancia somática", "trastornos gastrointestinales funcionales"],
-      "medicacion": ["NA"],
-      "set_setting": ["ausencia de estrategias de anclaje somático", "ambiente sensorialmente desregulado"]
+    "frases_utiles": {
+      "sosten": "Siente la incomodidad sin pelear con ella. Estoy aquí.",
+      "anclaje": "Lleva la respiración suave al abdomen. Podemos ajustar tu postura.",
+      "orientacion": "Vamos a observar cómo cambia. Si aumenta o aparece algo distinto, lo revisamos."
     },
-    "matriz_riesgo": "Bajo a Medio (Justificación: el malestar físico no es clínicamente peligroso pero puede disparar ansiedad si no se contiene ni resignifica.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Tu cuerpo está digiriendo más que comida, está digiriendo historia emocional. Estoy aquí mientras atraviesas esto.",
-      "intervencion_minima_anclaje": "Lleva tus manos al abdomen y respira hacia ahí. Solo siente el movimiento, sin expectativa.",
-      "intervencion_activa_reencuadre": "Ese malestar puede ser una señal de limpieza. No luches contra él; siente cómo cambia momento a momento. Tu cuerpo está participando activamente en el proceso."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Malestar persistente que se transforma en pánico somático o verbalizaciones de toxicidad/perdida de control.",
-      "accion_de_escalamiento": "Validación directa de la seguridad física, reforzar la orientación corporal. Ofrecer contención verbal y ajustes físicos (manta, posición, entorno)."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "NA"
+    "senales_intervencion_directiva": [
+      "Pánico somático o miedo intenso a intoxicación.",
+      "Vómito persistente, dolor intenso o signos de deshidratación.",
+      "Desmayo, confusión médica o síntomas atípicos.",
+      "Incapacidad de recuperar respiración estable."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "La relación con el cuerpo como fuente de información emocional. Patrones de evitación frente al malestar físico.",
-      "practica_sugerida": "Practicar escaneos corporales y respiración consciente durante momentos de incomodidad física leve para aumentar tolerancia interoceptiva."
-    }
+    "accion_directiva": "Ajustar postura, reducir estímulos, ofrecer recipiente/agua si procede, observar signos físicos y activar apoyo médico si hay señales relevantes."
   },
 
   {
     "efecto": "Oleadas térmicas",
     "dominio": ["somatico"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento escalofríos que suben por el cuerpo, como si me recorriera una ola de frío o de energía. A veces sudo sin razón o siento calor en el pecho.",
-      "signos_observables": "Piloerección (piel de gallina), temblor fino, sudoración leve, necesidad de cubrirse o descubrirse. Cambios en el color de la piel o en la postura para regular temperatura."
+      "descripcion_paciente": "Escalofríos, calor, sudoración, temblores finos o sensación de oleadas que suben por el cuerpo.",
+      "signos_observables": "Piel de gallina, temblor, sudoración leve, necesidad de cubrirse o descubrirse, cambios posturales para regular temperatura."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Respuesta simpaticomimética transitoria inducida por agonismo 5-HT2A y disminución del flujo sanguíneo en el hipotálamo (centro de la termorregulación). Las señales interoceptivas amplificadas generan una experiencia sensorial intensa de frío/calor.",
-      "frase_de_normalizacion": "Estas oleadas son parte del movimiento de tu energía emocional. No indican peligro. Permite que pasen por ti como una ola, sin tratar de detenerlas."
+    "mecanismo_probable": "El cuerpo puede mostrar cambios transitorios de activación y sensibilidad interna. Las sensaciones de frío, calor o energía pueden intensificarse.",
+    "lectura_operativa": "Si la persona conserva respiración y orientación, acompaña con calma y ajustes físicos. Si hay hiperventilación, pánico o temblor persistente, ancla y evalúa. ",
+    "presencia_cushion": {
+      "prioridad": "Calma + Seguridad",
+      "hacer": "Ofrece manta, ajuste de temperatura o postura. Mantén voz tranquila y observa evolución.",
+      "evitar": "No interpretes la oleada como energía espiritual necesaria. No ignores fiebre, dolor torácico o signos médicos."
     },
-    "moduladores_riesgo": {
-      "dosis": "media|alta",
-      "historial": ["hipersensibilidad sensorial", "ansiedad generalizada"],
-      "medicacion": ["NA"],
-      "set_setting": ["ambiente frío o estéril", "ausencia de contención física (mantas, tacto consensuado)"]
+    "frases_utiles": {
+      "sosten": "Deja que la sensación pase como una ola. Estoy aquí.",
+      "anclaje": "Siente el peso de la manta y el contacto del cuerpo con la superficie.",
+      "orientacion": "Esto es una sensación corporal intensa. Vamos a observarla y cuidar tu comodidad."
     },
-    "matriz_riesgo": "Bajo (Justificación: los síntomas físicos no implican riesgo médico, pero pueden percibirse como amenazantes si no se acompañan adecuadamente.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Estás sintiendo intensamente. Todo está bien. Solo deja que el cuerpo se exprese.",
-      "intervencion_minima_anclaje": "Abrígate o haz contacto físico consensuado. Siente el peso de la manta como una señal de que estás contenido.",
-      "intervencion_activa_reencuadre": "Lo que sientes es intensidad, no peligro. Cada oleada es parte del proceso; si dejas de luchar, notarás que cambia por sí sola."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Temblor persistente acompañado de hiperventilación, pánico o verbalizaciones de 'no aguanto más'.",
-      "accion_de_escalamiento": "Intervención verbal clara, reconexión con el entorno y respiración guiada. Ofrecer anclaje físico adicional o ajuste del entorno sensorial."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Signos de deshidratación (p.ej. cefalea)."
+    "senales_intervencion_directiva": [
+      "Temblor persistente con pánico o hiperventilación.",
+      "Verbalizaciones de 'no aguanto más'.",
+      "Signos físicos atípicos o deterioro del estado general.",
+      "Agitación motora creciente."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "La relación con el cuerpo como vehículo de emoción. Qué significa sentir intensamente sin control.",
-      "practica_sugerida": "Prácticas de regulación corporal (baños calientes, respiración diafragmática, escaneo corporal) para reforzar la confianza en la seguridad del cuerpo."
-  }
-},
+    "accion_directiva": "Ajustar entorno, guiar respiración, ofrecer apoyo físico consensuado y evaluar signos si la intensidad no baja."
+  },
 
   {
     "efecto": "Palpitaciones y agitación",
     "dominio": ["somatico"],
     "fenomenologia": {
-      "descripcion_paciente": "Siento que el corazón late muy fuerte o rápido. Es como si estuviera acelerado sin razón, y mi cuerpo no se puede quedar quieto.",
-      "signos_observables": "Aumento de la frecuencia cardíaca, agitación motora leve, inquietud física. Posible dilatación pupilar y respiración superficial acelerada."
+      "descripcion_paciente": "El corazón late fuerte o rápido. El cuerpo se siente acelerado, inquieto o incapaz de quedarse quieto.",
+      "signos_observables": "Respiración superficial, inquietud motora, dilatación pupilar, aumento visible de activación, miedo a perder control o a morir."
     },
-    "neurobiologia_aplicada": {
-      "mecanismo_hipotetico": "Respuesta simpaticomimética transitoria causada por el agonismo 5-HT2A y la activación del sistema autónomo. La hiperexcitación emocional amplifica la percepción de interocepción cardíaca. No implica riesgo cardiovascular clínico en pacientes sanos.",
-      "frase_de_normalizacion": "Tu corazón está respondiendo a la intensidad de la experiencia. No hay nada que hacer, solo estar aquí con lo que sientes. Esta sensación pasará."
+    "mecanismo_probable": "La activación corporal puede aumentar y sentirse amenazante. La atención al corazón o respiración puede amplificar la sensación de peligro.",
+    "lectura_operativa": "Diferencia activación esperable de señal médica. Si hay respiración recuperable y seguridad, calma y orienta. Si hay dolor torácico, desmayo, signos vitales fuera de rango o pánico no regulable, escala.",
+    "presencia_cushion": {
+      "prioridad": "Calma + Orientación",
+      "hacer": "Baja el ritmo de la sala. Observa respiración, color, postura y capacidad de responder. Usa instrucciones simples.",
+      "evitar": "No digas que es 'apertura del corazón'. No asumas que todo síntoma cardíaco es emocional."
     },
-    "moduladores_riesgo": {
-      "dosis": "alta",
-      "historial": ["ansiedad", "hipervigilancia somática"],
-      "medicacion": ["NA"],
-      "set_setting": ["hiperexcitación previa a la sesión", "ambiente desorganizado o sobreestimulante"]
+    "frases_utiles": {
+      "sosten": "Estoy aquí. Vamos a ir despacio con tu respiración.",
+      "anclaje": "Alarga la exhalación. Siente tus pies y el peso del cuerpo.",
+      "orientacion": "Vamos a revisar tu seguridad paso a paso. Si aparece dolor fuerte o algo cambia, activamos apoyo."
     },
-    "matriz_riesgo": "Medio (Justificación: aunque fisiológicamente seguro, puede ser interpretado como una señal de peligro, generando pánico si no se regula con acompañamiento.)",
-    "manual_de_intervencion": {
-      "no_intervencion_sosten": "Escucha tu cuerpo sin intentar detenerlo. Todo está funcionando como debe.",
-      "intervencion_minima_anclaje": "Lleva tu atención a la exhalación. Hazla más lenta, más larga. Siente tus pies tocando el suelo.",
-      "intervencion_activa_reencuadre": "Esta energía que sientes es tu sistema activado. No es amenaza, es potencia disponible. Usa tu respiración para habitarla, no para frenarla."
-    },
-    "criterios_de_escalamiento": {
-      "criterio_observable_para_escalar": "Verbalizaciones de miedo a morir, hiperventilación persistente, aumento progresivo de agitación motora.",
-      "accion_de_escalamiento": "Reorientación verbal firme, reconexión somática activa (respiración guiada, tacto consensuado), evaluación de signos vitales si el contexto lo permite."
-    },
-    "banderas_rojas_diagnostico_diferencial": [
-      "Taquicardia o síntomas vegetativos asociados.",
+    "senales_intervencion_directiva": [
+      "Miedo a morir con hiperventilación persistente.",
+      "Aumento progresivo de agitación motora.",
+      "Dolor torácico, desmayo, confusión médica o signos vitales fuera de rango.",
+      "Incapacidad de responder a orientación verbal."
     ],
-    "integracion_post_sesion": {
-      "tema_a_explorar": "La relación con la energía corporal, miedo al descontrol, necesidad de hipercontrol emocional.",
-      "practica_sugerida": "Respiración diafragmática, movimiento consciente (yoga, caminar lento), prácticas que permitan contener y canalizar la excitación sin interpretarla como amenaza."
-    }
+    "accion_directiva": "Guiar respiración, sentar o recostar con seguridad, evaluar signos vitales si es posible y activar apoyo médico si hay señales de alarma."
   }
 ];
