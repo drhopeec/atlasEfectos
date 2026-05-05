@@ -338,110 +338,98 @@
     }
 
     function generarHtmlFicha(efecto) {
-      const fichaId = 'efecto-' + slugify(efecto.efecto);
-      const mecanismoProbable = obtenerMecanismoProbable(efecto);
-      const lecturaOperativa = obtenerLecturaOperativa(efecto);
-      const cushion = obtenerCushion(efecto);
-      const frases = obtenerFrasesUtiles(efecto);
-      const senales = obtenerSenalesDirectivas(efecto);
-      const accionDirectiva = obtenerAccionDirectiva(efecto);
+  const fichaId = 'efecto-' + slugify(efecto.efecto);
+  const mecanismoProbable = obtenerMecanismoProbable(efecto);
+  const lecturaOperativa = obtenerLecturaOperativa(efecto);
+  const cushion = obtenerCushion(efecto);
+  const frases = obtenerFrasesUtiles(efecto);
+  const senales = obtenerSenalesDirectivas(efecto);
+  const accionDirectiva = obtenerAccionDirectiva(efecto);
 
-      return `
-        <div class="pagina-a4 ficha-a4" id="${fichaId}">
-          <header class="ficha-header">
-            <h1>${efecto.efecto}</h1>
-            <h2>${efecto.dominio.join(' / ')}</h2>
-          </header>
-          
-          <div class="ficha-grid">
-            
-            <div class="grid-col">
-              <h3>Fenomenología</h3>
+  return `
+    <div class="pagina-a4 ficha-a4" id="${fichaId}">
+      <header class="ficha-header">
+        <h1>${efecto.efecto}</h1>
+        <h2>${efecto.dominio.join(' / ')}</h2>
+      </header>
+      
+      <div class="ficha-grid">
+        
+        <div class="grid-col">
+          <h3>Fenomenología</h3>
 
-              <h4>Reporte subjetivo</h4>
-              <p>${efecto.fenomenologia.descripcion_paciente}</p>
+          <h4>Reporte subjetivo</h4>
+          <p>${efecto.fenomenologia.descripcion_paciente}</p>
 
-              <h4>Signos observables</h4>
-              <p>${efecto.fenomenologia.signos_observables}</p>
+          <h4>Signos observables</h4>
+          <p>${efecto.fenomenologia.signos_observables}</p>
+        </div>
+        
+        <div class="grid-col">
+          <h3>Mecanismo probable</h3>
+
+          <p>${mecanismoProbable}</p>
+
+          <h4>Lectura operativa</h4>
+          <p>${lecturaOperativa}</p>
+        </div>
+        
+        <div class="grid-col">
+          <h3>Presencia CUSHION</h3>
+
+          <div class="matriz-riesgo-box cushion-box">
+            <h4 class="riesgo-titulo">Prioridad: <span>${cushion.prioridad}</span></h4>
+            <p>${cushion.hacer}</p>
+          </div>
+
+          <h4>Evita</h4>
+          <p>${cushion.evitar}</p>
+        </div>
+        
+        <div class="ficha-manual">
+          <h3>Frases útiles</h3>
+
+          <div class="bloque-icono">
+            <div class="icono">✦</div>
+            <div>
+              <h4>Sostén</h4>
+              <p class="micro-etiqueta">Cuando hay intensidad, pero la persona conserva orientación, contacto y seguridad.</p>
+              <p>${frases.sosten}</p>
             </div>
-            
-            <div class="grid-col">
-              <h3>Mecanismo probable</h3>
+          </div>
 
-              <p>${mecanismoProbable}</p>
-
-              <p class="micro-etiqueta">
-                <strong>* Esta es una explicación breve para lectura en sesión. No reemplaza el folleto de mecanismos neurobiológicos.</strong>
-              </p>
-
-              <h4>Lectura operativa</h4>
-              <p>${lecturaOperativa}</p>
+          <div class="bloque-icono">
+            <div class="icono">⸱</div>
+            <div>
+              <h4>Anclaje</h4>
+              <p class="micro-etiqueta">Cuando la experiencia empieza a desbordar o la persona pierde contacto con cuerpo y entorno.</p>
+              <p>${frases.anclaje}</p>
             </div>
-            
-            <div class="grid-col">
-              <h3>Presencia CUSHION</h3>
+          </div>
 
-              <div class="matriz-riesgo-box cushion-box">
-                <h4 class="riesgo-titulo">Prioridad: <span>${cushion.prioridad}</span></h4>
-                <p>${cushion.hacer}</p>
-              </div>
-
-              <h4>Evita</h4>
-              <p>${cushion.evitar}</p>
-
-              <p class="micro-etiqueta">
-                <strong>* No intervenir no es abandonar. Es sostener presencia, regular el campo y observar señales.</strong>
-              </p>
+          <div class="bloque-icono">
+            <div class="icono">⟳</div>
+            <div>
+              <h4>Orientación / reencuadre breve</h4>
+              <p class="micro-etiqueta">Cuando aparece amenaza, confusión o rigidez interpretativa.</p>
+              <p>${frases.orientacion}</p>
             </div>
-            
-            <div class="ficha-manual">
-              <h3>Frases útiles</h3>
-
-              <div class="bloque-icono">
-                <div class="icono">✦</div>
-                <div>
-                  <h4>Sostén</h4>
-                  <p class="micro-etiqueta">Cuando hay intensidad, pero la persona conserva orientación, contacto y seguridad.</p>
-                  <p>${frases.sosten}</p>
-                </div>
-              </div>
-
-              <div class="bloque-icono">
-                <div class="icono">⸱</div>
-                <div>
-                  <h4>Anclaje</h4>
-                  <p class="micro-etiqueta">Cuando la experiencia empieza a desbordar o la persona pierde contacto con cuerpo y entorno.</p>
-                  <p>${frases.anclaje}</p>
-                </div>
-              </div>
-
-              <div class="bloque-icono">
-                <div class="icono">⟳</div>
-                <div>
-                  <h4>Orientación / reencuadre breve</h4>
-                  <p class="micro-etiqueta">Cuando aparece amenaza, confusión o rigidez interpretativa.</p>
-                  <p>${frases.orientacion}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="ficha-integracion">
-              <h3>Señales para intervención directiva</h3>
-
-              ${mapearLista(senales)}
-
-              <h4>Acción sugerida</h4>
-              <p>${accionDirectiva}</p>
-
-              <p class="micro-etiqueta">
-                <strong>* Si hay riesgo físico, síntomas médicos relevantes, ideación suicida, paranoia refractaria o pérdida marcada del juicio de realidad, activa protocolo de seguridad y apoyo clínico.</strong>
-              </p>
-            </div>
-            
           </div>
         </div>
-      `;
-    }
+
+        <div class="ficha-integracion">
+          <h3>Señales para intervención directiva</h3>
+
+          ${mapearLista(senales)}
+
+          <h4>Acción sugerida</h4>
+          <p>${accionDirectiva}</p>
+        </div>
+        
+      </div>
+    </div>
+  `;
+}
     
     function generarGlosario() {
       const itemsHtml = glosarioData.map(item => `
