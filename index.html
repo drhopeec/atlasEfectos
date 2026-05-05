@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atlas de Efectos Psicodélicos</title>
+  <title>Atlas de Fenómenos Psicodélicos</title>
   
   <link rel="stylesheet" href="estilos.css">
   
@@ -21,120 +21,128 @@
     const ordenDominios = ["visual", "cognitivo", "emocional", "autoprocesamiento", "somatico"];
 
     const textoIntroduccion = `
-      <p>Este atlas está hecho para <strong>darle nombre a lo que aparece en sesión</strong> y ofrecer <strong>criterios concretos</strong> para acompañar con más claridad.</p>
+      <p>Este atlas está hecho para <strong>darle nombre a lo que aparece en sesión</strong> y acompañarlo con más criterio.</p>
 
-      <p>Durante una experiencia psicodélica pueden aparecer fenómenos visuales, cognitivos, emocionales, somáticos y de autoprocesamiento. Algunos son esperables y no requieren intervención. Otros piden anclaje, reencuadre o escalamiento.</p>
+      <p>Durante una experiencia psicodélica pueden aparecer fenómenos visuales, cognitivos, emocionales, somáticos y de autoprocesamiento. Algunos son intensos, pero esperables. Otros empiezan a comprometer orientación, regulación, juicio de realidad o seguridad.</p>
 
-      <p>El objetivo de este documento es simple: ayudarte a reconocer qué está ocurriendo, qué puede observarse desde fuera, qué nivel de riesgo tiene y qué respuesta conviene aplicar.</p>
+      <p>La tarea del facilitador no es interpretar de inmediato ni intervenir por ansiedad propia. Primero se lee el fenómeno, se sostiene el campo y se observa si la persona puede atravesarlo con estabilidad.</p>
 
-      <p>Este atlas no intenta explicar todos los mecanismos neurobiológicos. Ese tema corresponde al folleto de mecanismos. Aquí el foco es operativo: <strong>fenomenología, riesgo, intervención e integración</strong>.</p>
+      <p>Este atlas usa la presencia <strong>CUSHION</strong> como base operativa: calma, ubicación, seguridad, hospitalidad, interés, orientación y no imposición.</p>
+
+      <span class="highlight">No todo fenómeno intenso requiere intervención. Primero se lee, se sostiene y se observa.</span>
     `;
 
     const textoComoUsar = `
-      <p>Este documento está diseñado para consulta rápida y estudio. No necesita leerse de corrido. Puedes revisar el dominio que corresponda y entrar directamente a la ficha del efecto.</p>
+      <p>Este documento está diseñado para consulta rápida, estudio y supervisión. No necesita leerse de corrido. Puedes entrar por dominio o ir directamente a la ficha del fenómeno.</p>
 
-      <p>Cada <strong>efecto</strong> se presenta en cuatro bloques:</p>
+      <p>Cada <strong>fenómeno</strong> se presenta en seis bloques:</p>
 
       <ul>
         <li><strong>Fenomenología:</strong> lo que la persona puede reportar y lo que el facilitador puede observar.</li>
-        <li><strong>Lectura operativa:</strong> una frase de normalización y los moduladores que pueden aumentar o reducir el riesgo.</li>
-        <li><strong>Riesgo e intervención:</strong> nivel de riesgo, indicadores post-sesión y criterios para escalar.</li>
-        <li><strong>Integración post-sesión:</strong> tema a explorar y práctica sugerida para traducir la experiencia en lenguaje y acción.</li>
+        <li><strong>Mecanismo probable:</strong> una explicación breve en lenguaje simple. No desarrolla teoría neurobiológica extensa.</li>
+        <li><strong>Lectura operativa:</strong> cómo entender el fenómeno en sesión y qué observar antes de intervenir.</li>
+        <li><strong>Presencia CUSHION:</strong> qué cualidad de presencia conviene priorizar.</li>
+        <li><strong>Frases útiles:</strong> lenguaje breve, neutral y no sugestivo.</li>
+        <li><strong>Señales para intervención directiva:</strong> cuándo ya no basta con sostener y hace falta anclar, reencuadrar o escalar.</li>
       </ul>
 
-      <p><strong>Uso recomendado:</strong> antes de la sesión, revisa los efectos más probables. Durante la sesión, usa la ficha para decidir si conviene sostener, anclar, reencuadrar o escalar. Después, usa la integración para ordenar lo vivido sin forzar interpretaciones.</p>
+      <p><strong>Uso recomendado:</strong> primero observa. Si la persona conserva orientación, respiración suficiente, contacto y seguridad física, sostén con CUSHION. Si aparece desborde, pérdida de contacto, pánico, riesgo físico o rigidez interpretativa, pasa a una intervención más directiva.</p>
 
       <p>La regla base es esta: <strong>un fenómeno subjetivo no se evalúa por lo extraño que parece, sino por su impacto en orientación, regulación, juicio de realidad y seguridad.</strong></p>
     `;
 
+    const textoCushion = `
+      <p><strong>CUSHION</strong> es una técnica de presencia para acompañar antes de intervenir. No significa quedarse pasivo. Significa regular el campo sin imponer dirección.</p>
+
+      <ul>
+        <li><strong>C — Calma:</strong> regula primero tu respiración, tono y postura. Tu ansiedad puede contagiar la sala.</li>
+        <li><strong>U — Ubicación:</strong> mantente disponible, estable y predecible. No deambules ni invadas.</li>
+        <li><strong>S — Seguridad:</strong> recuerda que está acompañado y que el espacio está contenido.</li>
+        <li><strong>H — Hospitalidad:</strong> permite que aparezca material difícil sin mostrar juicio, miedo o rechazo.</li>
+        <li><strong>I — Interés:</strong> escucha sin interrogar ni dirigir por curiosidad.</li>
+        <li><strong>O — Orientación:</strong> si la persona pierde referencias, vuelve a lo concreto: cuerpo, espacio, voz, respiración.</li>
+        <li><strong>N — No imposición:</strong> no expliques visiones, no sugieras significados y no refuerces conclusiones rígidas.</li>
+      </ul>
+
+      <span class="highlight">Presencia CUSHION es la base. La intervención directiva viene después, solo si la estabilidad empieza a fallar.</span>
+    `;
+
     const textosDominio = {
-      "visual": "Lo que la persona <strong>ve</strong>. Desde formas geométricas hasta figuras, estelas o superficies que parecen moverse. La tarea no es interpretar de inmediato, sino distinguir entre percepción esperable, sobrecarga y riesgo.",
-      "cognitivo": "Lo que la persona <strong>piensa</strong>. Ideas rápidas, bucles mentales, intuiciones súbitas o cambios en la percepción del tiempo. El reto es no discutir el contenido, sino observar regulación, coherencia y contacto.",
+      "visual": "Lo que la persona <strong>ve</strong>. Desde geometrías hasta figuras, estelas o superficies que parecen moverse. La tarea no es interpretar la imagen, sino observar si hay curiosidad, miedo, desorientación o pérdida de seguridad.",
+      "cognitivo": "Lo que la persona <strong>piensa</strong>. Ideas rápidas, bucles, intuiciones súbitas o cambios en la percepción del tiempo. El punto no es debatir el contenido, sino leer coherencia, flexibilidad, contacto y juicio de realidad.",
       "emocional": "Lo que la persona <strong>siente</strong>. Miedo, culpa, tristeza, dicha, alivio o catarsis. La intensidad emocional no es un problema por sí misma; el problema aparece cuando rebasa la capacidad de regulación.",
-      "autoprocesamiento": "Lo que la persona <strong>revisa sobre sí misma</strong>. Identidad, autocrítica, aceptación, memoria autobiográfica o sentido personal. Aquí se acompaña sin imponer significado.",
-      "somatico": "Lo que la persona <strong>manifiesta en el cuerpo</strong>. Náuseas, calor, temblores, presión, palpitaciones o cambios de respiración. Aquí se diferencia entre descarga esperable, ansiedad somática y señal médica relevante."
+      "autoprocesamiento": "Lo que la persona <strong>revisa sobre sí misma</strong>. Identidad, autocrítica, aceptación, memoria autobiográfica o sentido personal. Aquí se acompaña sin imponer significado ni convertir una experiencia aguda en verdad definitiva.",
+      "somatico": "Lo que la persona <strong>manifiesta en el cuerpo</strong>. Náuseas, calor, temblores, presión, palpitaciones o cambios respiratorios. Aquí se diferencia entre descarga esperable, ansiedad somática y señal médica relevante."
     };
 
     const glosarioData = [
       {
+        "termino": "Presencia CUSHION",
+        "definicion": "Técnica de acompañamiento basada en calma, ubicación, seguridad, hospitalidad, interés, orientación y no imposición. Es la base antes de intervenir de forma directiva."
+      },
+      {
+        "termino": "Calma",
+        "definicion": "Capacidad del facilitador para regular su propio tono, respiración, postura y velocidad antes de intentar regular al participante."
+      },
+      {
+        "termino": "Ubicación",
+        "definicion": "Presencia física estable, visible y predecible. Ayuda a que la persona sepa dónde está el facilitador sin sentirse invadida."
+      },
+      {
+        "termino": "Seguridad",
+        "definicion": "Recordatorio verbal, corporal y contextual de que la persona está acompañada y el espacio está contenido."
+      },
+      {
+        "termino": "Hospitalidad",
+        "definicion": "Actitud de apertura ante material difícil, extraño o emocionalmente cargado, sin juicio ni rechazo."
+      },
+      {
+        "termino": "Interés",
+        "definicion": "Escucha atenta sin interrogatorio. El facilitador acompaña la experiencia sin dirigirla por curiosidad propia."
+      },
+      {
+        "termino": "Orientación",
+        "definicion": "Uso de referencias simples para volver al cuerpo, la sala, la voz, la respiración o el presente cuando la persona pierde contacto."
+      },
+      {
+        "termino": "No imposición",
+        "definicion": "Principio de no sugerir significados, no interpretar visiones y no reforzar conclusiones rígidas durante un estado de alta sugestionabilidad."
+      },
+      {
         "termino": "Anclaje",
-        "definicion": "Intervención mínima para reconectar a la persona con el cuerpo o el entorno mediante frases breves, respiración, contacto con superficies o estímulos sensoriales simples."
-      },
-      {
-        "termino": "Apertura a la experiencia",
-        "definicion": "Disposición a explorar sensaciones, emociones o ideas nuevas sin cerrarse de inmediato. Puede facilitar el proceso, pero no sustituye estabilidad ni preparación."
-      },
-      {
-        "termino": "Autoesquema",
-        "definicion": "Conjunto de creencias sobre uno mismo. Durante una experiencia psicodélica puede volverse más flexible, visible o emocionalmente cargado."
-      },
-      {
-        "termino": "Avance emocional",
-        "definicion": "Momento en el que la persona atraviesa una emoción difícil sin evitarla y logra una forma nueva de contacto, aceptación o comprensión."
-      },
-      {
-        "termino": "Bypass espiritual",
-        "definicion": "Uso de lenguaje espiritual para evitar dolor, conflicto, responsabilidad o trabajo psicológico real."
-      },
-      {
-        "termino": "Contención silenciosa",
-        "definicion": "Presencia activa, estable y tranquila del facilitador sin intervención verbal innecesaria. Sirve cuando la experiencia se está desarrollando sin riesgo."
-      },
-      {
-        "termino": "Criterios de escalamiento",
-        "definicion": "Señales observables que indican que ya no basta con sostener o anclar. Pueden incluir riesgo físico, agitación severa, pérdida marcada de contacto, pánico persistente o ideación suicida."
-      },
-      {
-        "termino": "Cualidad noética",
-        "definicion": "Sensación subjetiva de certeza profunda. Puede generar insight valioso, pero también conclusiones rígidas si no se integra con cuidado."
-      },
-      {
-        "termino": "Factores de riesgo",
-        "definicion": "Variables que pueden aumentar la intensidad o dificultad de un efecto. Incluyen dosis, historia personal, estado emocional, entorno, preparación y apoyo."
-      },
-      {
-        "termino": "Flexibilidad psicológica",
-        "definicion": "Capacidad de estar en contacto con experiencias internas difíciles sin reaccionar de forma automática o evitativa."
-      },
-      {
-        "termino": "Frase de normalización",
-        "definicion": "Enunciado breve que valida la experiencia y reduce la percepción de peligro sin imponer una interpretación."
-      },
-      {
-        "termino": "Indicadores post-sesión",
-        "definicion": "Señales que aparecen después de la sesión y pueden requerir seguimiento: ansiedad persistente, confusión, insomnio, desrealización, retraimiento o creencias rígidas."
-      },
-      {
-        "termino": "Insight psicológico",
-        "definicion": "Comprensión significativa sobre un patrón emocional, relacional o conductual. No toda comprensión intensa debe tomarse como conclusión definitiva."
-      },
-      {
-        "termino": "Integración",
-        "definicion": "Proceso de traducir lo vivido en lenguaje, decisiones, prácticas y cambios sostenibles. No es explicar todo; es ordenar lo importante."
-      },
-      {
-        "termino": "Manual de intervención",
-        "definicion": "Secuencia gradual de respuesta: sostén, anclaje, reencuadre y escalamiento. Se aplica según intensidad, riesgo y respuesta observable."
-      },
-      {
-        "termino": "Matriz de riesgo",
-        "definicion": "Clasificación orientativa que estima si un fenómeno requiere solo observación, intervención mínima, reencuadre activo o escalamiento."
+        "definicion": "Intervención mínima para reconectar a la persona con el cuerpo o el entorno mediante respiración, contacto con superficies, voz o referencias concretas."
       },
       {
         "termino": "Reencuadre",
-        "definicion": "Intervención verbal breve que ayuda a reinterpretar una experiencia difícil sin discutir ni imponer significado."
+        "definicion": "Intervención verbal breve para reducir amenaza o rigidez interpretativa sin imponer significado."
       },
       {
-        "termino": "Sostén",
-        "definicion": "Presencia sin acción directiva. Se usa cuando la experiencia es intensa pero la persona conserva orientación, regulación suficiente y seguridad."
+        "termino": "Escalamiento",
+        "definicion": "Paso a protocolo de seguridad, apoyo clínico o derivación cuando hay riesgo físico, agitación severa, paranoia refractaria, ideación suicida o pérdida marcada del juicio de realidad."
+      },
+      {
+        "termino": "Fenomenología",
+        "definicion": "Descripción de lo que la persona vive subjetivamente y de lo que el facilitador puede observar desde fuera."
+      },
+      {
+        "termino": "Mecanismo probable",
+        "definicion": "Explicación breve del fenómeno usando lenguaje simple de percepción, interocepción, significado, memoria, emoción, orientación o regulación."
+      },
+      {
+        "termino": "Lectura operativa",
+        "definicion": "Interpretación práctica de lo que está ocurriendo en sesión para decidir si sostener, anclar, reencuadrar o escalar."
       },
       {
         "termino": "Shock ontológico",
-        "definicion": "Desorganización o confusión cuando la experiencia desafía de forma intensa las creencias básicas sobre la realidad, la identidad o el sentido."
+        "definicion": "Desorganización o confusión cuando la experiencia desafía intensamente las creencias básicas sobre realidad, identidad o sentido."
+      },
+      {
+        "termino": "Cualidad noética",
+        "definicion": "Sensación subjetiva de certeza profunda. Puede generar insight, pero también conclusiones rígidas si se toma como verdad literal sin revisión."
       }
     ];
 
-    // --- SECCIÓN 2: FUNCIONES DE AYUDA PARA RENDERIZAR ---
+    // --- SECCIÓN 2: FUNCIONES DE AYUDA ---
 
     function slugify(text) {
       return text.toString().toLowerCase().trim()
@@ -151,30 +159,137 @@
       return `<ul>${itemsFiltrados.map(item => `<li>${item}</li>`).join('')}</ul>`;
     }
 
-    function obtenerIndicadoresPostSesion(efecto) {
-      if (efecto.banderas_rojas_diagnostico_diferencial && efecto.banderas_rojas_diagnostico_diferencial.length > 0) {
-        return efecto.banderas_rojas_diagnostico_diferencial;
-      }
-
-      if (efecto.indicadores_postsesion && efecto.indicadores_postsesion.length > 0) {
-        return efecto.indicadores_postsesion;
-      }
-
-      return ["NA"];
+    function obtenerDominioPrincipal(efecto) {
+      return efecto.dominio && efecto.dominio.length ? efecto.dominio[0] : "general";
     }
 
-    function obtenerJustificacionRiesgo(matrizRiesgo) {
-      if (!matrizRiesgo) return "No especificado.";
-
-      const match = matrizRiesgo.match(/\(Justificación:\s*(.*?)\)$/);
-      if (match && match[1]) return match[1];
-
-      return matrizRiesgo;
+    function obtenerMecanismoProbable(efecto) {
+      if (efecto.mecanismo_probable) return efecto.mecanismo_probable;
+      if (efecto.lectura_operativa && efecto.lectura_operativa.mecanismo_probable) return efecto.lectura_operativa.mecanismo_probable;
+      if (efecto.neurobiologia_aplicada && efecto.neurobiologia_aplicada.mecanismo_hipotetico) {
+        return simplificarMecanismo(efecto.neurobiologia_aplicada.mecanismo_hipotetico, obtenerDominioPrincipal(efecto));
+      }
+      return mecanismoGenericoPorDominio(obtenerDominioPrincipal(efecto));
     }
 
-    function obtenerNivelRiesgo(matrizRiesgo) {
-      if (!matrizRiesgo) return "No especificado";
-      return matrizRiesgo.split(' ')[0].replace(/[()]/g, '');
+    function simplificarMecanismo(texto, dominio) {
+      const mecanismoPorDominio = {
+        "visual": "Puede aparecer cuando la percepción visual recibe más información interna o ambigua de lo habitual. La imagen se vuelve menos estable y más flexible.",
+        "cognitivo": "Puede aparecer cuando los patrones habituales de pensamiento pierden rigidez y surgen asociaciones, dudas o ideas con mayor intensidad.",
+        "emocional": "Puede aparecer cuando una emoción gana intensidad y se vuelve difícil de evitar. El sistema afectivo está más abierto y sensible.",
+        "autoprocesamiento": "Puede aparecer cuando la narrativa habitual del yo se vuelve más flexible. La persona puede verse desde una perspectiva menos fija.",
+        "somatico": "Puede aparecer cuando la atención hacia el cuerpo aumenta. Sensaciones internas habituales pueden sentirse más intensas o extrañas."
+      };
+
+      return mecanismoPorDominio[dominio] || texto;
+    }
+
+    function mecanismoGenericoPorDominio(dominio) {
+      const mecanismo = {
+        "visual": "La percepción visual puede volverse más flexible. Formas, colores, movimiento o patrones pueden sentirse más intensos o menos estables.",
+        "cognitivo": "El pensamiento puede volverse más asociativo, menos lineal o más cargado de significado.",
+        "emocional": "La emoción puede intensificarse y hacerse más visible. Lo evitado puede aparecer con más fuerza.",
+        "autoprocesamiento": "La relación con el yo, la identidad o la historia personal puede sentirse menos fija.",
+        "somatico": "Las señales internas del cuerpo pueden sentirse más presentes, intensas o difíciles de ignorar."
+      };
+
+      return mecanismo[dominio] || "El fenómeno puede reflejar un cambio temporal en percepción, emoción, cuerpo, memoria o significado.";
+    }
+
+    function obtenerLecturaOperativa(efecto) {
+      if (efecto.lectura_operativa && efecto.lectura_operativa.lectura) return efecto.lectura_operativa.lectura;
+      if (efecto.lectura_operativa && typeof efecto.lectura_operativa === "string") return efecto.lectura_operativa;
+
+      const dominio = obtenerDominioPrincipal(efecto);
+
+      const lecturas = {
+        "visual": "Si la persona observa con curiosidad y conserva contacto, no interrumpas. Si aparece miedo, desorientación o intento de abandonar el espacio, pasa a orientación y anclaje.",
+        "cognitivo": "Si el pensamiento fluye sin angustia ni rigidez, sostén. Si aparecen bucles, paranoia o certeza rígida, reduce estímulos y ofrece orientación breve.",
+        "emocional": "Si la emoción se mueve y la persona conserva seguridad, acompaña sin cortar. Si hay pánico sostenido, evitación extrema o riesgo físico, ancla y escala si no responde.",
+        "autoprocesamiento": "Si la revisión del yo ocurre con apertura y estabilidad, no impongas significado. Si aparece fragmentación, grandiosidad o terror, orienta al cuerpo y al presente.",
+        "somatico": "Si la sensación corporal cambia y la persona puede respirar, sostén. Si hay signos médicos relevantes, pánico somático o agitación peligrosa, evalúa y escala."
+      };
+
+      return lecturas[dominio] || "Observa orientación, regulación, contacto interpersonal, juicio de realidad y seguridad antes de intervenir.";
+    }
+
+    function obtenerCushion(efecto) {
+      if (efecto.presencia_cushion) return efecto.presencia_cushion;
+
+      const dominio = obtenerDominioPrincipal(efecto);
+
+      const cushionPorDominio = {
+        "visual": {
+          "prioridad": "Ubicación + No imposición",
+          "hacer": "Mantente estable, visible si hace falta, y evita interpretar las imágenes. Permite que el fenómeno visual ocurra si no hay miedo ni desorientación.",
+          "evitar": "No digas qué significa la imagen. No conviertas una visión en mensaje, símbolo o diagnóstico."
+        },
+        "cognitivo": {
+          "prioridad": "No imposición + Orientación",
+          "hacer": "Escucha sin debatir el contenido. Si hay confusión, vuelve a lo concreto: cuerpo, sala, respiración y temporalidad.",
+          "evitar": "No refuerces certezas rígidas. No discutas ideas complejas durante el pico."
+        },
+        "emocional": {
+          "prioridad": "Seguridad + Hospitalidad",
+          "hacer": "Permite que la emoción exista sin intentar arreglarla. Refuerza que está acompañado y que no necesita resolverla ahora.",
+          "evitar": "No cortes el llanto por incomodidad. No digas que no pasa nada."
+        },
+        "autoprocesamiento": {
+          "prioridad": "Hospitalidad + No imposición",
+          "hacer": "Recibe lo que aparece sobre identidad, culpa o sentido personal sin convertirlo en verdad final.",
+          "evitar": "No confirmes narrativas absolutas sobre quién es la persona o qué significa su vida."
+        },
+        "somatico": {
+          "prioridad": "Calma + Orientación",
+          "hacer": "Baja tu ritmo, observa respiración y seguridad física. Orienta al cuerpo sin dramatizar la sensación.",
+          "evitar": "No espiritualices síntomas físicos. No ignores señales médicas relevantes."
+        }
+      };
+
+      return cushionPorDominio[dominio] || {
+        "prioridad": "Calma + Seguridad",
+        "hacer": "Mantén presencia estable, voz baja y observación clara.",
+        "evitar": "No interpretes ni dirijas sin necesidad."
+      };
+    }
+
+    function obtenerFrasesUtiles(efecto) {
+      if (efecto.frases_utiles) return efecto.frases_utiles;
+
+      const manual = efecto.manual_de_intervencion || {};
+      const normalizacion =
+        efecto.lectura_operativa?.frase_de_normalizacion ||
+        efecto.neurobiologia_aplicada?.frase_de_normalizacion ||
+        "Estoy aquí contigo. No necesitas resolver esto ahora.";
+
+      return {
+        "sosten": manual.no_intervencion_sosten || normalizacion,
+        "anclaje": manual.intervencion_minima_anclaje || "Vuelve al cuerpo. Siente el contacto con la superficie y escucha mi voz.",
+        "orientacion": manual.intervencion_activa_reencuadre || "Esto es temporal. Estás en la sesión, estás acompañado y podemos volver a lo concreto."
+      };
+    }
+
+    function obtenerSenalesDirectivas(efecto) {
+      if (efecto.senales_intervencion_directiva) return efecto.senales_intervencion_directiva;
+
+      const criterios = efecto.criterios_de_escalamiento || {};
+      const principal = criterios.criterio_observable_para_escalar || "Pérdida de orientación, pánico sostenido, riesgo físico o incapacidad de responder a la voz.";
+
+      return [
+        principal,
+        "Pérdida marcada de contacto con el entorno o con el facilitador.",
+        "Riesgo físico, intento de levantarse sin estabilidad o agitación peligrosa.",
+        "Interpretación amenazante rígida, paranoia o imposibilidad de cuestionar el contenido.",
+        "Síntomas médicos relevantes o signos vitales fuera de rango."
+      ];
+    }
+
+    function obtenerAccionDirectiva(efecto) {
+      if (efecto.accion_directiva) return efecto.accion_directiva;
+      if (efecto.criterios_de_escalamiento && efecto.criterios_de_escalamiento.accion_de_escalamiento) {
+        return efecto.criterios_de_escalamiento.accion_de_escalamiento;
+      }
+      return "Pasar de presencia a anclaje, orientación verbal breve y protocolo de seguridad si no hay respuesta.";
     }
 
     function generarSeccion(texto, titulo, id = '') {
@@ -224,9 +339,12 @@
 
     function generarHtmlFicha(efecto) {
       const fichaId = 'efecto-' + slugify(efecto.efecto);
-      const indicadoresPostSesion = obtenerIndicadoresPostSesion(efecto);
-      const nivelRiesgo = obtenerNivelRiesgo(efecto.matriz_riesgo);
-      const justificacionRiesgo = obtenerJustificacionRiesgo(efecto.matriz_riesgo);
+      const mecanismoProbable = obtenerMecanismoProbable(efecto);
+      const lecturaOperativa = obtenerLecturaOperativa(efecto);
+      const cushion = obtenerCushion(efecto);
+      const frases = obtenerFrasesUtiles(efecto);
+      const senales = obtenerSenalesDirectivas(efecto);
+      const accionDirectiva = obtenerAccionDirectiva(efecto);
 
       return `
         <div class="pagina-a4 ficha-a4" id="${fichaId}">
@@ -248,53 +366,43 @@
             </div>
             
             <div class="grid-col">
-              <h3>Lectura operativa</h3>
+              <h3>Mecanismo probable</h3>
 
-              <h4>Normalización</h4>
-              <p><em>"${efecto.neurobiologia_aplicada.frase_de_normalizacion}"</em></p>
-
-              <h4>Moduladores de riesgo</h4>
-              ${mapearLista([
-                efecto.moduladores_riesgo.dosis ? `<strong>Dosis:</strong> ${efecto.moduladores_riesgo.dosis}` : null,
-                efecto.moduladores_riesgo.historial ? `<strong>Historial:</strong> ${efecto.moduladores_riesgo.historial.join(', ')}` : null,
-                efecto.moduladores_riesgo.medicacion ? `<strong>Medicación:</strong> ${efecto.moduladores_riesgo.medicacion.join(', ')}` : null,
-                efecto.moduladores_riesgo.set_setting ? `<strong>Set & Setting:</strong> ${efecto.moduladores_riesgo.set_setting.join(', ')}` : null
-              ])}
+              <p>${mecanismoProbable}</p>
 
               <p class="micro-etiqueta">
-                <strong>* La frase de normalización no interpreta la experiencia. Solo reduce amenaza y sostiene orientación.</strong>
+                <strong>* Esta es una explicación breve para lectura en sesión. No reemplaza el folleto de mecanismos neurobiológicos.</strong>
               </p>
+
+              <h4>Lectura operativa</h4>
+              <p>${lecturaOperativa}</p>
             </div>
             
             <div class="grid-col">
-              <h3>Riesgo y Escalamiento</h3>
+              <h3>Presencia CUSHION</h3>
 
-              <div class="matriz-riesgo-box">
-                <h4 class="riesgo-titulo">Nivel de Riesgo: <span>${nivelRiesgo}</span></h4>
-                <p>${justificacionRiesgo}</p>
-                <p class="micro-etiqueta"><strong>* Usa intervención gradual por niveles.</strong></p>
+              <div class="matriz-riesgo-box cushion-box">
+                <h4 class="riesgo-titulo">Prioridad: <span>${cushion.prioridad}</span></h4>
+                <p>${cushion.hacer}</p>
               </div>
 
-              <h4>Indicadores post-sesión</h4>
-              ${mapearLista(indicadoresPostSesion)}
+              <h4>Evita</h4>
+              <p>${cushion.evitar}</p>
 
-              ${
-                indicadoresPostSesion &&
-                indicadoresPostSesion[0] !== "NA"
-                  ? `<p class="micro-etiqueta"><strong>* Si aparece o persiste alguno de estos indicadores, considera seguimiento clínico.</strong></p>`
-                  : `<p class="micro-etiqueta">* No se identificaron indicadores post-sesión relevantes para este efecto.</p>`
-              }
+              <p class="micro-etiqueta">
+                <strong>* No intervenir no es abandonar. Es sostener presencia, regular el campo y observar señales.</strong>
+              </p>
             </div>
             
             <div class="ficha-manual">
-              <h3>Manual de Intervención</h3>
+              <h3>Frases útiles</h3>
 
               <div class="bloque-icono">
                 <div class="icono">✦</div>
                 <div>
                   <h4>Sostén</h4>
-                  <p class="micro-etiqueta">Cuando hay intensidad, pero la persona conserva orientación y seguridad.</p>
-                  <p>${efecto.manual_de_intervencion.no_intervencion_sosten}</p>
+                  <p class="micro-etiqueta">Cuando hay intensidad, pero la persona conserva orientación, contacto y seguridad.</p>
+                  <p>${frases.sosten}</p>
                 </div>
               </div>
 
@@ -303,39 +411,31 @@
                 <div>
                   <h4>Anclaje</h4>
                   <p class="micro-etiqueta">Cuando la experiencia empieza a desbordar o la persona pierde contacto con cuerpo y entorno.</p>
-                  <p>${efecto.manual_de_intervencion.intervencion_minima_anclaje}</p>
+                  <p>${frases.anclaje}</p>
                 </div>
               </div>
 
               <div class="bloque-icono">
                 <div class="icono">⟳</div>
                 <div>
-                  <h4>Reencuadre</h4>
-                  <p class="micro-etiqueta">Cuando hace falta una intervención verbal breve para reducir amenaza o rigidez interpretativa.</p>
-                  <p>${efecto.manual_de_intervencion.intervencion_activa_reencuadre}</p>
-                </div>
-              </div>
-
-              <div class="bloque-icono">
-                <div class="icono">▲</div>
-                <div>
-                  <h4>Escalamiento</h4>
-                  <p>
-                    ${efecto.criterios_de_escalamiento.criterio_observable_para_escalar}
-                    <strong>Acción:</strong> ${efecto.criterios_de_escalamiento.accion_de_escalamiento}
-                  </p>
+                  <h4>Orientación / reencuadre breve</h4>
+                  <p class="micro-etiqueta">Cuando aparece amenaza, confusión o rigidez interpretativa.</p>
+                  <p>${frases.orientacion}</p>
                 </div>
               </div>
             </div>
 
             <div class="ficha-integracion">
-              <h3>Integración Post-Sesión</h3>
+              <h3>Señales para intervención directiva</h3>
 
-              <h4>Tema a explorar</h4>
-              <p>${efecto.integracion_post_sesion.tema_a_explorar}</p>
+              ${mapearLista(senales)}
 
-              <h4>Práctica sugerida</h4>
-              <p>${efecto.integracion_post_sesion.practica_sugerida}</p>
+              <h4>Acción sugerida</h4>
+              <p>${accionDirectiva}</p>
+
+              <p class="micro-etiqueta">
+                <strong>* Si hay riesgo físico, síntomas médicos relevantes, ideación suicida, paranoia refractaria o pérdida marcada del juicio de realidad, activa protocolo de seguridad y apoyo clínico.</strong>
+              </p>
             </div>
             
           </div>
@@ -366,28 +466,31 @@
 
           <h3>Antes de la sesión</h3>
           <ul>
-            <li>Revisa el dominio de efectos más probable según dosis, sensibilidad, intención y contexto.</li>
-            <li>Identifica vulnerabilidades conocidas: ansiedad basal, historia de pánico, disociación, trauma, rumiación o desregulación somática.</li>
-            <li>Define de antemano cómo se aplicará el protocolo de sostén, anclaje, reencuadre y escalamiento.</li>
-            <li>Verifica setting, música, iluminación, temperatura, acceso a agua y posibilidad de reducir estímulos.</li>
+            <li>Pacta señales simples antes de la dosis: pulgar arriba, levantar la mano o una palabra breve.</li>
+            <li>Define qué hará el facilitador si la persona parece dormida, inmóvil, desbordada o desorientada.</li>
+            <li>Revisa setting, música, iluminación, temperatura, acceso a agua y posibilidad de reducir estímulos.</li>
+            <li>Recuerda el principio base: primero CUSHION, después intervención directiva si hace falta.</li>
           </ul>
 
           <h3>Durante la sesión</h3>
           <ul>
-            <li><strong>Observar:</strong> ¿la persona conserva orientación, respiración estable y seguridad física?</li>
-            <li><strong>Sostener:</strong> si la experiencia es intensa pero estable, no interrumpas por ansiedad del facilitador.</li>
-            <li><strong>Anclar:</strong> si hay desborde, confusión, pánico incipiente o pérdida de contacto corporal.</li>
-            <li><strong>Reencuadrar:</strong> si aparece interpretación amenazante, rigidez narrativa o lucha contra la experiencia.</li>
-            <li><strong>Escalar:</strong> si hay riesgo físico, agitación severa, ideación suicida, pérdida marcada de juicio de realidad o síntomas médicos relevantes.</li>
+            <li><strong>Calma:</strong> regula tu voz, respiración, postura y velocidad.</li>
+            <li><strong>Ubicación:</strong> permanece disponible, estable y predecible.</li>
+            <li><strong>Seguridad:</strong> recuerda el encuadre sin saturar de palabras.</li>
+            <li><strong>Hospitalidad:</strong> permite que aparezca material difícil sin mostrar rechazo.</li>
+            <li><strong>Interés:</strong> escucha sin interrogar ni dirigir.</li>
+            <li><strong>Orientación:</strong> vuelve a cuerpo, sala, respiración y presente si se pierde contacto.</li>
+            <li><strong>No imposición:</strong> no expliques visiones ni refuerces certezas rígidas.</li>
           </ul>
 
-          <h3>Después de la sesión</h3>
+          <h3>Cuándo pasar de CUSHION a intervención directiva</h3>
           <ul>
-            <li>Verifica estabilidad física y emocional antes del cierre.</li>
-            <li>Registra efectos destacados, respuestas del facilitador y criterios usados.</li>
-            <li>Programa seguimiento entre 24 y 72 horas cuando haya efectos intensos, confusos o de riesgo medio/alto.</li>
-            <li>Usa la práctica de integración sugerida como punto de partida, no como interpretación obligatoria.</li>
-            <li>Deriva si aparecen ansiedad persistente, confusión, insomnio grave, retraimiento, desrealización o creencias rígidas post-sesión.</li>
+            <li>La persona no responde a la voz o pierde contacto de forma marcada.</li>
+            <li>Hay pánico sostenido, agitación psicomotriz o riesgo físico.</li>
+            <li>Intenta abandonar el espacio sin orientación o equilibrio.</li>
+            <li>Aparece paranoia hacia el facilitador o el entorno.</li>
+            <li>Hay síntomas médicos relevantes o signos vitales fuera de rango.</li>
+            <li>Aparece ideación suicida, conducta autolesiva o amenaza hacia otros.</li>
           </ul>
         </div>
       `;
@@ -424,6 +527,7 @@
           <nav>
             <ul>
               ${itemsPorDominio}
+              <li><a href="#cushion">Presencia CUSHION</a></li>
               <li><a href="#glosario">Glosario</a></li>
               <li><a href="#checklist">Hoja de uso en sesión</a></li>
             </ul>
@@ -447,8 +551,8 @@
       // 1. Portada
       htmlCompleto += `
         <div class="pagina-a4 portada-a4" id="portada">
-          <h1>Atlas de Efectos Psicodélicos</h1>
-          <h2>Qué puede aparecer en sesión y cómo responder</h2>
+          <h1>Atlas de Fenómenos Psicodélicos</h1>
+          <h2>Lectura operativa y presencia CUSHION en sesión</h2>
           <div class="autor">AUTOR: <strong>Dr. HOPE</strong></div>
         </div>
       `;
@@ -459,15 +563,18 @@
       // 3. Introducción
       htmlCompleto += `
         <div class="pagina-a4 introduccion-a4" id="introduccion">
-          <h1>Introducción: Afila la intuición</h1>
+          <h1>Introducción: Primero lee, luego intervén</h1>
           ${textoIntroduccion}
         </div>
       `;
       
       // 4. Cómo usar
       htmlCompleto += generarSeccion(textoComoUsar, "Cómo usar este documento", "como-usar");
+
+      // 5. Presencia CUSHION
+      htmlCompleto += generarSeccion(textoCushion, "Presencia CUSHION", "cushion");
       
-      // 5. Dominios, fichas y referencias
+      // 6. Dominios, fichas y referencias
       for (const dominio of ordenDominios) {
         const dominioSlug = slugify(dominio);
 
@@ -487,20 +594,21 @@
         htmlCompleto += generarHtmlReferencias([dominio]);
       }
       
-      // 6. Apéndices
+      // 7. Apéndices
       htmlCompleto += generarGlosario();
       htmlCompleto += generarChecklist();
 
-      // 7. Cierre sobrio, sin CTA comercial
+      // 8. Cierre
       htmlCompleto += `
         <div class="pagina-a4 section-a4" id="cierre">
           <h1>Cierre</h1>
-          <p>Este atlas organiza efectos subjetivos para facilitar una lectura más clara durante la sesión. No busca explicar todos los mecanismos ni reemplazar criterio clínico.</p>
 
-          <p>Úsalo para reconocer fenómenos, estimar riesgo, elegir el nivel de intervención y preparar una integración más concreta.</p>
+          <p>Este atlas organiza fenómenos subjetivos para facilitar una lectura más clara durante la sesión. No busca explicar toda la neurobiología ni reemplazar criterio clínico.</p>
+
+          <p>Úsalo para reconocer qué aparece, observar si la persona conserva orientación y decidir si basta con presencia CUSHION o si hace falta una intervención más directiva.</p>
 
           <span class="highlight">
-            Lo subjetivo también puede leerse con orden: qué aparece, qué se observa, qué riesgo tiene y qué intervención corresponde.
+            No todo fenómeno intenso requiere intervención. Primero se lee, se sostiene y se observa.
           </span>
 
           <p style="margin-top: 30px; font-size: 0.95rem; color: #666;">
