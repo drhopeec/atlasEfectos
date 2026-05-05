@@ -14,165 +14,131 @@
 
   <main id="atlas-container"></main>
 
-
   <script>
     
     // --- SECCIÓN 1: DATOS Y TEXTOS NARRATIVOS ---
 
     const ordenDominios = ["visual", "cognitivo", "emocional", "autoprocesamiento", "somatico"];
 
-
-
     const textoIntroduccion = `
-      <p>Este atlas está hecho para <strong>darle nombre a lo que pasa</strong> y ofrecer <strong>criterios concretos</strong> para intervenir —o no— con claridad.</p>
-      <p>Arrancó cuando encontré un índice de efectos subjetivos y noté que lo "inefable" tiene orden y, muchas veces, mecanismo. Lo conecté con ciencia, lo probé en sesiones reales y lo sigo afinando. Así nació este atlas-manual: no solo describe, también ayuda a decidir.</p>
-      <p>Encontrarás <strong>efectos frecuentes</strong>, explicaciones neurobiológicas, frases guía, factores de riesgo y criterios de intervención. Todo pensado para la práctica del terapeuta o facilitador que necesita un marco confiable.</p>
-      <p>Este atlas se apoya en tres modelos clave —ACE, EMBARK y PHRI— no como teoría de relleno, sino como los pilares para tomar decisiones clínicas con método.</p>
+      <p>Este atlas está hecho para <strong>darle nombre a lo que aparece en sesión</strong> y ofrecer <strong>criterios concretos</strong> para acompañar con más claridad.</p>
+
+      <p>Durante una experiencia psicodélica pueden aparecer fenómenos visuales, cognitivos, emocionales, somáticos y de autoprocesamiento. Algunos son esperables y no requieren intervención. Otros piden anclaje, reencuadre o escalamiento.</p>
+
+      <p>El objetivo de este documento es simple: ayudarte a reconocer qué está ocurriendo, qué puede observarse desde fuera, qué nivel de riesgo tiene y qué respuesta conviene aplicar.</p>
+
+      <p>Este atlas no intenta explicar todos los mecanismos neurobiológicos. Ese tema corresponde al folleto de mecanismos. Aquí el foco es operativo: <strong>fenomenología, riesgo, intervención e integración</strong>.</p>
     `;
 
-    
-    const textoCómoUsar = `
-      <p>Te explico cómo está estructurado el manual y cómo sacarle provecho.</p>
+    const textoComoUsar = `
+      <p>Este documento está diseñado para consulta rápida y estudio. No necesita leerse de corrido. Puedes revisar el dominio que corresponda y entrar directamente a la ficha del efecto.</p>
 
-      <p>Cada <strong>efecto</strong> se presenta en una ficha con cinco bloques clave:</p>
+      <p>Cada <strong>efecto</strong> se presenta en cuatro bloques:</p>
+
       <ul>
-        <li><strong>Experiencia fenomenológica:</strong> lo que el paciente reporta y lo que el terapeuta puede observar.</li>
-        <li><strong>Explicación neurobiológica:</strong> mecanismo hipotético del efecto y una <em>frase de normalización</em> para contener sin sugestionar.</li>
-        <li><strong>Riesgo e intervención:</strong> nivel de riesgo, <em>moduladores</em> (dosis, historia, set/setting), <em>banderas rojas</em> y <em>indicadores post-sesión</em> que requieren consulta profesional.</li>
-        <li><strong>Manual de intervención:</strong> cuatro pasos operativos:
-          <em>Sostén</em> (presencia),
-          <em>Anclaje</em> (volver al cuerpo y al entorno),
-          <em>Reencuadre</em> (intervención activa y breve),
-          y <em>Escalamiento</em> (Intervención activa que puede llegar al uso de fármacos "protocolo fuera del alcance de este documento").</li>
-        <li><strong>Integración post-sesión:</strong> tema a explorar y práctica sugerida para procesar el efecto.</li>
+        <li><strong>Fenomenología:</strong> lo que la persona puede reportar y lo que el facilitador puede observar.</li>
+        <li><strong>Lectura operativa:</strong> una frase de normalización y los moduladores que pueden aumentar o reducir el riesgo.</li>
+        <li><strong>Riesgo e intervención:</strong> nivel de riesgo, indicadores post-sesión y criterios para escalar.</li>
+        <li><strong>Integración post-sesión:</strong> tema a explorar y práctica sugerida para traducir la experiencia en lenguaje y acción.</li>
       </ul>
 
-      <p><strong>Uso recomendado:</strong> antes de la sesión revisa los efectos probables; durante, consulta la ficha para decidir en ≤30 s entre sostener, anclar o reencuadrar; después, usa la sección de integración para traducir la experiencia en acciones concretas.</p>
+      <p><strong>Uso recomendado:</strong> antes de la sesión, revisa los efectos más probables. Durante la sesión, usa la ficha para decidir si conviene sostener, anclar, reencuadrar o escalar. Después, usa la integración para ordenar lo vivido sin forzar interpretaciones.</p>
+
+      <p>La regla base es esta: <strong>un fenómeno subjetivo no se evalúa por lo extraño que parece, sino por su impacto en orientación, regulación, juicio de realidad y seguridad.</strong></p>
     `;
 
-
     const textosDominio = {
-      "visual": "Lo que el paciente <strong>ve</strong>. Desde formas fractales hasta figuras emergentes o paredes que 'respiran'. Aquí se aprende a acompañar sin intervenir, validando la percepción como parte del proceso.",
-      "cognitivo": "Lo que el paciente <strong>piensa</strong>. Ideas rápidas, bucles mentales e intuiciones súbitas. El reto es sostener el flujo del pensamiento sin dirigirlo, dejando que se reorganice con libertad.",
-      "emocional": "Lo que el paciente <strong>siente</strong>. La emergencia de emociones intensas como el miedo, la culpa o la dicha puede señalar tanto bloqueo como apertura. Aquí se juega el corazón del proceso terapéutico.",
-      "autoprocesamiento": "Lo que el paciente <strong>transforma</strong> en su relación consigo mismo. Silencio de la autocrítica, aceptación del dolor y reescritura del yo. Aquí no se escapa del malestar: se aprende a habitarlo con dignidad.",
-      "somatico": "Lo que el paciente <strong>manifiesta</strong> en el cuerpo. Náuseas, oleadas térmicas o palpitaciones intensas. Aquí se encarna lo emocional y se regula lo que el lenguaje no alcanza a nombrar."
-
+      "visual": "Lo que la persona <strong>ve</strong>. Desde formas geométricas hasta figuras, estelas o superficies que parecen moverse. La tarea no es interpretar de inmediato, sino distinguir entre percepción esperable, sobrecarga y riesgo.",
+      "cognitivo": "Lo que la persona <strong>piensa</strong>. Ideas rápidas, bucles mentales, intuiciones súbitas o cambios en la percepción del tiempo. El reto es no discutir el contenido, sino observar regulación, coherencia y contacto.",
+      "emocional": "Lo que la persona <strong>siente</strong>. Miedo, culpa, tristeza, dicha, alivio o catarsis. La intensidad emocional no es un problema por sí misma; el problema aparece cuando rebasa la capacidad de regulación.",
+      "autoprocesamiento": "Lo que la persona <strong>revisa sobre sí misma</strong>. Identidad, autocrítica, aceptación, memoria autobiográfica o sentido personal. Aquí se acompaña sin imponer significado.",
+      "somatico": "Lo que la persona <strong>manifiesta en el cuerpo</strong>. Náuseas, calor, temblores, presión, palpitaciones o cambios de respiración. Aquí se diferencia entre descarga esperable, ansiedad somática y señal médica relevante."
     };
 
     const glosarioData = [
-    {
-      "termino": "Anclaje",
-      "definicion": "Intervención mínima para reconectar al paciente con el cuerpo o el entorno, utilizando frases breves o estímulos sensoriales. Segundo nivel del manual de intervención."
-    },
-    {
-      "termino": "Apertura a la experiencia",
-      "definicion": "Rasgo de personalidad asociado con curiosidad, flexibilidad y sensibilidad estética. Se incrementa tras experiencias psicodélicas profundas como OBN o avance emocional."
-    },
-    {
-      "termino": "Autoesquema",
-      "definicion": "Conjunto de creencias sobre el yo. Bajo psilocibina puede flexibilizarse y reconfigurarse, lo que permite revisar narrativas personales rígidas."
-    },
-    {
-      "termino": "Avance emocional",
-      "definicion": "Liberación emocional que ocurre al atravesar un estado aversivo sin evitarlo. Predice mejoras clínicas robustas cuando se contiene adecuadamente."
-    },
-    {
-      "termino": "Bypass espiritual",
-      "definicion": "Estrategia evasiva donde se usa lenguaje o creencias espirituales para evitar el contacto real con el dolor, el conflicto o la responsabilidad."
-    },
-    {
-      "termino": "Conectividad desacoplada",
-      "definicion": "Separación temporal de la comunicación entre regiones cerebrales (como mPFC y PCC), facilitando la desorganización del yo narrativo."
-    },
-    {
-      "termino": "Conocimiento saber-cómo",
-      "definicion": "Forma de conocimiento experiencial que permite actuar con sabiduría emocional. Se manifiesta en frases como 'aprendí a estar con mi ansiedad sin huir'."
-    },
-    {
-      "termino": "Contención silenciosa",
-      "definicion": "Presencia activa y tranquila del terapeuta, sin necesidad de intervención verbal. Proporciona seguridad emocional y regula la excitación del paciente."
-    },
-    {
-      "termino": "Criterios de escalamiento",
-      "definicion": "Signos clínicos observables que indican la necesidad de pasar a una intervención activa. Ejemplo: ideación suicida, agitación severa, disociación prolongada."
-    },
-    {
-      "termino": "Cualidad noética",
-      "definicion": "Sensación de que lo vivido es absolutamente verdadero. Puede facilitar insights valiosos o generar creencias injustificadas si no se integra críticamente."
-    },
-    {
-      "termino": "DMN (Red de Modo por Defecto)",
-      "definicion": "Red cerebral asociada con el pensamiento autorreferencial. Su desactivación correlaciona con la disolución del ego y la reconfiguración del autoesquema."
-    },
-    {
-      "termino": "Encarnar (ACE)",
-      "definicion": "Parte del modelo ACE. Implica sentir las emociones en el cuerpo sin juicio ni evitación, facilitando la integración y la regulación emocional."
-    },
-    {
-      "termino": "Entropía cerebral",
-      "definicion": "Estado de flexibilidad neuronal donde se relajan las jerarquías rígidas del pensamiento. Permite nuevas conexiones mentales y perspectivas."
-    },
-    {
-      "termino": "Factores de riesgo",
-      "definicion": "Variables que pueden amplificar o modular una experiencia difícil. Incluyen dosis, historia clínica, preparación emocional y entorno."
-    },
-    {
-      "termino": "Flexibilidad psicológica",
-      "definicion": "Capacidad de actuar según valores personales incluso en presencia de malestar. Es un mediador clave del cambio terapéutico con psicodélicos."
-    },
-    {
-      "termino": "Frase de normalización",
-      "definicion": "Enunciado breve que valida lo que el paciente experimenta y reduce la percepción de peligro. Ejemplo: 'Lo que sientes ahora es parte del proceso, estás a salvo'."
-    },
-    {
-      "termino": "Hiperpriores desadaptativos",
-      "definicion": "Creencias rígidas de alto nivel que el cerebro usa para predecir la realidad. Bajo psilocibina, pueden relajarse, permitiendo insights y reestructuración."
-    },
-    {
-      "termino": "Indicadores postsesión",
-      "definicion": "Signos que aparecen luego de la sesión y pueden señalar integración saludable o complicaciones clínicas. Incluyen persistencia de angustia, disociación o creencias rígidas."
-    },
-    {
-      "termino": "Insight psicológico",
-      "definicion": "Comprensión súbita y significativa sobre patrones emocionales o conductuales. Bajo psicodélicos, se experimenta con fuerte carga emocional y convicción."
-    },
-    {
-      "termino": "Integración",
-      "definicion": "Proceso terapéutico de traducir lo vivido durante la sesión en cambios duraderos. Implica reflexión, conexión emocional y acción comprometida."
-    },
-    {
-      "termino": "Manual de intervención",
-      "definicion": "Guía que ordena las acciones clínicas en cuatro niveles: sostén, anclaje, reencuadre y escalamiento. Se adapta a la intensidad y dirección del proceso."
-    },
-    {
-      "termino": "Matriz de riesgo",
-      "definicion": "Clasificación que estima la necesidad de intervención clínica según intensidad del fenómeno y vulnerabilidad del paciente (bajo, medio, alto)."
-    },
-    {
-      "termino": "REBUS (Relaxed Beliefs Under Psychedelics)",
-      "definicion": "Modelo que describe cómo los psicodélicos relajan las creencias rígidas (hiperpriores) permitiendo reconfiguración cognitiva y emocional."
-    },
-    {
-      "termino": "Reencuadre",
-      "definicion": "Intervención verbal que ayuda a reinterpretar una experiencia difícil desde una narrativa segura o significativa. Tercer nivel del manual."
-    },
-    {
-      "termino": "Sostén",
-      "definicion": "Presencia sin acción. Primer nivel del manual. Consiste en acompañar sin intervenir para sostener el proceso desde la calma y la conexión humana."
-    },
-    {
-      "termino": "Shock ontológico",
-      "definicion": "Desorganización que ocurre cuando la experiencia desafía la realidad tal como la conocíamos. Requiere encuadre cuidadoso para evitar disociación o grandiosidad."
-    }
-  ];
-
+      {
+        "termino": "Anclaje",
+        "definicion": "Intervención mínima para reconectar a la persona con el cuerpo o el entorno mediante frases breves, respiración, contacto con superficies o estímulos sensoriales simples."
+      },
+      {
+        "termino": "Apertura a la experiencia",
+        "definicion": "Disposición a explorar sensaciones, emociones o ideas nuevas sin cerrarse de inmediato. Puede facilitar el proceso, pero no sustituye estabilidad ni preparación."
+      },
+      {
+        "termino": "Autoesquema",
+        "definicion": "Conjunto de creencias sobre uno mismo. Durante una experiencia psicodélica puede volverse más flexible, visible o emocionalmente cargado."
+      },
+      {
+        "termino": "Avance emocional",
+        "definicion": "Momento en el que la persona atraviesa una emoción difícil sin evitarla y logra una forma nueva de contacto, aceptación o comprensión."
+      },
+      {
+        "termino": "Bypass espiritual",
+        "definicion": "Uso de lenguaje espiritual para evitar dolor, conflicto, responsabilidad o trabajo psicológico real."
+      },
+      {
+        "termino": "Contención silenciosa",
+        "definicion": "Presencia activa, estable y tranquila del facilitador sin intervención verbal innecesaria. Sirve cuando la experiencia se está desarrollando sin riesgo."
+      },
+      {
+        "termino": "Criterios de escalamiento",
+        "definicion": "Señales observables que indican que ya no basta con sostener o anclar. Pueden incluir riesgo físico, agitación severa, pérdida marcada de contacto, pánico persistente o ideación suicida."
+      },
+      {
+        "termino": "Cualidad noética",
+        "definicion": "Sensación subjetiva de certeza profunda. Puede generar insight valioso, pero también conclusiones rígidas si no se integra con cuidado."
+      },
+      {
+        "termino": "Factores de riesgo",
+        "definicion": "Variables que pueden aumentar la intensidad o dificultad de un efecto. Incluyen dosis, historia personal, estado emocional, entorno, preparación y apoyo."
+      },
+      {
+        "termino": "Flexibilidad psicológica",
+        "definicion": "Capacidad de estar en contacto con experiencias internas difíciles sin reaccionar de forma automática o evitativa."
+      },
+      {
+        "termino": "Frase de normalización",
+        "definicion": "Enunciado breve que valida la experiencia y reduce la percepción de peligro sin imponer una interpretación."
+      },
+      {
+        "termino": "Indicadores post-sesión",
+        "definicion": "Señales que aparecen después de la sesión y pueden requerir seguimiento: ansiedad persistente, confusión, insomnio, desrealización, retraimiento o creencias rígidas."
+      },
+      {
+        "termino": "Insight psicológico",
+        "definicion": "Comprensión significativa sobre un patrón emocional, relacional o conductual. No toda comprensión intensa debe tomarse como conclusión definitiva."
+      },
+      {
+        "termino": "Integración",
+        "definicion": "Proceso de traducir lo vivido en lenguaje, decisiones, prácticas y cambios sostenibles. No es explicar todo; es ordenar lo importante."
+      },
+      {
+        "termino": "Manual de intervención",
+        "definicion": "Secuencia gradual de respuesta: sostén, anclaje, reencuadre y escalamiento. Se aplica según intensidad, riesgo y respuesta observable."
+      },
+      {
+        "termino": "Matriz de riesgo",
+        "definicion": "Clasificación orientativa que estima si un fenómeno requiere solo observación, intervención mínima, reencuadre activo o escalamiento."
+      },
+      {
+        "termino": "Reencuadre",
+        "definicion": "Intervención verbal breve que ayuda a reinterpretar una experiencia difícil sin discutir ni imponer significado."
+      },
+      {
+        "termino": "Sostén",
+        "definicion": "Presencia sin acción directiva. Se usa cuando la experiencia es intensa pero la persona conserva orientación, regulación suficiente y seguridad."
+      },
+      {
+        "termino": "Shock ontológico",
+        "definicion": "Desorganización o confusión cuando la experiencia desafía de forma intensa las creencias básicas sobre la realidad, la identidad o el sentido."
+      }
+    ];
 
     // --- SECCIÓN 2: FUNCIONES DE AYUDA PARA RENDERIZAR ---
-    
-    // helper: crear slug para ids
+
     function slugify(text) {
       return text.toString().toLowerCase().trim()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
         .replace(/\s+/g, '-')
         .replace(/[^\w\-]+/g, '')
         .replace(/\-\-+/g, '-');
@@ -180,10 +146,37 @@
 
     function mapearLista(items) {
       if (!items || items.length === 0) return '<p>NA</p>';
-      return `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+      const itemsFiltrados = items.filter(item => item && item !== "NA");
+      if (itemsFiltrados.length === 0) return '<p>NA</p>';
+      return `<ul>${itemsFiltrados.map(item => `<li>${item}</li>`).join('')}</ul>`;
     }
 
-    // Ajuste: generarSeccion ahora admite id opcional
+    function obtenerIndicadoresPostSesion(efecto) {
+      if (efecto.banderas_rojas_diagnostico_diferencial && efecto.banderas_rojas_diagnostico_diferencial.length > 0) {
+        return efecto.banderas_rojas_diagnostico_diferencial;
+      }
+
+      if (efecto.indicadores_postsesion && efecto.indicadores_postsesion.length > 0) {
+        return efecto.indicadores_postsesion;
+      }
+
+      return ["NA"];
+    }
+
+    function obtenerJustificacionRiesgo(matrizRiesgo) {
+      if (!matrizRiesgo) return "No especificado.";
+
+      const match = matrizRiesgo.match(/\(Justificación:\s*(.*?)\)$/);
+      if (match && match[1]) return match[1];
+
+      return matrizRiesgo;
+    }
+
+    function obtenerNivelRiesgo(matrizRiesgo) {
+      if (!matrizRiesgo) return "No especificado";
+      return matrizRiesgo.split(' ')[0].replace(/[()]/g, '');
+    }
+
     function generarSeccion(texto, titulo, id = '') {
       const idAttr = id ? ` id="${id}"` : '';
       return `
@@ -194,9 +187,9 @@
       `;
     }
 
-    // Ajuste: generarHtmlReferencias añade id único por dominio
     function generarHtmlReferencias(dominios = []) {
       if (typeof referenciasData === 'undefined') return ''; 
+
       const referenciasUnicas = new Set();
       
       for (const dominio of dominios) {
@@ -206,13 +199,14 @@
           });
         }
       }
+
       const referencias = Array.from(referenciasUnicas).map(refStr => JSON.parse(refStr));
       if (referencias.length === 0) return ''; 
 
       const listaHtml = referencias.map(ref => `
         <li>
           <strong>${ref.referencia}</strong>
-          ${ref.resumen_atlas}
+          ${ref.resumen_atlas ? ref.resumen_atlas : ''}
         </li>
       `).join('');
 
@@ -220,7 +214,7 @@
 
       return `
         <div class="pagina-a4 referencias-pagina" id="${dominioId}">
-          <h1 style="text-transform: capitalize;">Referencias Clínicas: Dominio ${dominios[0]}</h1>
+          <h1 style="text-transform: capitalize;">Referencias: Dominio ${dominios[0]}</h1>
           <ul class="lista-referencias">
             ${listaHtml}
           </ul>
@@ -228,9 +222,12 @@
       `;
     }
 
-    // Ajuste: generarHtmlFicha ahora añade id a cada ficha (para link directo)
     function generarHtmlFicha(efecto) {
       const fichaId = 'efecto-' + slugify(efecto.efecto);
+      const indicadoresPostSesion = obtenerIndicadoresPostSesion(efecto);
+      const nivelRiesgo = obtenerNivelRiesgo(efecto.matriz_riesgo);
+      const justificacionRiesgo = obtenerJustificacionRiesgo(efecto.matriz_riesgo);
+
       return `
         <div class="pagina-a4 ficha-a4" id="${fichaId}">
           <header class="ficha-header">
@@ -242,84 +239,102 @@
             
             <div class="grid-col">
               <h3>Fenomenología</h3>
-              <h4>Paciente</h4>
+
+              <h4>Reporte subjetivo</h4>
               <p>${efecto.fenomenologia.descripcion_paciente}</p>
-              <h4>Observables</h4>
+
+              <h4>Signos observables</h4>
               <p>${efecto.fenomenologia.signos_observables}</p>
             </div>
             
             <div class="grid-col">
-              <h3>Neurobiología aplicada</h3>
-              <h4>Mecanismo probable</h4>
-              <p>${efecto.neurobiologia_aplicada.mecanismo_hipotetico}</p>
-              <h4>Normalización (Modelo)</h4>
+              <h3>Lectura operativa</h3>
+
+              <h4>Normalización</h4>
               <p><em>"${efecto.neurobiologia_aplicada.frase_de_normalizacion}"</em></p>
+
+              <h4>Moduladores de riesgo</h4>
+              ${mapearLista([
+                efecto.moduladores_riesgo.dosis ? `<strong>Dosis:</strong> ${efecto.moduladores_riesgo.dosis}` : null,
+                efecto.moduladores_riesgo.historial ? `<strong>Historial:</strong> ${efecto.moduladores_riesgo.historial.join(', ')}` : null,
+                efecto.moduladores_riesgo.medicacion ? `<strong>Medicación:</strong> ${efecto.moduladores_riesgo.medicacion.join(', ')}` : null,
+                efecto.moduladores_riesgo.set_setting ? `<strong>Set & Setting:</strong> ${efecto.moduladores_riesgo.set_setting.join(', ')}` : null
+              ])}
+
+              <p class="micro-etiqueta">
+                <strong>* La frase de normalización no interpreta la experiencia. Solo reduce amenaza y sostiene orientación.</strong>
+              </p>
             </div>
             
             <div class="grid-col">
-              <h3>Riesgo e Intervención</h3>
+              <h3>Riesgo y Escalamiento</h3>
+
               <div class="matriz-riesgo-box">
-                <h4 class="riesgo-titulo">Nivel de Riesgo: <span>${efecto.matriz_riesgo.split(' ')[0]}</span></h4>
-                <p>${efecto.matriz_riesgo.split(' (Justificación: ')[1].slice(0, -1)}</p>
-                <p class="micro-etiqueta"><strong>* usa intervención gradual por niveles.</strong></p>
+                <h4 class="riesgo-titulo">Nivel de Riesgo: <span>${nivelRiesgo}</span></h4>
+                <p>${justificacionRiesgo}</p>
+                <p class="micro-etiqueta"><strong>* Usa intervención gradual por niveles.</strong></p>
               </div>
-              <h4>Factores de Riesgo</h4>
-              ${mapearLista([
-                `<strong>Dosis:</strong> ${efecto.moduladores_riesgo.dosis}`,
-                `<strong>Historial:</strong> ${efecto.moduladores_riesgo.historial.join(', ')}`,
-                `<strong>Set & Setting:</strong> ${efecto.moduladores_riesgo.set_setting.join(', ')}`
-              ])}
-              <h4>Indicadores postsesión</h4>
-              ${mapearLista(efecto.banderas_rojas_diagnostico_diferencial)}
+
+              <h4>Indicadores post-sesión</h4>
+              ${mapearLista(indicadoresPostSesion)}
+
               ${
-                efecto.banderas_rojas_diagnostico_diferencial &&
-                efecto.banderas_rojas_diagnostico_diferencial[0] !== "NA"
-                  ? `<p class="micro-etiqueta"><strong>* Si alguno de estos indicadores aparece o se mantiene tras la sesión, considera seguimiento clínico.</strong></p>`
+                indicadoresPostSesion &&
+                indicadoresPostSesion[0] !== "NA"
+                  ? `<p class="micro-etiqueta"><strong>* Si aparece o persiste alguno de estos indicadores, considera seguimiento clínico.</strong></p>`
                   : `<p class="micro-etiqueta">* No se identificaron indicadores post-sesión relevantes para este efecto.</p>`
               }
             </div>
             
             <div class="ficha-manual">
               <h3>Manual de Intervención</h3>
+
               <div class="bloque-icono">
                 <div class="icono">✦</div>
                 <div>
-                  <h4>Sostén (No Intervención)</h4>
-                  <p class="micro-etiqueta">Frase(s) Modelo:</p>
+                  <h4>Sostén</h4>
+                  <p class="micro-etiqueta">Cuando hay intensidad, pero la persona conserva orientación y seguridad.</p>
                   <p>${efecto.manual_de_intervencion.no_intervencion_sosten}</p>
                 </div>
               </div>
+
               <div class="bloque-icono">
                 <div class="icono">⸱</div>
                 <div>
-                  <h4>Anclaje (Intervención Mínima)</h4>
-                  <p class="micro-etiqueta">Acción / Frase(s) Modelo:</p>
+                  <h4>Anclaje</h4>
+                  <p class="micro-etiqueta">Cuando la experiencia empieza a desbordar o la persona pierde contacto con cuerpo y entorno.</p>
                   <p>${efecto.manual_de_intervencion.intervencion_minima_anclaje}</p>
                 </div>
               </div>
+
               <div class="bloque-icono">
                 <div class="icono">⟳</div>
                 <div>
-                  <h4>Re-encuadre (Intervención Activa)</h4>
-                  <p class="micro-etiqueta">Frase(s) Modelo:</p>
+                  <h4>Reencuadre</h4>
+                  <p class="micro-etiqueta">Cuando hace falta una intervención verbal breve para reducir amenaza o rigidez interpretativa.</p>
                   <p>${efecto.manual_de_intervencion.intervencion_activa_reencuadre}</p>
-
                 </div>
               </div>
+
               <div class="bloque-icono">
                 <div class="icono">▲</div>
                 <div>
                   <h4>Escalamiento</h4>
-                  <p>${efecto.criterios_de_escalamiento.criterio_observable_para_escalar} <strong>Acción:</strong> ${efecto.criterios_de_escalamiento.accion_de_escalamiento}</p>
+                  <p>
+                    ${efecto.criterios_de_escalamiento.criterio_observable_para_escalar}
+                    <strong>Acción:</strong> ${efecto.criterios_de_escalamiento.accion_de_escalamiento}
+                  </p>
                 </div>
               </div>
             </div>
 
             <div class="ficha-integracion">
               <h3>Integración Post-Sesión</h3>
-              <h4>Tema a Explorar</h4>
+
+              <h4>Tema a explorar</h4>
               <p>${efecto.integracion_post_sesion.tema_a_explorar}</p>
-              <h4>Práctica Sugerida</h4>
+
+              <h4>Práctica sugerida</h4>
               <p>${efecto.integracion_post_sesion.practica_sugerida}</p>
             </div>
             
@@ -347,44 +362,51 @@
     function generarChecklist() {
       return `
         <div class="pagina-a4 section-a4" id="checklist">
-          <h1>Apéndice: Hoja de Uso Clínico</h1>
-          <h3>Checklist de Preparación de Sesión (Pre-vuelo)</h3>
+          <h1>Apéndice: Hoja de Uso en Sesión</h1>
+
+          <h3>Antes de la sesión</h3>
           <ul>
-            <li>Descarte de criterios de exclusión (medicación, historial).</li>
-            <li>Revisión de la intención y expectativas del paciente.</li>
-            <li>Validación del protocolo de seguridad y contacto de emergencia.</li>
-            <li>Preparación del 'Setting': música, iluminación, confort físico.</li>
+            <li>Revisa el dominio de efectos más probable según dosis, sensibilidad, intención y contexto.</li>
+            <li>Identifica vulnerabilidades conocidas: ansiedad basal, historia de pánico, disociación, trauma, rumiación o desregulación somática.</li>
+            <li>Define de antemano cómo se aplicará el protocolo de sostén, anclaje, reencuadre y escalamiento.</li>
+            <li>Verifica setting, música, iluminación, temperatura, acceso a agua y posibilidad de reducir estímulos.</li>
           </ul>
-          <h3>Checklist de Navegación (En-vuelo)</h3>
+
+          <h3>Durante la sesión</h3>
           <ul>
-            <li>Nivel 1 (Observar): ¿Signos vitales estables? ¿Respiración regular?</li>
-            <li>Nivel 2 (Validar): ¿El paciente muestra angustia? (Usar 'Frase de Normalización').</li>
-            <li>Nivel 3 (Anclar): ¿El paciente está en un 'bucle' o pánico? (Usar 'Anclaje').</li>
-            <li>Nivel 4 (Escalar): ¿Hay riesgo físico o agitación severa? (Revisar 'Indicadores Postsesión').</li>
+            <li><strong>Observar:</strong> ¿la persona conserva orientación, respiración estable y seguridad física?</li>
+            <li><strong>Sostener:</strong> si la experiencia es intensa pero estable, no interrumpas por ansiedad del facilitador.</li>
+            <li><strong>Anclar:</strong> si hay desborde, confusión, pánico incipiente o pérdida de contacto corporal.</li>
+            <li><strong>Reencuadrar:</strong> si aparece interpretación amenazante, rigidez narrativa o lucha contra la experiencia.</li>
+            <li><strong>Escalar:</strong> si hay riesgo físico, agitación severa, ideación suicida, pérdida marcada de juicio de realidad o síntomas médicos relevantes.</li>
           </ul>
-          <h3>Checklist de Integración (Post-vuelo)</h3>
+
+          <h3>Después de la sesión</h3>
           <ul>
-            <li>Verificar estabilidad física y emocional antes del cierre de la sesión.</li>
-            <li>Registrar observaciones clínicas y fenómenos destacados (para supervisión o integración).</li>
-            <li>Programar contacto de seguimiento (24-72 h) para evaluar estado emocional y sueño.</li>
-            <li>Proponer práctica de integración: journaling, respiración consciente o diálogo terapéutico.</li>
-            <li>Identificar señales de alerta post-agudas: ansiedad persistente, confusión o retraimiento social (considerar derivación).</li>
+            <li>Verifica estabilidad física y emocional antes del cierre.</li>
+            <li>Registra efectos destacados, respuestas del facilitador y criterios usados.</li>
+            <li>Programa seguimiento entre 24 y 72 horas cuando haya efectos intensos, confusos o de riesgo medio/alto.</li>
+            <li>Usa la práctica de integración sugerida como punto de partida, no como interpretación obligatoria.</li>
+            <li>Deriva si aparecen ansiedad persistente, confusión, insomnio grave, retraimiento, desrealización o creencias rígidas post-sesión.</li>
           </ul>
         </div>
       `;
     }
 
-    // Nueva función: generar índice / tabla de contenidos
     function generarIndice() {
       if (!efectosData) return '';
+
       const itemsPorDominio = ordenDominios.map(dominio => {
         const slugDominio = slugify(dominio);
         const efectosDelDominio = efectosData.filter(e => e.dominio[0] === dominio);
+
         const efectosHtml = efectosDelDominio.map(e => {
           const id = 'efecto-' + slugify(e.efecto);
           return `<li><a href="#${id}">${e.efecto}</a></li>`;
         }).join('');
+
         const referenciasId = 'referencias-' + slugDominio;
+
         return `
           <li class="indice-dominio">
             <strong><a href="#dominio-${slugDominio}">Dominio: ${dominio}</a></strong>
@@ -403,51 +425,52 @@
             <ul>
               ${itemsPorDominio}
               <li><a href="#glosario">Glosario</a></li>
-              <li><a href="#checklist">Checklist / Apéndice</a></li>
+              <li><a href="#checklist">Hoja de uso en sesión</a></li>
             </ul>
           </nav>
         </div>
       `;
     }
 
-    // --- SECCIÓN 3: FUNCIÓN PRINCIPAL DE RENDERIZADO (ACTUALIZADA) ---
+    // --- SECCIÓN 3: FUNCIÓN PRINCIPAL DE RENDERIZADO ---
+    
     function renderizarAtlasCompleto() {
       const container = document.getElementById('atlas-container');
-      if (!container || !efectosData || !referenciasData) {
-        console.error("Error: Faltan datos (efectos, referencias) o el contenedor HTML.");
+
+      if (!container || typeof efectosData === 'undefined') {
+        console.error("Error: faltan datos de efectos o el contenedor HTML.");
         return;
       }
       
       let htmlCompleto = '';
 
-      // 1. Renderizar Portada (ACTUALIZADA CON AUTOR)
+      // 1. Portada
       htmlCompleto += `
         <div class="pagina-a4 portada-a4" id="portada">
-          <h1>Efectos Psicodélicos</h1>
-          <h2>¿Qué puede pasar en sesión y cómo intervenir?</h2>
+          <h1>Atlas de Efectos Psicodélicos</h1>
+          <h2>Qué puede aparecer en sesión y cómo responder</h2>
           <div class="autor">AUTOR: <strong>Dr. HOPE</strong></div>
         </div>
       `;
 
-      // 1.5 Insertar Índice (antes de la introducción)
+      // 2. Índice
       htmlCompleto += generarIndice();
 
-      // 2. Renderizar Introducción
+      // 3. Introducción
       htmlCompleto += `
         <div class="pagina-a4 introduccion-a4" id="introduccion">
-          <h1>Introducción: Afila la intución</h1>
+          <h1>Introducción: Afila la intuición</h1>
           ${textoIntroduccion}
         </div>
       `;
       
-      // 3. Renderizar Secciones Narrativas
-      htmlCompleto += generarSeccion(textoCómoUsar, "Cómo usar este documento");
+      // 4. Cómo usar
+      htmlCompleto += generarSeccion(textoComoUsar, "Cómo usar este documento", "como-usar");
       
-      // 4. Renderizar Dominios, Fichas, y Página de Referencias
+      // 5. Dominios, fichas y referencias
       for (const dominio of ordenDominios) {
-        
-        // 4a. Página separadora del Dominio (con id)
         const dominioSlug = slugify(dominio);
+
         htmlCompleto += `
           <div class="pagina-a4 dominio-a4" id="dominio-${dominioSlug}">
             <h1 style="text-transform: capitalize;">Dominio: ${dominio}</h1>
@@ -455,36 +478,40 @@
           </div>
         `;
 
-        // 4b. Fichas de efectos del dominio
         const efectosDelDominio = efectosData.filter(efecto => efecto.dominio[0] === dominio);
+
         for (const efecto of efectosDelDominio) {
           htmlCompleto += generarHtmlFicha(efecto);
         }
         
-        // 4c. Página ÚNICA de Referencias del dominio
         htmlCompleto += generarHtmlReferencias([dominio]);
       }
       
-      // 5. Renderizar Apéndices Finales
+      // 6. Apéndices
       htmlCompleto += generarGlosario();
       htmlCompleto += generarChecklist();
 
-      // 6. AÑADIDO: Renderizar CTA de Cierre
+      // 7. Cierre sobrio, sin CTA comercial
       htmlCompleto += `
-      <div class="pagina-a4 cta-a4">
-        <div class="cta-contenido">
-          <h2>¿Te fué útil?</h2>
-          <p>Creé un curso que aterriza todo el proceso: desde el screening hasta la integración. Cada fase explicada con ejemplos reales y criterio clínico. Si no te sirve, te devuelvo el dinero. Sin vueltas.</p>
-          <a href="https://app.ecoretreatmountain.com/curso/registro" class="cta-boton" target="_blank">Ver detalles</a>
-          </div>
+        <div class="pagina-a4 section-a4" id="cierre">
+          <h1>Cierre</h1>
+          <p>Este atlas organiza efectos subjetivos para facilitar una lectura más clara durante la sesión. No busca explicar todos los mecanismos ni reemplazar criterio clínico.</p>
+
+          <p>Úsalo para reconocer fenómenos, estimar riesgo, elegir el nivel de intervención y preparar una integración más concreta.</p>
+
+          <span class="highlight">
+            Lo subjetivo también puede leerse con orden: qué aparece, qué se observa, qué riesgo tiene y qué intervención corresponde.
+          </span>
+
+          <p style="margin-top: 30px; font-size: 0.95rem; color: #666;">
+            <strong>Mountain.</strong> Material educativo para facilitadores y centros. No sustituye evaluación médica, psicológica ni supervisión clínica especializada.
+          </p>
         </div>
       `;
 
-      // 7. Volcar todo el HTML al contenedor
       container.innerHTML = htmlCompleto;
     }
 
-    // Ejecutar el renderizado
     document.addEventListener('DOMContentLoaded', renderizarAtlasCompleto);
   </script>
 
